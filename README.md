@@ -3,6 +3,8 @@
 The plugin allows you to create colour tags and display them in graphs. 
 It supports both manually entered tags and automatic tags.
 
+![example](images/tags_example.png)
+
 Tags can be assigned to a device (displayed on all its graphs), 
 to a specific graph for a single device, to all graphs for all devices 
 within the same site ID, or to all graphs. There is also the option 

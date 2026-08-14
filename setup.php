@@ -73,7 +73,9 @@ function plugin_tags_remove_data() {
 	db_execute('DROP TABLE IF EXISTS plugin_tags_event_archive');
 	db_execute('DROP TABLE IF EXISTS plugin_tags_uptime');
 	db_execute('DROP TABLE IF EXISTS plugin_tags_state');
-	db_execute("DELETE FROM settings WHERE name LIKE '%plugin_tags%'");
+	db_execute("DELETE FROM settings WHERE name LIKE 'plugin_tags%'");
+	db_execute("DELETE FROM settings WHERE name LIKE 'tags_%'");
+
 	return true;
 }
 

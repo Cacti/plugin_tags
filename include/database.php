@@ -81,6 +81,7 @@ function plugin_tags_setup_table() {
 	$data['comment']   = 'Holds events';
 	api_plugin_db_table_create('tags', 'plugin_tags_event', $data);
 
+	$data              = [];
 	$data['columns'][] = ['name' => 'id', 'type' => 'int(11)', 'NULL' => false, 'auto_increment' => true];
 	$data['columns'][] = ['name' => 'type', 'type' => 'varchar(32)', 'NULL' => false, 'default' => 'manual'];
 	$data['columns'][] = ['name' => 'description', 'type' => 'varchar(64)', 'NULL' => false, 'default' => ''];

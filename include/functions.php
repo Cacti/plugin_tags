@@ -50,7 +50,6 @@ function tags_is_automatic_type($type) {
 	return strpos((string) $type, 'auto_') === 0;
 }
 
-
 /** Write a plugin debug message when selective debugging is enabled.
  *
  * @param string $message Message to log.
@@ -64,7 +63,6 @@ function tags_debug($message = '') {
 		cacti_log('DEBUG: ' . trim($message), true, 'TAGS');
 	}
 }
-
 
 /** Read a persisted plugin state value.
  *
@@ -155,6 +153,7 @@ function plugin_tags_check_poller_events() {
 	}
 
 	$poller_interval = read_config_option('poller_interval');
+
 	$pollers = db_fetch_assoc('SELECT id, name, status, total_time, UNIX_TIMESTAMP() - UNIX_TIMESTAMP(last_status) AS heartbeat FROM poller WHERE disabled = "" ORDER BY id');
 
 	foreach ($pollers as $poller) {
@@ -162,7 +161,7 @@ function plugin_tags_check_poller_events() {
 
 		if (read_config_option('tags_poller_overrun') == 'on') {
 			$key      = 'poller_overrun:' . $poller_id;
-			$overrun  = (float) $poller['total_time'] >= ($poller_interval-1);
+			$overrun  = (float) $poller['total_time'] >= ($poller_interval - 1);
 			$was_over = tags_state_get($key) === '1';
 
 			if ($overrun && !$was_over) {
@@ -216,7 +215,7 @@ function plugin_tags_check_plugin_events() {
 	global $config;
 
 	$tags = 0;
-echo "aaaaa";
+
 	if ((int)$config['poller_id'] !== 1) {
 		return $tags;
 	}
@@ -231,9 +230,8 @@ echo "aaaaa";
 		FROM plugin_config
 		ORDER BY directory');
 
-echo "bb";
 	foreach ($plugins as $plugin) {
-echo "cc-" . $plugin['directory'];
+
 		$key = 'plugin:' . $plugin['directory'];
 
 		$old_raw = tags_state_get($key);
@@ -248,7 +246,6 @@ echo "cc-" . $plugin['directory'];
 		/* Plugin enabled */
 		if ($old_status !== null && $old_status != 1 && $new_status == 1) {
 
-echo "dd";
 			$description = sprintf('Plugin enabled: %s %s', $plugin['directory'], $new_version);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_enabled');
@@ -257,7 +254,7 @@ echo "dd";
 
 		/* Plugin disabled */
 		} elseif ($old_status !== null && $old_status == 1 && $new_status != 1) {
-echo "ee";
+
 			$description = sprintf('Plugin disabled: %s',$plugin['directory']);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_disabled');
@@ -266,15 +263,13 @@ echo "ee";
 
 		/* Plugin version changed */
 		} elseif ($old_version !== null && version_compare($old_version, $new_version, '!=')) {
-echo "ff";
+
 			$description = sprintf('Plugin updated: %s %s → %s', $plugin['directory'], $old_version, $new_version);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_updated');
 
 			$tags++;
 		}
-
-echo "gg";
 
 		tags_state_set($key, json_encode([
 			'status'  => $new_status,
@@ -309,8 +304,9 @@ function plugin_tags_device_save($device) {
  *
  * @return bool true if tag was created, false otherwise
  */
-function plugin_tags_check_version () {
-	$current_version = get_cacti_version();
+function plugin_tags_check_version() {
+
+	$current_version  = get_cacti_version();
 	$previous_version = read_config_option('plugin_tags_cacti_version');
 
 	if (isset($previous_version) && $current_version != $previous_version) {
@@ -336,14 +332,15 @@ function plugin_tags_check_hosts() {
 	$tags_host_restart   = read_config_option("tags_host_restart");
 	$tags_host_added     = read_config_option("tags_host_added");
 	$tags_primary_device = read_config_option("tags_primary_device");
+
 	$tags = 0;
 
 	if ($tags_host_restart) {
-		$color_host_restart = read_config_option("tags_host_restart_color");
+		$color_host_restart = read_config_option('tags_host_restart_color');
 	}
 
 	if ($tags_host_added) {
-		$color_host_added = read_config_option("tags_host_added_color");
+		$color_host_added = read_config_option('tags_host_added_color');
 	}
 
 	$hosts = db_fetch_assoc ("SELECT id, snmp_sysUpTimeInstance, total_polls, ptu.uptime AS `old_uptime`
@@ -357,21 +354,21 @@ function plugin_tags_check_hosts() {
 
 			if ($tags_host_added && $host['old_uptime'] === null && $host['total_polls'] < 10) { // adding new device
 				if ($tags_primary_device > 0) {
-					plugin_tags_create_tag (__('Device added, id %s', $host['id'], 'tags'), 'primary', $tags_primary_device, 0, $color_host_added, 'auto_device_added');
+					plugin_tags_create_tag(__('Device added, id %s', $host['id'], 'tags'), 'primary', $tags_primary_device, 0, $color_host_added, 'auto_device_added');
 					$tags++;
 				} else {
 					cacti_log('Cannot create tag, primary device not set', 'tags');
 				}
 
-				plugin_tags_create_tag (__('Device added', 'tags'), 'device', $host['id'], 0, $color_host_added, 'auto_device_added');
+				plugin_tags_create_tag(__('Device added', 'tags'), 'device', $host['id'], 0, $color_host_added, 'auto_device_added');
 				$tags++;
 				continue;
 			}
 
 			if ($tags_host_restart && $host['old_uptime'] > $host['snmp_sysUpTimeInstance']
 				&& $host['snmp_sysUpTimeInstance'] > 0) { // restart
-					plugin_tags_create_tag(__('Restart, uptime was %s', get_daysfromtime($host['old_uptime']/100), 'tags'), 'device', $host['id'], 0, $color_host_restart, 'auto_device_restart');
-					$tags++;
+				plugin_tags_create_tag(__('Restart, uptime was %s', get_daysfromtime($host['old_uptime']/100), 'tags'), 'device', $host['id'], 0, $color_host_restart, 'auto_device_restart');
+				$tags++;
 			}
 		}
 		db_execute("INSERT INTO plugin_tags_uptime (host_id, uptime)
@@ -421,7 +418,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 	$host_id = db_fetch_cell_prepared('SELECT host_id FROM graph_local WHERE id = ?',
 		[$data['graph_id']]);
 
-	$tags_primary = db_fetch_assoc_prepared ("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
+	$tags_primary = db_fetch_assoc_prepared("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
 		tag_time BETWEEN ? AND ? AND
 		enabled='on' AND
 		target = 'primary' AND
@@ -430,7 +427,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 		ORDER BY tag_time desc",
 		[$data['start'], $data['end'], $host_id]);
 
-	$tags_host = db_fetch_assoc_prepared ("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
+	$tags_host = db_fetch_assoc_prepared("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
 		tag_time BETWEEN ? AND ? AND
 		enabled='on' AND
 		target = 'device' AND
@@ -439,14 +436,14 @@ function plugin_tags_rrd_graph_graph_options($data) {
 		ORDER BY tag_time desc",
 		[$data['start'], $data['end'], $host_id]);
 
-	$tags_all = db_fetch_assoc_prepared ("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
+	$tags_all = db_fetch_assoc_prepared("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
 		tag_time BETWEEN ? AND ? AND
 		enabled='on' AND
 		target = 'all'
 		ORDER BY tag_time desc",
 		[$data['start'], $data['end']]);
 
-	$tags_graph = db_fetch_assoc_prepared ("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
+	$tags_graph = db_fetch_assoc_prepared("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
 		tag_time BETWEEN ? AND ? AND
 		enabled='on' AND
 		target = 'graph' AND
@@ -458,8 +455,8 @@ function plugin_tags_rrd_graph_graph_options($data) {
 	$site_id = db_fetch_cell_prepared('SELECT site_id FROM host WHERE id = ?',
 		[$host_id]);
 
-	if($site_id > 0) {
-		$tags_site = db_fetch_assoc_prepared ("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
+	if ($site_id > 0) {
+		$tags_site = db_fetch_assoc_prepared("SELECT id, tag_time, description, color, type FROM plugin_tags_event WHERE
 			tag_time BETWEEN ? AND ? AND
 			enabled='on' AND
 			target = 'site' AND
@@ -484,7 +481,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 		$tags = array_merge($tags, $tags_site);
 	}
 
-	usort($tags, function($a, $b) {
+	usort($tags, function ($a, $b) {
 		return $b['tag_time'] <=> $a['tag_time'];
 	});
 
@@ -502,7 +499,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 				$label = date('y-m-d H:i', $tag['tag_time']) . ' ' . $tag['description'];
 				$label = str_replace(':', '\\:', $label);
 
-				$add[] = RRD_NL . "VRULE:" . $tag['tag_time'] . "#$color:'$label\l'" . RRD_NL;
+				$add[] = RRD_NL . 'VRULE:' . $tag['tag_time'] . "#$color:'$label\l'" . RRD_NL;
 			}
 		} else {
 			$automatic_groups = [];
@@ -531,7 +528,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 			}
 
 			$automatic_groups = array_values($automatic_groups);
-			usort($automatic_groups, function($a, $b) {
+			usort($automatic_groups, function ($a, $b) {
 				return $b['latest']['tag_time'] <=> $a['latest']['tag_time'];
 			});
 
@@ -540,7 +537,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 			foreach (array_slice($automatic_groups, 0, $legend_limit) as $group) {
 				$type       = $group['latest']['type'];
 				$type_label = $tags_event_types[$type] ?? $type;
-				$dates      = array_map(function($timestamp) {
+				$dates      = array_map(function ($timestamp) {
 					return date('y-m-d H:i', $timestamp);
 				}, $group['dates']);
 				$label = $type_label . ' (' . $group['count'] . '): ' . implode(', ', $dates);
@@ -572,7 +569,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
 
 			foreach (array_slice($tags, 0, $vrule_limit) as $tag) {
 				$color = array_key_exists($tag['color'], $all_colors) ? $tag['color'] : '999999';
-				$line  = "VRULE:" . $tag['tag_time'] . "#$color";
+				$line  = 'VRULE:' . $tag['tag_time'] . "#$color";
 
 				if (isset($legend_by_id[$tag['id']])) {
 					$line .= ":'" . $legend_by_id[$tag['id']] . "\l'";
@@ -712,7 +709,7 @@ function plugin_tags_settings_update() {
 		'tags_plugin_state_color'          => 'auto_plugin_updated',
 	];
 
-	foreach($tags_sett as $ts) {
+	foreach ($tags_sett as $ts) {
 		if (config_value_exists($ts . '_old')) {
 			$old = read_config_option($ts . '_old');
 			$act = read_config_option($ts);
@@ -732,10 +729,10 @@ function plugin_tags_settings_update() {
 
 					default:
 						if (isset($automatic_types[$ts])) {
-							db_execute_prepared("UPDATE plugin_tags_event
+							db_execute_prepared('UPDATE plugin_tags_event
 								SET color = ?
 								WHERE type = ? AND
-								color = ?",
+								color = ?',
 								[$act, $automatic_types[$ts], $old]);
 						}
 
@@ -743,7 +740,7 @@ function plugin_tags_settings_update() {
 
 						break;
 				}
-			} 
+			}
 		} else { // save default as old values
 			set_config_option($ts . '_old', read_config_option($ts));
 		}
@@ -759,13 +756,13 @@ function plugin_tags_settings_update() {
  */
 function plugin_tags_archive() {
 
-	$retention_days = (int) read_config_option("tags_retention");
+	$retention_days = (int) read_config_option('tags_retention');
 
 	if ($retention_days == 0) {
 		return true;
 	}
 
-	$limit = time() - ($retention_days*86400);
+	$limit = time() - ($retention_days * 86400);
 
 	$result = db_fetch_assoc_prepared('SELECT id
 		FROM plugin_tags_event
@@ -788,6 +785,7 @@ function plugin_tags_archive() {
 function plugin_tags_move_old_events($ids) {
 
 	cacti_log('PLUGIN TAGS: moving ' . cacti_sizeof($ids) . ' records to the archive');
+
 	foreach (array_chunk($ids, 50) as $chunk) {
 		$chunk = array_map('intval', $chunk);
 

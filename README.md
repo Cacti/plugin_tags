@@ -21,7 +21,7 @@ It is also possible to archive old tags. These are then not displayed in the gra
 
 ## Installation
 
-To install the servcheck plugin, simply copy the plugin_servcheck directory to
+To install the Tags plugin, simply copy the plugin_tags directory to
 Cacti's plugins directory and rename it to simply 'tags'. Once you have done
 this, goto Cacti's Plugin Management page, Install and Enable the Tags plugin. Once
 this is complete, you can grant users permission to manage tags.
@@ -31,11 +31,11 @@ Go to Management -> Tags
 
 ## Bugs and Feature Enhancements
 
-Bug and feature enhancements for the servcheck plugin are handled in GitHub. If
+Bug and feature enhancements for the Tags plugin are handled in GitHub. If
 you find a first search the Cacti forums for a solution before creating an issue
 in GitHub - https://github.com/Cacti/plugin_tags
 
-You can find more information on our forum - http://forums.cacti.net/
+You can find more information on our forum - https://forums.cacti.net/viewtopic.php?t=64137 
 
 -----------------------------------------------
 Copyright (c) 2004-2026 - The Cacti Group, Inc.

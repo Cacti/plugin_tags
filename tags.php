@@ -46,7 +46,7 @@ switch (get_request_var('action')) {
 			$sql_where = 'WHERE host_id = ' . get_filter_request_var('host_id');
 		} else {
 			$sql_where = '';
-		}	
+		}
 		get_allowed_ajax_graphs($sql_where);
 
 		break;
@@ -206,7 +206,6 @@ function form_actions() {
 		</td>
 	</tr>";
 
-
 	html_end_box();
 
 	form_end();
@@ -222,7 +221,7 @@ function form_save() {
 	global $tags_colors, $tags_target;
 
 	if (isset_request_var('save_component')) {
-		$save['id']   = get_filter_request_var('id');
+		$save['id']          = get_filter_request_var('id');
 		$save['description'] = form_input_validate(get_nfilter_request_var('description'), 'description', '', false, 3);
 
 
@@ -240,14 +239,14 @@ function form_save() {
 			$save['target'] = get_nfilter_request_var('target');
 
 			if (get_nfilter_request_var('target') == 'all') {
-				$save['host_id'] = 0;
+				$save['host_id']  = 0;
 				$save['graph_id'] = 0;
-			} elseif  (get_nfilter_request_var('target') == 'device') {
+			} elseif (get_nfilter_request_var('target') == 'device') {
 				$save['host_id'] = get_filter_request_var('host_id');
-			} elseif  (get_nfilter_request_var('target') == 'graph') {
+			} elseif (get_nfilter_request_var('target') == 'graph') {
 				$host_id = db_fetch_cell_prepared('SELECT host_id FROM graph_local WHERE id = ?', [get_filter_request_var('graph_id')]);
 				if ($host_id > 0) {
-					$save['host_id'] = $host_id;
+					$save['host_id']  = $host_id;
 					$save['graph_id'] = get_filter_request_var('graph_id');
 				} else {
 					$_SESSION['sess_error_fields']['graph_id'] = 'graph_id';
@@ -318,17 +317,19 @@ function tags_edit() {
 
 		$tags_fields['color']['array'] = $tags_colors;
 	} else {
-		$data = [];
+		$data         = [];
 		$header_label = __('Tag [new]');
 		$tags_fields['color']['array'] = $tags_colors;
 	}
 
 	$tags_fields['host_id']['id'] = isset($data['host_id']) ? $data['host_id'] : '';
+
 	if (isset($data['host_id']) && $data['host_id'] > 0) {
 		$tags_fields['host_id']['value'] = db_fetch_cell_prepared('SELECT description FROM host WHERE id = ?', [$data['host_id']]);
 	}
 
 	$tags_fields['graph_id']['id'] = isset($data['graph_id']) ? $data['graph_id'] : '';
+
 	if (isset($data['graph_id']) && $data['graph_id'] > 0) {
 		$tags_fields['graph_id']['value'] = db_fetch_cell_prepared('SELECT gt.name FROM graph_local AS gl 
 		INNER JOIN graph_templates_graph AS gtg ON gl.id=gtg.local_graph_id 
@@ -336,6 +337,7 @@ function tags_edit() {
 	}
 
 	$tags_fields['site_id']['id'] = isset($data['site_id']) ? $data['site_id'] : '';
+
 	if (isset($data['site_id']) && $data['site_id'] > 0) {
 		$tags_fields['site_id']['value'] = db_fetch_cell_prepared('SELECT name FROM sites WHERE id = ?', [$data['site_id']]);
 	}
@@ -370,13 +372,7 @@ function tags_edit() {
 
 		setTag();
 
-// tohle to kdyztak resi
- //   $('#target').on('change', function () {
-   //     setTag();
-   // });
-
-
-		$('#tag_time').after('<i id="tagTime" class="calendar fa fa-calendar" title="<?php print __esc('Start Date/Time Selector', 'tags');?>"></i>');
+		$('#tag_time').after('<i id="tagTime" class="calendar fa fa-calendar" title="<?php print __esc('Start Date/Time Selector', 'tags'); ?>"></i>');
 
 		$('#tagTime').click(function() {
 			if (dateOpen) {
@@ -388,7 +384,6 @@ function tags_edit() {
 			}
 		});
 
-
 		$('#tag_time').datetimepicker({
 			minuteGrid: 10,
 			stepMinute: 1,
@@ -398,12 +393,7 @@ function tags_edit() {
 			dateFormat: 'yy-mm-dd',
 			showButtonPanel: false
 		});
-
-
-
 	});
-
-
 
 	function setTag() {
 		var target_type = $('#target').val();
@@ -424,11 +414,9 @@ function tags_edit() {
 			$('#row_site_id').show();
 		}
 	}
-
 	</script>
 
 <?php
-
 }
 
 
@@ -499,12 +487,6 @@ function tags_list() {
 
 	request_validation();
 
-/*
-if (get_request_var('predefined_timespan')) {
-	echo "budu resit cas";
-}
-*/
-
 	$sql_where = '';
 
 	if (get_filter_request_var('rows') == '-1') {
@@ -541,7 +523,7 @@ if (get_request_var('predefined_timespan')) {
 
 	$primary = (int) read_config_option('tags_primary_device');
 
-	if (get_nfilter_request_var('target') == 'primary' && $primary == 0 ) {
+	if (get_nfilter_request_var('target') == 'primary' && $primary == 0) {
 		print __('You have to set primary device in Console - Configuration - Settings - Tags');
 		return true;
 	}
@@ -553,14 +535,11 @@ if (get_request_var('predefined_timespan')) {
 	$sql_order = get_order_string();
 	$sql_limit = ' LIMIT ' . ($rows * (get_request_var('page') - 1)) . ',' . $rows;
 
-
-//!! tady pak asi budu hledat i graf, jestli pod to zarizeni spada
-
 	$total_rows = db_fetch_cell("SELECT COUNT(id)
 		FROM $sql_table
 		$sql_where");
 
-// outer je tam kvuli target='all'
+	// outer is used for target=all
 	$result = db_fetch_assoc("SELECT $sql_table.*, host.description AS host_description
 		FROM $sql_table
 		LEFT OUTER JOIN host
@@ -625,7 +604,7 @@ if (get_request_var('predefined_timespan')) {
 			$row['graph_id'] = $row['graph_id'] > 0 ? $row['graph_id'] : '-';
 			$row['site_id']  = $row['site_id']  > 0 ? $row['site_id']  : '-';
 
-			$row['type']  = tags_is_automatic_type($row['type']) ? __('Yes', 'tags') : __('No', 'tags');;
+			$row['type']  = tags_is_automatic_type($row['type']) ? __('Yes', 'tags') : __('No', 'tags');
 
 			form_alternate_row('line' . $row['id'], false, $row['enabled']);
 			form_selectable_cell("<span class='color-box' style='--tagcolor: " . htmlspecialchars($color) . "'></span><a class='linkEditMain' href='" . html_escape(htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false&action=edit&id=' . $row['id']) . "'>" . $row['description'] . '</a>', $row['id']);
@@ -656,10 +635,6 @@ if (get_request_var('predefined_timespan')) {
 		draw_actions_dropdown($tags_actions_menu, 1);
 	}
 
-
-
-// TADY
-
 	print "<input type='hidden' name='is_archive' value='" . (get_nfilter_request_var('archive') ? 1 : 0) . "'>";
 
 	form_end();
@@ -674,7 +649,7 @@ function tags_filter() {
 
 	if (get_filter_request_var('host_id')) {
 		$host_id = get_filter_request_var('host_id');
-	} else if (isset($_SESSION['plugin_uptime_host_id'])) {
+	} elseif (isset($_SESSION['plugin_uptime_host_id'])) {
 		$host_id = $_SESSION['plugin_uptime_host_id'];
 	} else {
 		$host_id = -1;
@@ -759,7 +734,7 @@ function tags_filter() {
 					</td>
 					<td>
 					<input id="archive" type="checkbox" name="archive" value="1" class="ui-state-default ui-corner-all"
-					<?php echo (get_filter_request_var('archive') ? 'checked="checked"' : '');?>> Archive
+					<?php echo (get_filter_request_var('archive') ? 'checked="checked"' : ''); ?>> Archive
 					</td>
 					<td>
 						<span class='nowrap'>
@@ -777,7 +752,7 @@ function tags_filter() {
 			<table class='filterTable'>
 				<tr id='timespan'>
 					<td>
-						<?php print __('Presets');?>
+						<?php print __('Presets'); ?>
 					</td>
 					<td>
 						<select id='predefined_timespan'>
@@ -798,7 +773,7 @@ function tags_filter() {
 						</select>
 					</td>
 					<td>
-						<?php print __('From');?>
+						<?php print __('From'); ?>
 					</td>
 					<td>
 						<span>
@@ -808,7 +783,7 @@ function tags_filter() {
 						</span>
 					</td>
 					<td>
-						<?php print __('To');?>
+						<?php print __('To'); ?>
 					</td>
 					<td>
 						<span>
@@ -827,10 +802,8 @@ function tags_filter() {
 	</form>
 	<script type='text/javascript'>
 
-//get current graph xxxx muzu nechat
-		var graph_start     = <?php print get_current_graph_start();?>;
-		var graph_end       = <?php print get_current_graph_end();?>;
-//		var pageAction      = <?php //print json_encode($action);?>;
+		var graph_start     = <?php print get_current_graph_start(); ?>;
+		var graph_end       = <?php print get_current_graph_end(); ?>;
 		var graphPage       = 'tags.php';
 		var date1Open       = false;
 		var date2Open       = false;
@@ -845,9 +818,7 @@ function tags_filter() {
 			}
 		}
 
-
 		function applyFilter() {
-
 			if ($('#archive').is(':checked')) {
 				var archive = 1;
 			} else {
@@ -861,7 +832,6 @@ function tags_filter() {
 			strURL += '&target=' + $('#target').val();
 			strURL += '&archive=' + archive;
 			strURL += '&type=' + $('#type').val();
-
 			strURL += '&tag_timespan=' + $('#predefined_timespan').val();
 
 			if ($('#predefined_timespan').val() >= 0) {
@@ -881,8 +851,6 @@ function tags_filter() {
 		}
 
 		$(function() {
-
-
 			$('#rows').click(function() {
 				applyFilter();
 			});
@@ -911,7 +879,6 @@ function tags_filter() {
 				event.preventDefault();
 				applyFilter();
 			});
-/// z time
 
 			$('#startDate').on('click', function() {
 				if (date1Open) {
@@ -957,17 +924,13 @@ function tags_filter() {
 				setCustomTimespan();
 			});
 
-
 			$('#predefined_timespan').on('change', function() {
 				applyFilter();
 			});
-
 		});
-
 		</script>
 <?php
 }
-
 
 
 /** Return sites matching an AJAX search request.

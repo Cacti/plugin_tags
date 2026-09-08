@@ -36,21 +36,6 @@ function plugin_tags_upgrade() {
 	$new  = $info['version'];
 	$old  = db_fetch_cell('SELECT version FROM plugin_config WHERE directory="tags"');
 
-
-	if (version_compare($old, '0.2', '<')) {
-/*
-		foreach (['plugin_tags_event', 'plugin_tags_event_archive'] as $table) {
-			$column = db_fetch_row("SHOW COLUMNS FROM $table LIKE 'type'");
-
-			if (isset($column['Type']) && stripos($column['Type'], 'varchar') !== 0) {
-				db_execute("ALTER TABLE $table MODIFY type varchar(32) NOT NULL DEFAULT 'manual'");
-			}
-
-			db_execute("UPDATE $table SET type = 'auto_other' WHERE type = 'automatic'");
-		}
-*/
-	}
-
 	db_execute_prepared('UPDATE plugin_config SET version = ? WHERE directory = ?', [$new, 'tags']);
 
 	plugin_tags_setup_state_table();
@@ -97,13 +82,12 @@ function plugin_tags_setup_table() {
 	$data['comment']   = 'Events archive';
 	api_plugin_db_table_create('tags', 'plugin_tags_event_archive', $data);
 
-
-	$data = [];
+	$data              = [];
 	$data['columns'][] = ['name' => 'host_id', 'type' => 'int(11)', 'NULL' => false];
 	$data['columns'][] = ['name' => 'uptime', 'type' => 'bigint(20)', 'NULL' => false, 'default' => '0'];
 	$data['primary']   = 'host_id';
-	$data['type'] = 'InnoDB';
-	$data['comment'] = 'Holds device uptime';
+	$data['type']      = 'InnoDB';
+	$data['comment']   = 'Holds device uptime';
 	api_plugin_db_table_create ('tags', 'plugin_tags_uptime', $data);
 
 	plugin_tags_setup_state_table();

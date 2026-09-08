@@ -205,6 +205,3 @@ function plugin_tags_page_head() {
 
 	print "<link type='text/css' href='" . $config['url_path'] . "plugins/tags/themes/common.css' rel='stylesheet'>";
 }
-
-
-

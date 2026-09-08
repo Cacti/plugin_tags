@@ -22,7 +22,6 @@
  +-------------------------------------------------------------------------+
 */
 
-
 $tags_retention = [
 	'0'   => __('Never', 'tags'),
 	'7'   => __('%d Days', 7, 'tags'),
@@ -52,16 +51,16 @@ $tags_type = [
 
 $tags_auto_how = [
 	'primary' => __('Primary device', 'tags'),
-	'all'    => __('All devices', 'tags'),
+	'all'     => __('All devices', 'tags'),
 ];
 
 
 $tags_event_types = [
-	'manual'                     => __('Manual', 'tags'),
-	'auto_device_added'          => __('Device Added', 'tags'),
-	'auto_device_changed'        => __('Device Changed', 'tags'),
-	'auto_device_restart'        => __('Device Restart', 'tags'),
-	'auto_cacti_version_changed' => __('Cacti Version Changed', 'tags'),
+	'manual'                        => __('Manual', 'tags'),
+	'auto_device_added'             => __('Device Added', 'tags'),
+	'auto_device_changed'           => __('Device Changed', 'tags'),
+	'auto_device_restart'           => __('Device Restart', 'tags'),
+	'auto_cacti_version_changed'    => __('Cacti Version Changed', 'tags'),
 	'auto_other'                    => __('Other Automatic Events', 'tags'),
 	'auto_data_source_reindexed'    => __('Data Source Reindexed', 'tags'),
 	'auto_poller_overrun'           => __('Poller Overrun', 'tags'),
@@ -130,13 +129,13 @@ $tags_fields = [
 		'none_value'    => __('None', 'tags'),
 	],
 	'tag_time' => [
-		'method' => 'textbox',
+		'method'        => 'textbox',
 		'friendly_name' => __('Date and time of tag', 'tags'),
-		'description' => __('The date / time for this tag.', 'tags'),
-		'value' => isset($data['tag_time']) ? date('Y-m-d H:i', $data['tag_time']) : '',
-		'default' => date('Y-m-d H:i', time()),
-		'max_length' => 22,
-		'size' => 22,
+		'description'   => __('The date / time for this tag.', 'tags'),
+		'value'         => isset($data['tag_time']) ? date('Y-m-d H:i', $data['tag_time']) : '',
+		'default'       => date('Y-m-d H:i', time()),
+		'max_length'    => 22,
+		'size'          => 22,
 	],
 	'color' => [
 		'friendly_name' => __('Choose color', 'tags'),
@@ -160,16 +159,16 @@ $tags_fields = [
 ];
 
 $settings['tags'] = [
-	'tags_display_header1' => [
+	'tags_display_header1'  => [
 		'friendly_name' => __('Settings', 'tags'),
 		'method'        => 'spacer',
 	],
 	'tags_retention' => [
 		'friendly_name' => __('Data Retention', 'tags'),
-		'description' => __('After this time, tags will be moved to the archive and will no longer be displayed', 'mactrack'),
-		'method' => 'drop_array',
-		'default' => '365',
-		'array' => $tags_retention,
+		'description'   => __('After this time, tags will be moved to the archive and will no longer be displayed', 'mactrack'),
+		'method'        => 'drop_array',
+		'default'       => '365',
+		'array'         => $tags_retention,
 	],
 	'tags_graph_limit' => [
 		'friendly_name' => __('Graph legend limit', 'tags'),

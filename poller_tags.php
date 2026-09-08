@@ -45,7 +45,7 @@ $dir = __DIR__;
 chdir($dir);
 
 if (strpos($dir, 'plugins') !== false) {
-        chdir('../../');
+	chdir('../../');
 }
 
 require('./include/cli_check.php');
@@ -74,7 +74,7 @@ if (cacti_sizeof($parms)) {
 		if (strpos($parameter, '=')) {
 			list($arg, $value) = explode('=', $parameter, 2);
 		} else {
-			$arg = $parameter;
+			$arg   = $parameter;
 			$value = '';
 		}
 
@@ -131,17 +131,17 @@ if (read_config_option('tags_cacti_version') == 'on') {
 	}
 }
 
-if (read_config_option("tags_poller_overrun") == 'on') {
+if (read_config_option('tags_poller_overrun') == 'on') {
 	$tags += plugin_tags_check_poller_events();
 }
 
-if (read_config_option("tags_plugin_state") == 'on') {
+if (read_config_option('tags_plugin_state') == 'on') {
 	$tags += plugin_tags_check_plugin_events();
 }
 
 $poller_end = microtime(true);
 
-$pstats = 'Time:' . round($poller_end-$poller_start, 2) . ', Tags:' . $tags;
+$pstats = 'Time:' . round($poller_end - $poller_start, 2) . ', Tags:' . $tags;
 
 cacti_log('TAGS STATS: ' . $pstats, false, 'SYSTEM');
 tags_debug($pstats);

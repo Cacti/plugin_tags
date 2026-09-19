@@ -15,7 +15,7 @@
 */
 
 /**
- * Base class for Evidence tests.
+ * Base class for Tags tests.
  *
  * Pest's functional tests do not need this directly, but any test that
  * prefers a class-based fixture can `uses(TestCase::class)` to get a clean

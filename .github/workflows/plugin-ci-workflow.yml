@@ -82,6 +82,7 @@ jobs:
         php-version: ${{ matrix.php }}
         extensions: intl, mysql, gd, ldap, gmp, xml, curl, json, mbstring, snmp
         ini-values: "post_max_size=256M, max_execution_time=60, date.timezone=America/New_York"
+        coverage: pcov
 
     - name: Check PHP version
       run: php -v
@@ -108,7 +109,6 @@ jobs:
     - name: Create MySQL Config
       run: |
         echo -e "[client]\nuser = root\npassword = cactiroot\nhost = 127.0.0.1\n" > ~/.my.cnf
-        cat ~/.my.cnf
 
     - name: Initialize Cacti Database
       env:

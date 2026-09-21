@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti \n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-09-21 11:45-0400\n"
+"POT-Creation-Date: 2026-09-21 12:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -18,211 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: setup.php:44
-msgid "Plugin Tags - view"
-msgstr ""
-
-#: setup.php:146
-msgid "Management"
-msgstr ""
-
-#: setup.php:146 setup.php:163 setup.php:196 tags.php:584 tags.php:716
-msgid "Tags"
-msgstr ""
-
-#: setup.php:170
-msgid "Tags Edit"
-msgstr ""
-
-#: setup.php:177
-msgid "Tags Save"
-msgstr ""
-
-#: tags.php:31
-msgid "Delete"
-msgstr ""
-
-#: tags.php:32
-msgid "Disable"
-msgstr ""
-
-#: tags.php:33 include/arrays.php:150
-msgid "Enable"
-msgstr ""
-
-#: tags.php:34
-msgid "Archive"
-msgstr ""
-
-#: tags.php:158
-msgid "Click 'Continue' to delete the following item."
-msgid_plural "Click 'Continue' to delete following items."
-msgstr[0] ""
-msgstr[1] ""
-
-#: tags.php:163 tags.php:172 tags.php:181 tags.php:190
-msgid "Cancel"
-msgstr ""
-
-#: tags.php:163 tags.php:172 tags.php:181 tags.php:190
-msgid "Continue"
-msgstr ""
-
-#: tags.php:167
-msgid "Click 'Continue' to disable the following item."
-msgid_plural "Click 'Continue' to delete following items."
-msgstr[0] ""
-msgstr[1] ""
-
-#: tags.php:176
-msgid "Click 'Continue' to enable the following item."
-msgid_plural "Click 'Continue' to delete following items."
-msgstr[0] ""
-msgstr[1] ""
-
-#: tags.php:185
-msgid "Click 'Continue' to archive the following item."
-msgid_plural "Click 'Continue' to archive following items."
-msgstr[0] ""
-msgstr[1] ""
-
-#: tags.php:316
-msgid "Tag [edit: %s]"
-msgstr ""
-
-#: tags.php:321
-msgid "Tag [new]"
-msgstr ""
-
-#: tags.php:375
-msgid "Start Date/Time Selector"
-msgstr ""
-
-#: tags.php:527
-msgid "You have to set primary device in Console - Configuration - Settings - Tags"
-msgstr ""
-
-#: tags.php:553 include/arrays.php:86
-msgid "Description"
-msgstr ""
-
-#: tags.php:557
-msgid "Tag time"
-msgstr ""
-
-#: tags.php:561 tags.php:676
-msgid "Target"
-msgstr ""
-
-#: tags.php:565 include/arrays.php:102
-msgid "Device"
-msgstr ""
-
-#: tags.php:569 include/arrays.php:113
-msgid "Graph"
-msgstr ""
-
-#: tags.php:573 include/arrays.php:123
-msgid "Site"
-msgstr ""
-
-#: tags.php:577 include/arrays.php:48
-msgid "Automatic"
-msgstr ""
-
-#: tags.php:607
-msgid "Yes"
-msgstr ""
-
-#: tags.php:607
-msgid "No"
-msgstr ""
-
-#: tags.php:622
-msgid "Empty"
-msgstr ""
-
-#: tags.php:658
-msgid "Tags Management"
-msgstr ""
-
-#: tags.php:670
-msgid "Search"
-msgstr ""
-
-#: tags.php:681 tags.php:701 tags.php:761
-msgid "Any"
-msgstr ""
-
-#: tags.php:696
-msgid "Type"
-msgstr ""
-
-#: tags.php:721
-msgid "Default"
-msgstr ""
-
-#: tags.php:741
-msgid "Go"
-msgstr ""
-
-#: tags.php:741
-msgid "Set/Refresh Filters"
-msgstr ""
-
-#: tags.php:742
-msgid "Clear"
-msgstr ""
-
-#: tags.php:742
-msgid "Clear Filters"
-msgstr ""
-
-#: tags.php:755
-msgid "Presets"
-msgstr ""
-
-#: tags.php:762
-msgid "Custom"
-msgstr ""
-
-#: tags.php:776
-msgid "From"
-msgstr ""
-
-#: tags.php:782
-msgid "Start Date Selector"
-msgstr ""
-
-#: tags.php:786
-msgid "To"
-msgstr ""
-
-#: tags.php:791
-msgid "End Date Selector"
-msgstr ""
-
 #: include/arrays.php:26
 msgid "Never"
 msgstr ""
 
 #: include/arrays.php:27 include/arrays.php:28
+#, php-format
 msgid "%d Days"
 msgstr ""
 
 #: include/arrays.php:29
+#, php-format
 msgid "%d Month"
 msgstr ""
 
 #: include/arrays.php:30 include/arrays.php:31
+#, php-format
 msgid "%d Months"
 msgstr ""
 
 #: include/arrays.php:32
+#, php-format
 msgid "%d Year"
 msgstr ""
 
 #: include/arrays.php:33
+#, php-format
 msgid "%d Years"
 msgstr ""
 
@@ -258,6 +79,10 @@ msgstr ""
 msgid "Pink"
 msgstr ""
 
+#: include/arrays.php:48 tags.php:577
+msgid "Automatic"
+msgstr ""
+
 #: include/arrays.php:49 include/arrays.php:59
 msgid "Manual"
 msgstr ""
@@ -270,7 +95,7 @@ msgstr ""
 msgid "All devices"
 msgstr ""
 
-#: include/arrays.php:60 include/functions.php:363
+#: include/arrays.php:60
 msgid "Device Added"
 msgstr ""
 
@@ -310,6 +135,10 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
+#: include/arrays.php:86 tags.php:553
+msgid "Description"
+msgstr ""
+
 #: include/arrays.php:87
 msgid "Tag message, max. length 64 chars"
 msgstr ""
@@ -322,6 +151,10 @@ msgstr ""
 msgid "Tag can be assigned with on or more devices"
 msgstr ""
 
+#: include/arrays.php:102 tags.php:565
+msgid "Device"
+msgstr ""
+
 #: include/arrays.php:103
 msgid "Select device"
 msgstr ""
@@ -330,12 +163,20 @@ msgstr ""
 msgid "Select a Device"
 msgstr ""
 
+#: include/arrays.php:113 tags.php:569
+msgid "Graph"
+msgstr ""
+
 #: include/arrays.php:114
 msgid "Select graph"
 msgstr ""
 
 #: include/arrays.php:119 include/arrays.php:129 include/arrays.php:185
 msgid "None"
+msgstr ""
+
+#: include/arrays.php:123 tags.php:573
+msgid "Site"
 msgstr ""
 
 #: include/arrays.php:124
@@ -356,6 +197,10 @@ msgstr ""
 
 #: include/arrays.php:145
 msgid "Select color for this tag"
+msgstr ""
+
+#: include/arrays.php:150 tags.php:33
+msgid "Enable"
 msgstr ""
 
 #: include/arrays.php:151
@@ -406,7 +251,8 @@ msgstr ""
 msgid "Host restart tag color"
 msgstr ""
 
-#: include/arrays.php:200 include/arrays.php:213 include/arrays.php:226 include/arrays.php:262
+#: include/arrays.php:200 include/arrays.php:213 include/arrays.php:226
+#: include/arrays.php:262
 msgid "Recommendation: Use a different color for each automatic tag"
 msgstr ""
 
@@ -507,17 +353,209 @@ msgid "Plugin state tag color"
 msgstr ""
 
 #: include/functions.php:295
+#, php-format
 msgid "Device save/changed, id %s"
 msgstr ""
 
 #: include/functions.php:357
+#, php-format
 msgid "Device added, id %s"
 msgstr ""
 
+#: include/functions.php:363
+msgid "Device added"
+msgstr ""
+
 #: include/functions.php:370
+#, php-format
 msgid "Restart, uptime was %s"
 msgstr ""
 
 #: include/functions.php:621
 msgid "Show tags for this graph"
+msgstr ""
+
+#: setup.php:44
+msgid "Plugin Tags - view"
+msgstr ""
+
+#: setup.php:146
+msgid "Management"
+msgstr ""
+
+#: setup.php:146 setup.php:163 setup.php:196 tags.php:584 tags.php:716
+msgid "Tags"
+msgstr ""
+
+#: setup.php:170
+msgid "Tags Edit"
+msgstr ""
+
+#: setup.php:177
+msgid "Tags Save"
+msgstr ""
+
+#: tags.php:31
+msgid "Delete"
+msgstr ""
+
+#: tags.php:32
+msgid "Disable"
+msgstr ""
+
+#: tags.php:34
+msgid "Archive"
+msgstr ""
+
+#: tags.php:158
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:163 tags.php:172 tags.php:181 tags.php:190
+msgid "Cancel"
+msgstr ""
+
+#: tags.php:163 tags.php:172 tags.php:181 tags.php:190
+msgid "Continue"
+msgstr ""
+
+#: tags.php:163
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:167
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:172
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:176
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:181
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:185
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:190
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tags.php:316
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr ""
+
+#: tags.php:321
+msgid "Tag [new]"
+msgstr ""
+
+#: tags.php:375
+msgid "Start Date/Time Selector"
+msgstr ""
+
+#: tags.php:527
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr ""
+
+#: tags.php:557
+msgid "Tag time"
+msgstr ""
+
+#: tags.php:561 tags.php:676
+msgid "Target"
+msgstr ""
+
+#: tags.php:607
+msgid "No"
+msgstr ""
+
+#: tags.php:607
+msgid "Yes"
+msgstr ""
+
+#: tags.php:622
+msgid "Empty"
+msgstr ""
+
+#: tags.php:658
+msgid "Tags Management"
+msgstr ""
+
+#: tags.php:670
+msgid "Search"
+msgstr ""
+
+#: tags.php:681 tags.php:701 tags.php:761
+msgid "Any"
+msgstr ""
+
+#: tags.php:696
+msgid "Type"
+msgstr ""
+
+#: tags.php:721
+msgid "Default"
+msgstr ""
+
+#: tags.php:741
+msgid "Go"
+msgstr ""
+
+#: tags.php:741
+msgid "Set/Refresh Filters"
+msgstr ""
+
+#: tags.php:742
+msgid "Clear"
+msgstr ""
+
+#: tags.php:742
+msgid "Clear Filters"
+msgstr ""
+
+#: tags.php:755
+msgid "Presets"
+msgstr ""
+
+#: tags.php:762
+msgid "Custom"
+msgstr ""
+
+#: tags.php:776
+msgid "From"
+msgstr ""
+
+#: tags.php:782
+msgid "Start Date Selector"
+msgstr ""
+
+#: tags.php:786
+msgid "To"
+msgstr ""
+
+#: tags.php:791
+msgid "End Date Selector"
 msgstr ""

@@ -119,15 +119,19 @@ if (!function_exists('db_fetch_row_prepared')) {
 	}
 }
 
+$GLOBALS['__test_db_fetch_cell_return'] = '';
+
 if (!function_exists('db_fetch_cell')) {
 	function db_fetch_cell($sql) {
-		return '';
+		return $GLOBALS['__test_db_fetch_cell_return'];
 	}
 }
 
+$GLOBALS['__test_db_fetch_cell_prepared_return'] = '';
+
 if (!function_exists('db_fetch_cell_prepared')) {
 	function db_fetch_cell_prepared($sql, $params = array()) {
-		return '';
+		return $GLOBALS['__test_db_fetch_cell_prepared_return'];
 	}
 }
 
@@ -151,6 +155,62 @@ if (!function_exists('api_plugin_db_add_column')) {
 
 if (!function_exists('api_plugin_db_table_create')) {
 	function api_plugin_db_table_create($plugin, $table, $data) {
+		$GLOBALS['__test_db_calls'][] = array('fn' => 'api_plugin_db_table_create', 'plugin' => $plugin, 'table' => $table, 'data' => $data);
+		return true;
+	}
+}
+
+$GLOBALS['__test_registered_hooks']  = array();
+$GLOBALS['__test_registered_realms'] = array();
+
+if (!function_exists('api_plugin_register_hook')) {
+	function api_plugin_register_hook($plugin, $hook, $function, $file, $enabled = 1) {
+		$GLOBALS['__test_registered_hooks'][] = array(
+			'plugin'   => $plugin,
+			'hook'     => $hook,
+			'function' => $function,
+			'file'     => $file,
+			'enabled'  => $enabled,
+		);
+		return true;
+	}
+}
+
+if (!function_exists('api_plugin_register_realm')) {
+	function api_plugin_register_realm($plugin, $file, $description, $enabled = 1) {
+		$GLOBALS['__test_registered_realms'][] = array(
+			'plugin'      => $plugin,
+			'file'        => $file,
+			'description' => $description,
+			'enabled'     => $enabled,
+		);
+		return true;
+	}
+}
+
+if (!function_exists('db_table_exists')) {
+	function db_table_exists($table) {
+		return false;
+	}
+}
+
+$GLOBALS['__test_current_page'] = '';
+
+if (!function_exists('get_current_page')) {
+	function get_current_page() {
+		return $GLOBALS['__test_current_page'];
+	}
+}
+
+if (!function_exists('test_set_current_page')) {
+	function test_set_current_page($page) {
+		$GLOBALS['__test_current_page'] = $page;
+	}
+}
+
+if (!function_exists('exec_background')) {
+	function exec_background($command, $args = '') {
+		$GLOBALS['__test_db_calls'][] = array('fn' => 'exec_background', 'command' => $command, 'args' => $args);
 		return true;
 	}
 }

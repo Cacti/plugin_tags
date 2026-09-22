@@ -34,9 +34,24 @@ beforeAll(function () {
 
 beforeEach(function () {
 	$GLOBALS['__test_db_calls'] = array();
+        $GLOBALS['__test_config_options']['path_php_binary'] = '/usr/bin/php';
 });
 
 it('dispatches the background poller with the php binary from config', function () {
+        plugin_tags_poller_bottom();
+
+        $execCalls = array_values(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+                return $call['fn'] === 'exec_background';
+        }));
+
+        expect($execCalls)->toHaveCount(1);
+        expect($execCalls[0]['command'])->toBe('/usr/bin/php');
+        expect($execCalls[0]['args'])->toContain('poller_tags.php');
+});
+
+it('falls back to a bare "php" command when path_php_binary is not configured', function () {
+	$GLOBALS['__test_config_options']['path_php_binary'] = '';
+
 	plugin_tags_poller_bottom();
 
 	$execCalls = array_values(array_filter($GLOBALS['__test_db_calls'], function ($call) {

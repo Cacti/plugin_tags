@@ -39,11 +39,19 @@ it('reports that the plugin always owns persistent data', function () {
 it('drops every owned table and settings row when removing data', function () {
 	expect(plugin_tags_remove_data())->toBeTrue();
 
-	$drops = array_filter($GLOBALS['__test_db_calls'], function ($call) {
+	$drops = array_values(array_map(function ($call) {
+		preg_match('/DROP TABLE IF EXISTS (\S+)/i', $call['sql'], $matches);
+		return $matches[1] ?? null;
+	}, array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'DROP TABLE') !== false;
-	});
+	})));
 
-	expect($drops)->toHaveCount(4);
+	expect($drops)->toEqualCanonicalizing(array(
+		'plugin_tags_event',
+		'plugin_tags_event_archive',
+		'plugin_tags_uptime',
+		'plugin_tags_state',
+	));
 
 	$settingsDeletes = array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute' && stripos($call['sql'], 'DELETE FROM settings') !== false;

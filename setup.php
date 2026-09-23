@@ -22,9 +22,18 @@
  +-------------------------------------------------------------------------+
 */
 
-/** Install the Tags plugin and register its hooks.
+/**
+ * Installs the tags plugin: registers its Cacti hooks (draw_navigation_text,
+ * config_arrays, config_settings, page_head, poller_bottom, device_remove,
+ * rrd_graph_graph_options, graph_buttons, graph_buttons_thumbnails,
+ * api_device_save, run_data_query), adds its tags.php realm, and creates
+ * its database tables. Invoked by Cacti's plugin architecture when an
+ * administrator installs this plugin from Console > Plugin Management.
  *
  * @return void
+ *
+ * @global array $config Cacti global configuration array; used to load
+ *                        this plugin's database.php.
  */
 function plugin_tags_install() {
 	global $config;
@@ -48,25 +57,36 @@ function plugin_tags_install() {
 	plugin_tags_setup_table();
 }
 
-/** Handle plugin uninstallation.
+/**
+ * Uninstalls the tags plugin. Invoked by Cacti's plugin architecture when
+ * an administrator uninstalls this plugin from Console > Plugin
+ * Management; currently a no-op (tables and settings are intentionally
+ * left in place unless plugin_tags_remove_data() is called separately).
  *
- * @return bool
+ * @return bool Always returns true.
  */
 function plugin_tags_uninstall() {
 	return true;
 }
 
-/** Report whether the plugin owns persistent data.
+/**
+ * Reports that this plugin owns persistent data (its database tables and
+ * settings) that can be cleaned up separately from uninstallation. Invoked
+ * by Cacti's plugin architecture on the Plugin Management page to decide
+ * whether to offer a "Remove Data" action.
  *
- * @return bool
+ * @return bool Always returns true.
  */
 function plugin_tags_has_data() {
 	return true;
 }
 
-/** Remove all plugin-owned data.
+/**
+ * Drops all of this plugin's database tables and deletes its settings.
+ * Invoked by Cacti's plugin architecture when an administrator chooses
+ * "Remove Data" for this plugin on the Plugin Management page.
  *
- * @return bool
+ * @return bool Always returns true.
  */
 function plugin_tags_remove_data() {
 	db_execute('DROP TABLE IF EXISTS plugin_tags_event');
@@ -79,9 +99,17 @@ function plugin_tags_remove_data() {
 	return true;
 }
 
-/** Check and update the plugin configuration.
+/**
+ * Verifies the plugin's configuration is up to date by loading the
+ * database helpers and triggering plugin_tags_upgrade(), then ensures the
+ * 'run_data_query' hook is registered (added after initial release, so
+ * older installs may be missing it). Invoked by Cacti's plugin architecture
+ * on relevant page loads, and from plugin_tags_config_arrays().
  *
- * @return bool
+ * @return bool Always returns true.
+ *
+ * @global array $config Cacti global configuration array; used to load
+ *                        this plugin's database.php.
  */
 function plugin_tags_check_config() {
 	global $config;
@@ -98,9 +126,17 @@ function plugin_tags_check_config() {
 	return true;
 }
 
-/** Return plugin metadata from INFO.
+/**
+ * Reads this plugin's INFO file and returns its [info] section. Used by
+ * Cacti's plugin architecture via the api_plugin_version hook, and
+ * internally by plugin_tags_upgrade()/display_version() to detect/report
+ * the plugin's version.
  *
- * @return array Plugin metadata.
+ * @return array The parsed [info] section of the plugin's INFO file (keys
+ *               such as name, version, author, description).
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the plugin's base path.
  */
 function plugin_tags_version() {
 	global $config;
@@ -110,9 +146,19 @@ function plugin_tags_version() {
 	return $info['info'];
 }
 
-/** Process tag events at the end of a polling cycle.
+/**
+ * Hook implementation for Cacti's 'poller_bottom' filter. On the primary
+ * poller, runs the poller/data-collector event checks inline, then always
+ * launches poller_tags.php as a background process to perform the
+ * remainder of this plugin's per-cycle work (host checks, version checks,
+ * archiving). Called by Cacti's poller via
+ * api_plugin_hook('poller_bottom', ...) at the end of each polling cycle.
  *
  * @return void
+ *
+ * @global array $config Cacti global configuration array; used to locate
+ *                        the PHP binary and this plugin's poller script,
+ *                        and to check the current poller_id.
  */
 function plugin_tags_poller_bottom() {
 	global $config;
@@ -136,9 +182,27 @@ function plugin_tags_poller_bottom() {
 	exec_background($command_string, $extra_args);
 }
 
-/** Add Tags entries to Cacti configuration arrays.
+/**
+ * Hook implementation for Cacti's 'config_arrays' filter. Adds the "Tags"
+ * entry under the Management section of Cacti's menu, and triggers a
+ * configuration check on the pages where it matters (index.php,
+ * plugins.php, tags.php). Called by Cacti core via
+ * api_plugin_hook('config_arrays', ...) while building the navigation
+ * menu.
  *
  * @return void
+ *
+ * @global array $menu                      Cacti's main navigation menu
+ *                                           array, extended here with this
+ *                                           plugin's entry.
+ * @global array $user_auth_realms          Cacti's registered realm map
+ *                                           (unused directly; declared for
+ *                                           parity with other config_arrays
+ *                                           hook implementations).
+ * @global array $user_auth_realm_filenames Cacti's realm-to-filename map
+ *                                           (unused directly; declared for
+ *                                           parity with other config_arrays
+ *                                           hook implementations).
  */
 function plugin_tags_config_arrays() {
 	global $menu, $user_auth_realms, $user_auth_realm_filenames;
@@ -152,11 +216,17 @@ function plugin_tags_config_arrays() {
 	}
 }
 
-/** Add Tags pages to the navigation hierarchy.
+/**
+ * Hook implementation for Cacti's 'draw_navigation_text' filter. Adds
+ * breadcrumb entries for tags.php's default, edit, and save views. Called
+ * by Cacti core via api_plugin_hook('draw_navigation_text', ...) while
+ * rendering the page breadcrumb trail.
  *
- * @param array $nav Navigation definitions.
+ * @param array $nav The existing breadcrumb map contributed by Cacti core
+ *                    and other plugins.
  *
- * @return array Updated navigation definitions.
+ * @return array The $nav array with this plugin's breadcrumb entries
+ *               added.
  */
 function plugin_tags_draw_navigation_text($nav) {
 	$nav['tags.php:'] = [
@@ -184,9 +254,20 @@ function plugin_tags_draw_navigation_text($nav) {
 }
 
 
-/** Register Tags settings with Cacti.
+/**
+ * Hook implementation for Cacti's 'config_settings' filter. Loads this
+ * plugin's option arrays and registers the "Tags" settings tab. Called by
+ * Cacti core via api_plugin_hook('config_settings', ...) while building
+ * the Settings page.
  *
  * @return void
+ *
+ * @global array $config   Cacti global configuration array; used to load
+ *                          this plugin's include/arrays.php.
+ * @global array $tabs     Cacti's registered Settings page tabs, extended
+ *                          here with the 'tags' tab label.
+ * @global array $settings Cacti's registered Settings page fields (unused
+ *                          directly here; populated via include/arrays.php).
  */
 function plugin_tags_config_settings() {
 	global $config, $tabs, $settings;
@@ -196,9 +277,16 @@ function plugin_tags_config_settings() {
 	$tabs['tags'] = __('Tags', 'tags');
 }
 
-/** Add plugin assets to the page header.
+/**
+ * Hook implementation for Cacti's 'page_head' filter. Includes this
+ * plugin's stylesheet on every page. Called by Cacti core via
+ * api_plugin_hook('page_head', ...) while rendering the page <head>
+ * section.
  *
- * @return void
+ * @return void Outputs HTML directly.
+ *
+ * @global array $config Cacti global configuration array; used to build
+ *                        the stylesheet's URL.
  */
 function plugin_tags_page_head() {
 	global $config;

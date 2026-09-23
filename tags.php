@@ -84,9 +84,20 @@ switch (get_request_var('action')) {
 		break;
 }
 
-/** Execute or confirm bulk tag actions.
+/**
+ * Handles the bulk-actions form for the Tags list (delete/disable/enable/
+ * archive). On first display, renders the confirmation dialog listing the
+ * selected tags; once confirmed, applies the chosen action to each
+ * selected row in either the active or archive table. Invoked from this
+ * file's dispatcher when the request's 'action' is 'actions'.
  *
- * @return void
+ * @return void Either redirects back to this page after applying the
+ *              action, or prints the confirmation dialog and returns
+ *              nothing.
+ *
+ * @global array $tags_actions_menu Map of bulk-action ids to their display
+ *                                  labels, used to populate the actions
+ *                                  dropdown/confirmation title.
  */
 function form_actions() {
 	global $tags_actions_menu;
@@ -213,9 +224,17 @@ function form_actions() {
 	bottom_footer();
 }
 
-/** Validate and save a tag from the edit form.
+/**
+ * Validates and saves a single tag (description, color, target scope, and
+ * associated device/graph/site) from the submitted edit form. Invoked from
+ * this file's dispatcher when the request's 'action' is 'save'.
  *
- * @return void
+ * @return void Redirects back to this page; does not return a value.
+ *
+ * @global array $tags_colors The plugin's valid tag color palette, used to
+ *                             validate/default the submitted color.
+ * @global array $tags_target The plugin's valid target-scope values, used
+ *                             to validate the submitted target.
  */
 function form_save() {
 	global $tags_colors, $tags_target;
@@ -295,9 +314,18 @@ function form_save() {
 	exit;
 }
 
-/** Render the tag edit form.
+/**
+ * Renders the add/edit form for a single tag, pre-populating its fields
+ * (and resolving the display name of its associated device/graph/site)
+ * when editing an existing tag. Invoked from this file's dispatcher when
+ * the request's 'action' is 'edit'.
  *
- * @return void
+ * @return void Outputs the edit form HTML directly.
+ *
+ * @global array $tags_fields The edit form's field definitions, populated
+ *                             here with the tag's current values.
+ * @global array $tags_colors The plugin's valid tag color palette, used to
+ *                             populate the color field's options.
  */
 function tags_edit() {
 	global $tags_fields, $tags_colors;
@@ -420,7 +448,10 @@ function tags_edit() {
 }
 
 
-/** Validate and persist list filter request variables.
+/**
+ * Validates and persists (in session) the Tags list's filter request
+ * variables (timespan, rows, page, filter, sort, target, type). Called
+ * from tags_list() before the list is queried.
  *
  * @return void
  */
@@ -470,9 +501,31 @@ function request_validation() {
 	validate_store_request_vars($filters, 'sess_tags_event');
 }
 
-/** Render the filtered tag list.
+/**
+ * Renders the main Tags list page: validates the stored filters, draws the
+ * filter toolbar, queries the active (or archived) tag events matching the
+ * selected device/target/type/time-range filters, and prints the
+ * paginated, sortable results table. Invoked from this file's dispatcher
+ * for the default (no 'action') request.
  *
- * @return void
+ * @return void|bool Outputs the list page HTML directly; returns true
+ *                    early (printing a configuration notice instead) when
+ *                    filtering by the 'primary' target with no primary
+ *                    device configured.
+ *
+ * @global array $config             Cacti global configuration array;
+ *                                    used to load timespan_settings.php.
+ * @global array $tags_actions_menu  Map of bulk-action ids to their
+ *                                    display labels, used to populate the
+ *                                    actions dropdown.
+ * @global array $tags_colors        The plugin's tag color palette, used
+ *                                    to render each row's color swatch.
+ * @global array $tags_target        Map of target-scope values to display
+ *                                    labels, used to render each row's
+ *                                    target column.
+ * @global array $tags_type          Reserved/declared for parity with
+ *                                    other list-page functions; not used
+ *                                    directly here.
  */
 function tags_list() {
 	global $config, $tags_actions_menu, $tags_colors, $tags_target, $tags_type;
@@ -640,9 +693,25 @@ function tags_list() {
 	form_end();
 }
 
-/** Render tag list filters and time-span controls.
+/**
+ * Draws the Tags list's filter toolbar (search box, target/type/timespan
+ * selectors, rows-per-page selector) and the client-side JS/date pickers
+ * that drive it. Called from tags_list() before the list table itself is
+ * rendered.
  *
- * @return void
+ * @return void Outputs HTML and JavaScript directly.
+ *
+ * @global array $item_rows        Rows-per-page options offered by Cacti
+ *                                  core, used to populate the 'rows'
+ *                                  select list.
+ * @global array $tags_target      Map of target-scope values to display
+ *                                  labels, used to populate the target
+ *                                  filter.
+ * @global array $tags_type        Map of type values to display labels,
+ *                                  used to populate the type filter.
+ * @global array $graph_timespans  Cacti's predefined graph timespan
+ *                                  options, used to populate the timespan
+ *                                  selector.
  */
 function tags_filter() {
 	global $item_rows, $tags_target, $tags_type, $graph_timespans;
@@ -933,11 +1002,17 @@ function tags_filter() {
 }
 
 
-/** Return sites matching an AJAX search request.
+/**
+ * Returns Cacti sites matching an autocomplete search term as a JSON array,
+ * for the site-selection field on the tag edit form. Invoked from this
+ * file's dispatcher when the request's 'action' is 'ajax_sites'.
  *
- * @param string $sql_where Optional SQL WHERE clause.
+ * @param string $sql_where Optional SQL WHERE clause to further restrict
+ *                           the site list; defaults to ''.
  *
- * @return array|null Empty array for an unauthorized user; otherwise null.
+ * @return array Empty array (returned, not printed) for an unauthorized
+ *               user; otherwise prints the matching sites as JSON and
+ *               returns no explicit value.
  */
 function tags_get_ajax_sites($sql_where = '') {
 	$user_id = $_SESSION['sess_user_id'];

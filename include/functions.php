@@ -23,9 +23,14 @@
 */
 
 /**
- * Check if debug is enabled
+ * Checks whether selective plugin debugging is enabled for 'tags' via the
+ * 'selective_plugin_debug' setting and updates the $debug flag used by
+ * tags_debug(). Called once near the top of poller_tags.php's main flow.
  *
  * @return void
+ *
+ * @global bool $debug Set to true when debugging is enabled for this
+ *                      plugin.
  */
 function tags_check_debug() {
 	global $debug;
@@ -40,9 +45,12 @@ function tags_check_debug() {
 }
 
 /**
- * Determine whether an event type represents an automatic tag.
+ * Determines whether a tag event's type represents an automatically
+ * generated tag (types prefixed 'auto_') as opposed to a manually created
+ * one. Called from plugin_tags_rrd_graph_graph_options() while grouping
+ * tags for the graph legend, and from tags.php's list view.
  *
- * @param string $type Event type.
+ * @param string $type The tag event's type value.
  *
  * @return bool True for automatic event types.
  */
@@ -50,11 +58,17 @@ function tags_is_automatic_type($type) {
 	return strpos((string) $type, 'auto_') === 0;
 }
 
-/** Write a plugin debug message when selective debugging is enabled.
+/**
+ * Writes $message to the Cacti log, prefixed 'DEBUG:', when selective
+ * debugging is enabled for this plugin. Called throughout poller_tags.php
+ * wherever verbose diagnostic output is useful.
  *
- * @param string $message Message to log.
+ * @param string $message The message to log when debugging is enabled.
  *
  * @return void
+ *
+ * @global bool $debug Whether debugging is enabled, set by
+ *                      tags_check_debug().
  */
 function tags_debug($message = '') {
 	global $debug;
@@ -64,11 +78,16 @@ function tags_debug($message = '') {
 	}
 }
 
-/** Read a persisted plugin state value.
+/**
+ * Reads a persisted state value from the plugin_tags_state table, used to
+ * detect changes between poller runs (e.g. reindex hashes, poller/plugin
+ * status flags). Called throughout this file's change-detection functions
+ * before comparing against a newly computed state.
  *
- * @param string $key State key.
+ * @param string $key The state_key to look up.
  *
- * @return string|null Stored value, or null when unavailable.
+ * @return string|null The stored state_value, or null when the state
+ *                      table doesn't exist or the key has no value.
  */
 function tags_state_get($key) {
 	if (!db_table_exists('plugin_tags_state')) {
@@ -80,10 +99,14 @@ function tags_state_get($key) {
 	return $value === false ? null : $value;
 }
 
-/** Persist a plugin state value.
+/**
+ * Persists a state value to the plugin_tags_state table (inserting or
+ * updating as needed), used to detect changes between poller runs. Called
+ * throughout this file's change-detection functions after evaluating the
+ * current state.
  *
- * @param string $key   State key.
- * @param string $value State value.
+ * @param string $key   The state_key to store.
+ * @param string $value The state_value to store.
  *
  * @return void
  */
@@ -98,11 +121,19 @@ function tags_state_set($key, $value) {
 		[$key, $value]);
 }
 
-/** Detect data-query index changes and create a reindex tag.
+/**
+ * Hook implementation for Cacti's 'run_data_query' filter. Compares the
+ * current set of SNMP indexes for a data query against the previously
+ * recorded state and, when they differ, creates an
+ * "auto_data_source_reindexed" tag noting the index count change. Called
+ * by Cacti core via api_plugin_hook('run_data_query', ...) after a data
+ * query re-index completes.
  *
- * @param array $data Data-query hook arguments.
+ * @param array $data Hook payload; must include 'host_id' and
+ *                     'snmp_query_id' for this function to act.
  *
- * @return array Unmodified hook arguments.
+ * @return array The unmodified $data array (this hook does not modify its
+ *               payload).
  */
 function plugin_tags_data_query_reindexed($data) {
 	if (read_config_option('tags_data_source_reindexed') != 'on' ||
@@ -132,11 +163,19 @@ function plugin_tags_data_query_reindexed($data) {
 	return $data;
 }
 
-/** Detect poller overruns and data-collector state transitions.
+/**
+ * Detects poller-interval overruns and data-collector up/down state
+ * transitions for every enabled poller, creating tags for newly-detected
+ * transitions. Runs only on the primary poller (poller_id 1) and only when
+ * a primary device is configured. Called from poller_tags.php's main flow
+ * when the 'tags_poller_overrun' or 'tags_data_collector_status' settings
+ * are enabled.
  *
- * @return int Number of generated tags.
+ * @return int The number of tags created during this run.
+ *
+ * @global array $config Cacti global configuration array; used to check
+ *                        the current poller_id.
  */
-
 function plugin_tags_check_poller_events() {
 	global $config;
 
@@ -198,17 +237,23 @@ function plugin_tags_check_poller_events() {
 }
 
 /**
- * Check plugin status and version changes.
+ * Monitors all installed plugins and generates tag events when a plugin is
+ * enabled, disabled, or has its version changed.
  *
  * Monitors all installed plugins and generates tag events when:
  *   - a plugin is enabled (status changes to 1),
  *   - a plugin is disabled (status changes from 1),
  *   - a plugin version changes.
  *
- * Previous plugin states are stored in the plugin_tags_state table.
- * This function is executed only by the primary poller.
+ * Previous plugin states are stored in the plugin_tags_state table. Runs
+ * only on the primary poller (poller_id 1) and only when a primary device
+ * is configured. Called from poller_tags.php's main flow when the
+ * 'tags_plugin_state' setting is enabled.
  *
  * @return int Number of generated tags.
+ *
+ * @global array $config Cacti global configuration array; used to check
+ *                        the current poller_id.
  */
 
 function plugin_tags_check_plugin_events() {
@@ -282,11 +327,15 @@ function plugin_tags_check_plugin_events() {
 
 
 /**
- * Create automatic tag when device is modified/saved
+ * Hook implementation for Cacti's 'api_device_save' filter. Creates an
+ * "auto_device_changed" tag for the saved device when the
+ * 'tags_device_save' setting is enabled. Called by Cacti core via
+ * api_plugin_hook('api_device_save', ...) after a device is saved.
  *
- * @param array $device Device values being saved.
+ * @param array $device The device values being saved; must include 'id'.
  *
- * @return array
+ * @return array The unmodified $device array (this hook does not modify
+ *               its payload).
  */
 
 function plugin_tags_device_save($device) {
@@ -300,9 +349,13 @@ function plugin_tags_device_save($device) {
 
 
 /**
- * Check if Cacti version has changed and create tag if it has
+ * Compares the running Cacti version against the previously recorded
+ * version and creates an "auto_cacti_version_changed" tag when they
+ * differ, then records the current version for next time. Called from
+ * poller_tags.php's main flow when the 'tags_cacti_version' setting is
+ * enabled.
  *
- * @return bool true if tag was created, false otherwise
+ * @return bool True if a tag was created; false otherwise.
  */
 function plugin_tags_check_version() {
 
@@ -322,9 +375,16 @@ function plugin_tags_check_version() {
 
 
 /**
- * Check hosts for creating automatic tags
+ * Checks every enabled host for newly-added devices and SNMP uptime
+ * restarts, creating "auto_device_added"/"auto_device_restart" tags as
+ * appropriate, then records each host's current uptime for the next
+ * comparison. Called from poller_tags.php's main flow on every run.
  *
- * @return void
+ * @return int The number of tags created during this run.
+ *
+ * @global array $config Cacti global configuration array (unused directly
+ *                        here; declared for parity with other check_*
+ *                        functions in this file).
  */
 function plugin_tags_check_hosts() {
 	global $config;
@@ -384,9 +444,12 @@ function plugin_tags_check_hosts() {
 
 
 /**
- * Remove tags related to device
+ * Hook implementation for Cacti's 'device_remove' filter. Deletes all tag
+ * events, archived tag events, and uptime records associated with the
+ * removed device. Called by Cacti core via
+ * api_plugin_hook('device_remove', ...) after a device is deleted.
  *
- * @param array $ids device ids that will be removed
+ * @param int $ids The host_id of the device being removed.
  *
  * @return void
  */
@@ -398,11 +461,26 @@ function plugin_tags_device_remove($ids) {
 
 
 /**
- * Add tags to graph. If a tag was created a few seconds ago, it may not be displayed immediately, but only after the next polling cycle. This is due to the graph’s time limit.
+ * Hook implementation for Cacti's 'rrd_graph_graph_options' filter. Adds
+ * VRULE markers and a legend listing tags relevant to the graph being
+ * rendered (matching by primary/device/site/graph/all target and the
+ * graph's time range), grouping automatic tags together once the legend
+ * limit is exceeded. Called by Cacti core via
+ * api_plugin_hook('rrd_graph_graph_options', ...) while building a graph's
+ * RRDtool options. If a tag was created a few seconds ago, it may not be
+ * displayed immediately, but only after the next polling cycle; this is
+ * due to the graph's time limit.
  *
- * @param array $data graph data that we will modify
+ * @param array $data The graph's RRDtool option data, including 'start',
+ *                     'end', and 'graph_id'.
  *
- * @return array Modified graph data.
+ * @return array The $data array with tag VRULEs/legend appended to
+ *               'graph_opts' when matching tags exist.
+ *
+ * @global array $config      Cacti global configuration array; used to
+ *                             load this plugin's color array.
+ * @global array $tags_colors The plugin's tag color palette, loaded from
+ *                             include/arrays.php.
  */
 function plugin_tags_rrd_graph_graph_options($data) {
 	global $config, $tags_colors;
@@ -604,11 +682,20 @@ function plugin_tags_rrd_graph_graph_options($data) {
 }
 
 
-/** Render the Tags shortcut next to a graph.
+/**
+ * Hook implementation for Cacti's 'graph_buttons'/'graph_buttons_thumbnails'
+ * filters. Prints a link/icon that opens tags.php filtered to the current
+ * graph's device. Called by Cacti core via
+ * api_plugin_hook('graph_buttons'/'graph_buttons_thumbnails', ...) while
+ * rendering a graph's action buttons.
  *
- * @param array $data Graph button hook data.
+ * @param array $data Hook payload; $data[1]['local_graph_id'] identifies
+ *                     the current graph.
  *
- * @return void
+ * @return void Outputs HTML directly.
+ *
+ * @global array $config Cacti global configuration array; used to build
+ *                        the tags.php link URL.
  */
 function plugin_tags_graph_button($data) {
 	global $config;
@@ -623,16 +710,28 @@ function plugin_tags_graph_button($data) {
 }
 
 
-/** Create a tag event. For some tags, the target may change beforeFor some tags, the target may change before save.
+/**
+ * Inserts a new tag event row. For certain automatic tag types, the target
+ * may be redirected to 'all' or the configured primary device (per the
+ * 'tags_automatic_how' setting) before saving, to prevent duplicated
+ * automatic tags across every device. Called throughout this file's
+ * change-detection functions (plugin_tags_check_*, plugin_tags_device_*)
+ * whenever a tag-worthy event is detected.
  *
- * @param string $description Tag description.
- * @param string $target      Target type.
- * @param int    $host_id     Device ID.
- * @param int    $graph_id    Graph ID.
- * @param string $color       Six-character RGB color.
- * @param string $type        Event type.
+ * @param string $description The tag's description text.
+ * @param string $target      The tag's target scope ('all', 'primary',
+ *                             'device', 'graph', or 'site').
+ * @param int    $host_id     The associated host id, or 0 when not
+ *                             applicable.
+ * @param int    $graph_id    The associated graph id, or 0 when not
+ *                             applicable.
+ * @param string $color       The tag's six-character RGB color.
+ * @param string $type        The tag's event type (e.g. 'manual' or an
+ *                             'auto_*' type).
  *
- * @return void
+ * @return bool True once the tag has been inserted, or false when an
+ *              automatic tag needed a primary device that isn't
+ *              configured.
  */
 function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $color, $type) {
 
@@ -675,10 +774,18 @@ function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $col
 }
 
 
-/** This feature ensures that when a user changes a setting (such as the tag colour or primary device), the existing tags are automatically updated.
- *  Starts automatically each poller run.
+/**
+ * Propagates changes to automatic-tag color and primary-device settings
+ * onto already-created tag events, so existing tags stay consistent with
+ * the user's latest configuration (e.g. re-coloring existing tags of a
+ * type when its configured color changes). Runs automatically on every
+ * poller run; called from poller_tags.php's main flow.
  *
- * @return bool True after settings are processed.
+ * @return bool True after settings changes have been processed.
+ *
+ * @global array $settings Cacti's registered Settings page fields (unused
+ *                          directly here; declared for parity with other
+ *                          settings-related functions).
  */
 function plugin_tags_settings_update() {
 	global $settings;
@@ -750,9 +857,14 @@ function plugin_tags_settings_update() {
 }
 
 
-/** Move expired tag events to the archive.
+/**
+ * Finds tag events older than the configured retention period
+ * ('tags_retention' days) and moves them to the archive table. Called
+ * from poller_tags.php's main flow on every run; a retention of 0 disables
+ * archiving entirely.
  *
- * @return bool|null True when archiving is disabled; otherwise null.
+ * @return bool|void True when archiving is disabled (retention is 0);
+ *                    otherwise no explicit return value.
  */
 function plugin_tags_archive() {
 
@@ -776,9 +888,13 @@ function plugin_tags_archive() {
 }
 
 
-/** Move selected tag events to the archive.
+/**
+ * Moves the given tag events from plugin_tags_event into
+ * plugin_tags_event_archive, in batches of 50, then deletes them from the
+ * active table. Called from plugin_tags_archive() for expired events and
+ * from tags.php's form_actions() for manually-archived events.
  *
- * @param array $ids Tag event IDs.
+ * @param array $ids The plugin_tags_event.id values to archive.
  *
  * @return void
  */

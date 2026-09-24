@@ -1010,9 +1010,10 @@ function tags_filter() {
  * @param string $sql_where Optional SQL WHERE clause to further restrict
  *                           the site list; defaults to ''.
  *
- * @return array Empty array (returned, not printed) for an unauthorized
- *               user; otherwise prints the matching sites as JSON and
- *               returns no explicit value.
+ * @return array|null Empty array (returned, not printed) for an
+ *                     unauthorized user; otherwise prints the matching
+ *                     sites as JSON and returns null (falls off the end
+ *                     of the function without an explicit return).
  */
 function tags_get_ajax_sites($sql_where = '') {
 	$user_id = $_SESSION['sess_user_id'];

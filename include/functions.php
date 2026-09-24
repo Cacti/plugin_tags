@@ -474,8 +474,9 @@ function plugin_tags_device_remove($ids) {
  * @param array $data The graph's RRDtool option data, including 'start',
  *                     'end', and 'graph_id'.
  *
- * @return array The $data array with tag VRULEs/legend appended to
- *               'graph_opts' when matching tags exist.
+ * @return array The $data array with a 'Tags' header appended to
+ *               'graph_opts' and the tag VRULEs/legend entries added to
+ *               'txt_graph_items' when matching tags exist.
  *
  * @global array $config      Cacti global configuration array; used to
  *                             load this plugin's color array.
@@ -803,17 +804,14 @@ function plugin_tags_settings_update() {
 	];
 
 	$automatic_types = [
-		'tags_cacti_version_color'         => 'auto_cacti_version_changed',
-		'tags_device_save_color'           => 'auto_device_changed',
-		'tags_host_added_color'            => 'auto_device_added',
-		'tags_host_restart_color'          => 'auto_device_restart',
-		'tags_data_source_reindexed_color' => 'auto_data_source_reindexed',
-		'tags_poller_overrun_color'        => 'auto_poller_overrun',
-		'tags_data_collector_status_color' => 'auto_data_collector_down',
-		'tags_data_collector_status_color' => 'auto_data_collector_recovered',
-		'tags_plugin_state_color'          => 'auto_plugin_enabled',
-		'tags_plugin_state_color'          => 'auto_plugin_disabled',
-		'tags_plugin_state_color'          => 'auto_plugin_updated',
+		'tags_cacti_version_color'         => ['auto_cacti_version_changed'],
+		'tags_device_save_color'           => ['auto_device_changed'],
+		'tags_host_added_color'            => ['auto_device_added'],
+		'tags_host_restart_color'          => ['auto_device_restart'],
+		'tags_data_source_reindexed_color' => ['auto_data_source_reindexed'],
+		'tags_poller_overrun_color'        => ['auto_poller_overrun'],
+		'tags_data_collector_status_color' => ['auto_data_collector_down', 'auto_data_collector_recovered'],
+		'tags_plugin_state_color'          => ['auto_plugin_enabled', 'auto_plugin_disabled', 'auto_plugin_updated'],
 	];
 
 	foreach ($tags_sett as $ts) {
@@ -836,11 +834,13 @@ function plugin_tags_settings_update() {
 
 					default:
 						if (isset($automatic_types[$ts])) {
-							db_execute_prepared('UPDATE plugin_tags_event
-								SET color = ?
-								WHERE type = ? AND
-								color = ?',
-								[$act, $automatic_types[$ts], $old]);
+							foreach ($automatic_types[$ts] as $automatic_type) {
+								db_execute_prepared('UPDATE plugin_tags_event
+									SET color = ?
+									WHERE type = ? AND
+									color = ?',
+									[$act, $automatic_type, $old]);
+							}
 						}
 
 						set_config_option($ts . '_old', $act);

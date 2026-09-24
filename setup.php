@@ -48,7 +48,7 @@ function plugin_tags_install() {
 	api_plugin_register_hook('tags', 'graph_buttons',            'plugin_tags_graph_button',            'include/functions.php');
 	api_plugin_register_hook('tags', 'graph_buttons_thumbnails', 'plugin_tags_graph_button',            'include/functions.php');
 	api_plugin_register_hook('tags', 'api_device_save',          'plugin_tags_device_save',             'include/functions.php');
-	api_plugin_register_hook('tags', 'run_data_query',           'plugin_tags_data_query_reindexed',     'include/functions.php');
+	api_plugin_register_hook('tags', 'run_data_query',           'plugin_tags_data_query_reindexed',    'include/functions.php');
 
 	api_plugin_register_realm('tags', 'tags.php', __('Plugin Tags - view', 'tags'), 1);
 

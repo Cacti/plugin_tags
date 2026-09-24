@@ -451,12 +451,14 @@ function plugin_tags_check_hosts() {
  *
  * @param int $ids The host_id of the device being removed.
  *
- * @return void
+ * @return int Device ID
  */
 function plugin_tags_device_remove($ids) {
 	db_execute_prepared('DELETE FROM plugin_tags_event WHERE host_id = ?', [$ids]);
 	db_execute_prepared('DELETE FROM plugin_tags_event_archive WHERE host_id = ?', [$ids]);
 	db_execute_prepared('DELETE FROM plugin_tags_uptime WHERE host_id = ?', [$ids]);
+
+	return ($ids);
 }
 
 

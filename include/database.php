@@ -23,9 +23,16 @@
 */
 
 /**
- * Upgrade the tags plugin
+ * Compares the plugin's INFO-file version against the version recorded in
+ * plugin_config, updates the stored value, and ensures the state table
+ * exists. Invoked by Cacti's plugin architecture (via
+ * plugin_tags_check_config()) to bring an existing installation up to
+ * date.
  *
- * @return void
+ * @return bool Always returns true.
+ *
+ * @global array $config Cacti global configuration array; used to load
+ *                        this plugin's functions.php.
  */
 function plugin_tags_upgrade() {
 	global $config;
@@ -44,7 +51,10 @@ function plugin_tags_upgrade() {
 }
 
 /**
- * Setup the database tables for the tags plugin
+ * Creates the plugin_tags_event, plugin_tags_event_archive, and
+ * plugin_tags_uptime database tables used to store active/archived tag
+ * events and device uptime, then ensures the state table exists. Called
+ * once from plugin_tags_install() when the plugin is first installed.
  *
  * @return void
  */
@@ -93,7 +103,10 @@ function plugin_tags_setup_table() {
 	plugin_tags_setup_state_table();
 }
 
-/** Create the state table used for transition detection.
+/**
+ * Creates the plugin_tags_state database table, if it doesn't already
+ * exist, used to persist state-transition detection data between poller
+ * runs. Called from plugin_tags_setup_table() and plugin_tags_upgrade().
  *
  * @return void
  */

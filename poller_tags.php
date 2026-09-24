@@ -155,7 +155,9 @@ exit(0);
 
 
 /**
- * Display the Tags poller version.
+ * Prints this utility's name and version to standard output. Called from
+ * the main CLI flow in this file for the --version option and at the top
+ * of display_help().
  *
  * @return void
  */
@@ -171,7 +173,9 @@ function display_version() {
 }
 
 /**
- * Display command-line usage information.
+ * Prints this utility's command-line usage/help text to standard output.
+ * Called from the main CLI flow in this file for the --help option and
+ * when an invalid argument is supplied.
  *
  * @return void
  */
@@ -186,7 +190,11 @@ function display_help() {
 
 
 /**
- * Handle a process signal and terminate the poller cleanly.
+ * Handles SIGTERM/SIGINT/SIGUSR1 by logging a shutdown warning,
+ * unregistering this process (unless --force was given), signaling any
+ * running child poller processes to stop, and exiting; all other signals
+ * are ignored. Registered as this script's signal handler via
+ * pcntl_signal() when the pcntl extension is available.
  *
  * @param int $signo The signal that was thrown by the interface.
  *

@@ -49,12 +49,14 @@ if (strpos($dir, 'plugins') !== false) {
 }
 
 require('./include/cli_check.php');
+
+/** @var array<string,mixed> $config */
 require_once($config['base_path'] . '/plugins/tags/include/functions.php');
 require_once($config['base_path'] . '/lib/poller.php');
 
 error_reporting(E_ALL);
 
-/* record the start time */
+// record the start time
 $poller_start = microtime(true);
 $start_date   = date('Y-m-d H:i:s');
 $force        = false;
@@ -65,21 +67,20 @@ global $config, $database_default;
 
 $run_from_poller = true;
 
-/* process calling arguments */
+// process calling arguments
 $parms = $_SERVER['argv'];
 array_shift($parms);
 
 if (cacti_sizeof($parms)) {
-	foreach($parms as $parameter) {
+	foreach ($parms as $parameter) {
 		if (strpos($parameter, '=')) {
-			list($arg, $value) = explode('=', $parameter, 2);
+			[$arg, $value] = explode('=', $parameter, 2);
 		} else {
 			$arg   = $parameter;
 			$value = '';
 		}
 
 		switch($arg) {
-
 			case '--force':
 				$force = true;
 
@@ -111,7 +112,7 @@ tags_check_debug();
 
 plugin_tags_settings_update();
 
-/* silently end if the registered process is still running, or process table missing */
+// silently end if the registered process is still running, or process table missing
 if (function_exists('register_process_start')) {
 	if (!register_process_start('tags', 'master', $config['poller_id'])) {
 		tags_debug('Another Tags Process Still Running');
@@ -153,7 +154,6 @@ if (function_exists('unregister_process')) {
 
 exit(0);
 
-
 /**
  * Prints this utility's name and version to standard output. Called from
  * the main CLI flow in this file for the --version option and at the top
@@ -161,7 +161,7 @@ exit(0);
  *
  * @return void
  */
-function display_version() {
+function display_version(): void {
 	global $config;
 
 	if (!function_exists('plugin_tags_version')) {
@@ -179,7 +179,7 @@ function display_version() {
  *
  * @return void
  */
-function display_help() {
+function display_help(): void {
 	display_version();
 
 	print PHP_EOL;
@@ -187,7 +187,6 @@ function display_help() {
 	print '  --force       - force execution, e.g. for testing' . PHP_EOL;
 	print '  --debug       - debug execution, e.g. for testing' . PHP_EOL . PHP_EOL;
 }
-
 
 /**
  * Handles SIGTERM/SIGINT/SIGUSR1 by logging a shutdown warning,
@@ -200,8 +199,8 @@ function display_help() {
  *
  * @return void
  */
-function sig_handler($signo) {
-	global $force, $poller_id, $taskname;
+function sig_handler(int $signo): void {
+	global $force, $config;
 
 	switch ($signo) {
 		case SIGTERM:
@@ -210,14 +209,14 @@ function sig_handler($signo) {
 			cacti_log("WARNING: Tags Poller 'master' is shutting down by signal!", false, 'TAGS');
 
 			if (!$force) {
-				unregister_process('task', 'master', $poller_id, getmypid());
+				unregister_process('tags', 'master', (int) $config['poller_id'], (int) getmypid());
 			}
 
 			$processes = db_fetch_assoc_prepared('SELECT *
 				FROM processes
-				WHERE tasktype = "task"
+				WHERE tasktype = "tags"
 				AND taskname = ?',
-				[$taskname]);
+				['child:' . $config['poller_id']]);
 
 			cacti_log('Signaling ' . cacti_sizeof($processes), false, 'TAGS');
 
@@ -229,7 +228,7 @@ function sig_handler($signo) {
 						WHERE pid = ?
 						AND tasktype = "tags"
 						AND taskname = ?',
-						[$p['pid'], "child:$poller_id"]);
+						[$p['pid'], 'child:' . $config['poller_id']]);
 				}
 			}
 
@@ -238,5 +237,3 @@ function sig_handler($signo) {
 			// ignore all other signals
 	}
 }
-
-

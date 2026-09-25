@@ -32,7 +32,7 @@
  * @global bool $debug Set to true when debugging is enabled for this
  *                      plugin.
  */
-function tags_check_debug() {
+function tags_check_debug(): void {
 	global $debug;
 
 	if (!$debug) {
@@ -54,7 +54,7 @@ function tags_check_debug() {
  *
  * @return bool True for automatic event types.
  */
-function tags_is_automatic_type($type) {
+function tags_is_automatic_type($type): bool {
 	return strpos((string) $type, 'auto_') === 0;
 }
 
@@ -70,7 +70,7 @@ function tags_is_automatic_type($type) {
  * @global bool $debug Whether debugging is enabled, set by
  *                      tags_check_debug().
  */
-function tags_debug($message = '') {
+function tags_debug($message = ''): void {
 	global $debug;
 
 	if ($debug) {
@@ -87,9 +87,9 @@ function tags_debug($message = '') {
  * @param string $key The state_key to look up.
  *
  * @return string|null The stored state_value, or null when the state
- *                      table doesn't exist or the key has no value.
+ *                     table doesn't exist or the key has no value.
  */
-function tags_state_get($key) {
+function tags_state_get($key): ?string {
 	if (!db_table_exists('plugin_tags_state')) {
 		return null;
 	}
@@ -110,7 +110,7 @@ function tags_state_get($key) {
  *
  * @return void
  */
-function tags_state_set($key, $value) {
+function tags_state_set($key, $value): void {
 	if (!db_table_exists('plugin_tags_state')) {
 		return;
 	}
@@ -130,7 +130,7 @@ function tags_state_set($key, $value) {
  * query re-index completes.
  *
  * @param array $data Hook payload; must include 'host_id' and
- *                     'snmp_query_id' for this function to act.
+ *                    'snmp_query_id' for this function to act.
  *
  * @return array The unmodified $data array (this hook does not modify its
  *               payload).
@@ -158,7 +158,7 @@ function plugin_tags_data_query_reindexed($data) {
 		}
 	}
 
-	tags_state_set($key, json_encode($state));
+	tags_state_set($key, (string) json_encode($state));
 
 	return $data;
 }
@@ -176,7 +176,7 @@ function plugin_tags_data_query_reindexed($data) {
  * @global array $config Cacti global configuration array; used to check
  *                        the current poller_id.
  */
-function plugin_tags_check_poller_events() {
+function plugin_tags_check_poller_events(): int {
 	global $config;
 
 	$tags = 0;
@@ -230,9 +230,10 @@ function plugin_tags_check_poller_events() {
 				$tags++;
 			}
 
-			tags_state_set($key, json_encode(['down' => $down, 'since' => $down ? $since : 0]));
+			tags_state_set($key, (string) json_encode(['down' => $down, 'since' => $down ? $since : 0]));
 		}
 	}
+
 	return $tags;
 }
 
@@ -256,7 +257,7 @@ function plugin_tags_check_poller_events() {
  *                        the current poller_id.
  */
 
-function plugin_tags_check_plugin_events() {
+function plugin_tags_check_plugin_events(): int {
 	global $config;
 
 	$tags = 0;
@@ -276,7 +277,6 @@ function plugin_tags_check_plugin_events() {
 		ORDER BY directory');
 
 	foreach ($plugins as $plugin) {
-
 		$key = 'plugin:' . $plugin['directory'];
 
 		$old_raw = tags_state_get($key);
@@ -288,27 +288,24 @@ function plugin_tags_check_plugin_events() {
 		$new_status  = (int)$plugin['status'];
 		$new_version = $plugin['version'];
 
-		/* Plugin enabled */
+		// Plugin enabled
 		if ($old_status !== null && $old_status != 1 && $new_status == 1) {
-
 			$description = sprintf('Plugin enabled: %s %s', $plugin['directory'], $new_version);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_enabled');
 
 			$tags++;
 
-		/* Plugin disabled */
+			// Plugin disabled
 		} elseif ($old_status !== null && $old_status == 1 && $new_status != 1) {
-
 			$description = sprintf('Plugin disabled: %s',$plugin['directory']);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_disabled');
 
 			$tags++;
 
-		/* Plugin version changed */
+			// Plugin version changed
 		} elseif ($old_version !== null && version_compare($old_version, $new_version, '!=')) {
-
 			$description = sprintf('Plugin updated: %s %s → %s', $plugin['directory'], $old_version, $new_version);
 
 			plugin_tags_create_tag(substr($description, 0, 64), 'primary', $primary_device, 0, read_config_option('tags_plugin_state_color'), 'auto_plugin_updated');
@@ -316,7 +313,7 @@ function plugin_tags_check_plugin_events() {
 			$tags++;
 		}
 
-		tags_state_set($key, json_encode([
+		tags_state_set($key, (string) json_encode([
 			'status'  => $new_status,
 			'version' => $new_version
 		]));
@@ -324,7 +321,6 @@ function plugin_tags_check_plugin_events() {
 
 	return $tags;
 }
-
 
 /**
  * Hook implementation for Cacti's 'api_device_save' filter. Creates an
@@ -339,14 +335,12 @@ function plugin_tags_check_plugin_events() {
  */
 
 function plugin_tags_device_save($device) {
-
 	if (read_config_option('tags_device_save') && $device['id'] > 0) {
-		plugin_tags_create_tag(__('Device save/changed, id %s', $device['id'], 'tags'), 'device', $device['id'], 0, read_config_option("tags_device_save_color"), 'auto_device_changed');
+		plugin_tags_create_tag(__('Device save/changed, id %s', $device['id'], 'tags'), 'device', $device['id'], 0, read_config_option('tags_device_save_color'), 'auto_device_changed');
 	}
 
 	return $device;
 }
-
 
 /**
  * Compares the running Cacti version against the previously recorded
@@ -357,14 +351,14 @@ function plugin_tags_device_save($device) {
  *
  * @return bool True if a tag was created; false otherwise.
  */
-function plugin_tags_check_version() {
-
+function plugin_tags_check_version(): bool {
 	$current_version  = get_cacti_version();
 	$previous_version = read_config_option('plugin_tags_cacti_version');
 
 	if (isset($previous_version) && $current_version != $previous_version) {
 		plugin_tags_create_tag('Cacti version changed: ' . $current_version, 'all', 0, 0, read_config_option('tags_cacti_version_color'), 'auto_cacti_version_changed');
 		set_config_option('plugin_tags_cacti_version', $current_version);
+
 		return true;
 	} else {
 		set_config_option('plugin_tags_cacti_version', $current_version);
@@ -372,7 +366,6 @@ function plugin_tags_check_version() {
 
 	return false;
 }
-
 
 /**
  * Checks every enabled host for newly-added devices and SNMP uptime
@@ -386,12 +379,12 @@ function plugin_tags_check_version() {
  *                        here; declared for parity with other check_*
  *                        functions in this file).
  */
-function plugin_tags_check_hosts() {
+function plugin_tags_check_hosts(): int {
 	global $config;
 
-	$tags_host_restart   = read_config_option("tags_host_restart");
-	$tags_host_added     = read_config_option("tags_host_added");
-	$tags_primary_device = read_config_option("tags_primary_device");
+	$tags_host_restart   = read_config_option('tags_host_restart');
+	$tags_host_added     = read_config_option('tags_host_added');
+	$tags_primary_device = read_config_option('tags_primary_device');
 
 	$tags = 0;
 
@@ -403,7 +396,7 @@ function plugin_tags_check_hosts() {
 		$color_host_added = read_config_option('tags_host_added_color');
 	}
 
-	$hosts = db_fetch_assoc ("SELECT id, snmp_sysUpTimeInstance, total_polls, ptu.uptime AS `old_uptime`
+	$hosts = db_fetch_assoc("SELECT id, snmp_sysUpTimeInstance, total_polls, ptu.uptime AS `old_uptime`
 		FROM host AS h
 		LEFT JOIN plugin_tags_uptime AS ptu
 		ON h.id = ptu.host_id
@@ -411,23 +404,23 @@ function plugin_tags_check_hosts() {
 
 	if (cacti_sizeof($hosts) > 0) {
 		foreach ($hosts as $host) {
-
 			if ($tags_host_added && $host['old_uptime'] === null && $host['total_polls'] < 10) { // adding new device
 				if ($tags_primary_device > 0) {
 					plugin_tags_create_tag(__('Device added, id %s', $host['id'], 'tags'), 'primary', $tags_primary_device, 0, $color_host_added, 'auto_device_added');
 					$tags++;
 				} else {
-					cacti_log('Cannot create tag, primary device not set', 'tags');
+					cacti_log('Cannot create tag, primary device not set', false, 'tags');
 				}
 
 				plugin_tags_create_tag(__('Device added', 'tags'), 'device', $host['id'], 0, $color_host_added, 'auto_device_added');
 				$tags++;
+
 				continue;
 			}
 
 			if ($tags_host_restart && $host['old_uptime'] > $host['snmp_sysUpTimeInstance']
 				&& $host['snmp_sysUpTimeInstance'] > 0) { // restart
-				plugin_tags_create_tag(__('Restart, uptime was %s', get_daysfromtime($host['old_uptime']/100), 'tags'), 'device', $host['id'], 0, $color_host_restart, 'auto_device_restart');
+				plugin_tags_create_tag(__('Restart, uptime was %s', get_daysfromtime($host['old_uptime'] / 100), 'tags'), 'device', $host['id'], 0, $color_host_restart, 'auto_device_restart');
 				$tags++;
 			}
 		}
@@ -439,9 +432,9 @@ function plugin_tags_check_hosts() {
 			ON DUPLICATE KEY UPDATE
 			uptime = VALUES(uptime)");
 	}
+
 	return $tags;
 }
-
 
 /**
  * Hook implementation for Cacti's 'device_remove' filter. Deletes all tag
@@ -461,7 +454,6 @@ function plugin_tags_device_remove($ids) {
 	return ($ids);
 }
 
-
 /**
  * Hook implementation for Cacti's 'rrd_graph_graph_options' filter. Adds
  * VRULE markers and a legend listing tags relevant to the graph being
@@ -474,7 +466,7 @@ function plugin_tags_device_remove($ids) {
  * due to the graph's time limit.
  *
  * @param array $data The graph's RRDtool option data, including 'start',
- *                     'end', and 'graph_id'.
+ *                    'end', and 'graph_id'.
  *
  * @return array The $data array with a 'Tags' header appended to
  *               'graph_opts' and the tag VRULEs/legend entries added to
@@ -549,15 +541,19 @@ function plugin_tags_rrd_graph_graph_options($data) {
 	if (isset($tags_primary) && is_array($tags_primary) && cacti_sizeof($tags_primary) > 0) {
 		$tags = array_merge($tags, $tags_primary);
 	}
+
 	if (isset($tags_host) && is_array($tags_host) && cacti_sizeof($tags_host) > 0) {
 		$tags = array_merge($tags, $tags_host);
 	}
+
 	if (isset($tags_all) && is_array($tags_all) && cacti_sizeof($tags_all) > 0) {
 		$tags = array_merge($tags, $tags_all);
 	}
+
 	if (isset($tags_graph) && is_array($tags_graph) && cacti_sizeof($tags_graph) > 0) {
 		$tags = array_merge($tags, $tags_graph);
 	}
+
 	if (isset($tags_site) && is_array($tags_site) && cacti_sizeof($tags_site) > 0) {
 		$tags = array_merge($tags, $tags_site);
 	}
@@ -684,7 +680,6 @@ function plugin_tags_rrd_graph_graph_options($data) {
 	return $data;
 }
 
-
 /**
  * Hook implementation for Cacti's 'graph_buttons'/'graph_buttons_thumbnails'
  * filters. Prints a link/icon that opens tags.php filtered to the current
@@ -693,7 +688,7 @@ function plugin_tags_rrd_graph_graph_options($data) {
  * rendering a graph's action buttons.
  *
  * @param array $data Hook payload; $data[1]['local_graph_id'] identifies
- *                     the current graph.
+ *                    the current graph.
  *
  * @return void Outputs HTML directly.
  *
@@ -712,7 +707,6 @@ function plugin_tags_graph_button($data) {
 	print '<a class="iconLink" href="' . html_escape($redir) . '">' . $fav . '</a><br/>';
 }
 
-
 /**
  * Inserts a new tag event row. For certain automatic tag types, the target
  * may be redirected to 'all' or the configured primary device (per the
@@ -723,35 +717,31 @@ function plugin_tags_graph_button($data) {
  *
  * @param string $description The tag's description text.
  * @param string $target      The tag's target scope ('all', 'primary',
- *                             'device', 'graph', or 'site').
+ *                            'device', 'graph', or 'site').
  * @param int    $host_id     The associated host id, or 0 when not
- *                             applicable.
+ *                            applicable.
  * @param int    $graph_id    The associated graph id, or 0 when not
- *                             applicable.
+ *                            applicable.
  * @param string $color       The tag's six-character RGB color.
  * @param string $type        The tag's event type (e.g. 'manual' or an
- *                             'auto_*' type).
+ *                            'auto_*' type).
  *
  * @return bool True once the tag has been inserted, or false when an
  *              automatic tag needed a primary device that isn't
  *              configured.
  */
-function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $color, $type) {
-
+function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $color, $type): bool {
 	// In the settings, you can specify for certain automatic tags whether they should apply only to the primary device or to all devices.
 	// I’m adjusting this here to prevent code duplication when there are multiple calls.
 
-	if (in_array($type, ['auto_plugin_disabled', 'auto_plugin_enabled', 'auto_plugin_updated', 'auto_data_collector_down', 'auto_data_collector_recovered', 'auto_poller_overrun', 'auto_cacti_version_changed'])) {
-
+	if (in_array($type, ['auto_plugin_disabled', 'auto_plugin_enabled', 'auto_plugin_updated', 'auto_data_collector_down', 'auto_data_collector_recovered', 'auto_poller_overrun', 'auto_cacti_version_changed'], true)) {
 		if (read_config_option('tags_automatic_how') == 'all') {
-
 			db_execute_prepared("INSERT INTO plugin_tags_event
 				(type, description, tag_time, target, host_id, graph_id, color, enabled)
 				VALUES
 				(?, ?, unix_timestamp(), 'all', 0, 0, ?, 'on')",
 				[$type, $description, $color]);
 		} else { // primary
-
 			$primary_device = (int) read_config_option('tags_primary_device');
 
 			if ($primary_device > 0) {
@@ -761,7 +751,8 @@ function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $col
 					(?, ?, unix_timestamp(), 'primary', ?, 0, ?, 'on')",
 					[$type, $description, $primary_device, $color]);
 			} else {
-				cacti_log('Cannot create tag, primary device not set', 'tags');
+				cacti_log('Cannot create tag, primary device not set', false, 'tags');
+
 				return false;
 			}
 		}
@@ -776,7 +767,6 @@ function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $col
 	return true;
 }
 
-
 /**
  * Propagates changes to automatic-tag color and primary-device settings
  * onto already-created tag events, so existing tags stay consistent with
@@ -790,7 +780,7 @@ function plugin_tags_create_tag($description, $target, $host_id, $graph_id, $col
  *                          directly here; declared for parity with other
  *                          settings-related functions).
  */
-function plugin_tags_settings_update() {
+function plugin_tags_settings_update(): bool {
 	global $settings;
 
 	$tags_sett = [
@@ -833,7 +823,6 @@ function plugin_tags_settings_update() {
 						set_config_option($ts . '_old', $act);
 
 						break;
-
 					default:
 						if (isset($automatic_types[$ts])) {
 							foreach ($automatic_types[$ts] as $automatic_type) {
@@ -858,7 +847,6 @@ function plugin_tags_settings_update() {
 	return true;
 }
 
-
 /**
  * Finds tag events older than the configured retention period
  * ('tags_retention' days) and moves them to the archive table. Called
@@ -866,10 +854,9 @@ function plugin_tags_settings_update() {
  * archiving entirely.
  *
  * @return bool|void True when archiving is disabled (retention is 0);
- *                    otherwise no explicit return value.
+ *                   otherwise no explicit return value.
  */
 function plugin_tags_archive() {
-
 	$retention_days = (int) read_config_option('tags_retention');
 
 	if ($retention_days == 0) {
@@ -889,7 +876,6 @@ function plugin_tags_archive() {
 	}
 }
 
-
 /**
  * Moves the given tag events from plugin_tags_event into
  * plugin_tags_event_archive, in batches of 50, then deletes them from the
@@ -900,8 +886,7 @@ function plugin_tags_archive() {
  *
  * @return void
  */
-function plugin_tags_move_old_events($ids) {
-
+function plugin_tags_move_old_events($ids): void {
 	cacti_log('PLUGIN TAGS: moving ' . cacti_sizeof($ids) . ' records to the archive');
 
 	foreach (array_chunk($ids, 50) as $chunk) {
@@ -919,4 +904,3 @@ function plugin_tags_move_old_events($ids) {
 			$chunk);
 	}
 }
-

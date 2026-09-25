@@ -35,7 +35,7 @@
  * @global array $config Cacti global configuration array; used to load
  *                        this plugin's database.php.
  */
-function plugin_tags_install() {
+function plugin_tags_install(): void {
 	global $config;
 
 	api_plugin_register_hook('tags', 'draw_navigation_text',     'plugin_tags_draw_navigation_text',    'setup.php');
@@ -65,7 +65,7 @@ function plugin_tags_install() {
  *
  * @return bool Always returns true.
  */
-function plugin_tags_uninstall() {
+function plugin_tags_uninstall(): bool {
 	return true;
 }
 
@@ -77,7 +77,7 @@ function plugin_tags_uninstall() {
  *
  * @return bool Always returns true.
  */
-function plugin_tags_has_data() {
+function plugin_tags_has_data(): bool {
 	return true;
 }
 
@@ -88,7 +88,7 @@ function plugin_tags_has_data() {
  *
  * @return bool Always returns true.
  */
-function plugin_tags_remove_data() {
+function plugin_tags_remove_data(): bool {
 	db_execute('DROP TABLE IF EXISTS plugin_tags_event');
 	db_execute('DROP TABLE IF EXISTS plugin_tags_event_archive');
 	db_execute('DROP TABLE IF EXISTS plugin_tags_uptime');
@@ -111,7 +111,7 @@ function plugin_tags_remove_data() {
  * @global array $config Cacti global configuration array; used to load
  *                        this plugin's database.php.
  */
-function plugin_tags_check_config() {
+function plugin_tags_check_config(): bool {
 	global $config;
 
 	include_once($config['base_path'] . '/plugins/tags/include/database.php');
@@ -138,10 +138,11 @@ function plugin_tags_check_config() {
  * @global array $config Cacti global configuration array; used to locate
  *                        the plugin's base path.
  */
-function plugin_tags_version() {
+function plugin_tags_version(): array {
 	global $config;
 
 	$info = parse_ini_file($config['base_path'] . '/plugins/tags/INFO', true);
+	$info = is_array($info) ? $info : [];
 
 	return $info['info'];
 }
@@ -160,7 +161,7 @@ function plugin_tags_version() {
  *                        the PHP binary and this plugin's poller script,
  *                        and to check the current poller_id.
  */
-function plugin_tags_poller_bottom() {
+function plugin_tags_poller_bottom(): void {
 	global $config;
 
 	require_once($config['library_path'] . '/database.php');
@@ -204,7 +205,7 @@ function plugin_tags_poller_bottom() {
  *                                           parity with other config_arrays
  *                                           hook implementations).
  */
-function plugin_tags_config_arrays() {
+function plugin_tags_config_arrays(): void {
 	global $menu, $user_auth_realms, $user_auth_realm_filenames;
 
 	$menu[__('Management')]['plugins/tags/tags.php'] = __('Tags', 'tags');
@@ -223,7 +224,7 @@ function plugin_tags_config_arrays() {
  * rendering the page breadcrumb trail.
  *
  * @param array $nav The existing breadcrumb map contributed by Cacti core
- *                    and other plugins.
+ *                   and other plugins.
  *
  * @return array The $nav array with this plugin's breadcrumb entries
  *               added.
@@ -253,7 +254,6 @@ function plugin_tags_draw_navigation_text($nav) {
 	return $nav;
 }
 
-
 /**
  * Hook implementation for Cacti's 'config_settings' filter. Loads this
  * plugin's option arrays and registers the "Tags" settings tab. Called by
@@ -269,7 +269,7 @@ function plugin_tags_draw_navigation_text($nav) {
  * @global array $settings Cacti's registered Settings page fields (unused
  *                          directly here; populated via include/arrays.php).
  */
-function plugin_tags_config_settings() {
+function plugin_tags_config_settings(): void {
 	global $config, $tabs, $settings;
 
 	include_once($config['base_path'] . '/plugins/tags/include/arrays.php');
@@ -288,7 +288,7 @@ function plugin_tags_config_settings() {
  * @global array $config Cacti global configuration array; used to build
  *                        the stylesheet's URL.
  */
-function plugin_tags_page_head() {
+function plugin_tags_page_head(): void {
 	global $config;
 
 	print "<link type='text/css' href='" . $config['url_path'] . "plugins/tags/themes/common.css' rel='stylesheet'>";

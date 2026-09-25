@@ -24,6 +24,8 @@
 
 chdir('../../');
 require_once('./include/auth.php');
+
+/** @var array<string,mixed> $config */
 require_once($config['base_path'] . '/plugins/tags/include/functions.php');
 require($config['base_path'] . '/plugins/tags/include/arrays.php');
 
@@ -50,10 +52,9 @@ switch (get_request_var('action')) {
 		get_allowed_ajax_graphs($sql_where);
 
 		break;
-
 	case 'ajax_sites':
 		if (!isempty_request_var('site_id')) {
-			$sql_where = 'WHERE id = ' . get_filter_request_var('ste_id');
+			$sql_where = 'WHERE id = ' . get_filter_request_var('site_id');
 		} else {
 			$sql_where = '';
 		}
@@ -61,7 +62,6 @@ switch (get_request_var('action')) {
 		tags_get_ajax_sites($sql_where);
 
 		break;
-
 	case 'save':
 		form_save();
 
@@ -99,7 +99,7 @@ switch (get_request_var('action')) {
  *                                  labels, used to populate the actions
  *                                  dropdown/confirmation title.
  */
-function form_actions() {
+function form_actions(): void {
 	global $tags_actions_menu;
 
 	// ================= input validation =================
@@ -160,7 +160,9 @@ function form_actions() {
 
 	form_start(htmlspecialchars(basename($_SERVER['PHP_SELF'])));
 
-	html_start_box($tags_actions_menu[get_filter_request_var('drp_action')], '60%', '', '3', 'center', '');
+	html_start_box($tags_actions_menu[get_filter_request_var('drp_action')], '60%', false, 3, 'center', '');
+
+	$save_html = '';
 
 	if (cacti_sizeof($items_array) > 0) {
 		if (get_filter_request_var('drp_action') == 1) {
@@ -200,7 +202,6 @@ function form_actions() {
 
 			$save_html = "<input type='button' value='" . __esc('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Archive item', 'Archive items', cacti_sizeof($items_array)) . "'>";
 		}
-
 	} else {
 		raise_message(40);
 		header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false');
@@ -210,7 +211,7 @@ function form_actions() {
 	print "<tr>
 		<td class='saveRow'>
 			<input type='hidden' name='action' value='actions'>
-			<input type='hidden' name='selected_items' value='" . (isset($items_array) ? serialize($items_array) : '') . "'>
+			<input type='hidden' name='selected_items' value='" . serialize($items_array) . "'>
 			<input type='hidden' name='drp_action' value='" . get_request_var('drp_action') . "'>
 			<input type='hidden' name='is_archive' value='" . (get_filter_request_var('is_archive') ? 1 : 0) . "'>
 			$save_html
@@ -236,13 +237,12 @@ function form_actions() {
  * @global array $tags_target The plugin's valid target-scope values, used
  *                             to validate the submitted target.
  */
-function form_save() {
+function form_save(): void {
 	global $tags_colors, $tags_target;
 
 	if (isset_request_var('save_component')) {
 		$save['id']          = get_filter_request_var('id');
 		$save['description'] = form_input_validate(get_nfilter_request_var('description'), 'description', '', false, 3);
-
 
 		$available_colors = $tags_colors;
 
@@ -264,6 +264,7 @@ function form_save() {
 				$save['host_id'] = get_filter_request_var('host_id');
 			} elseif (get_nfilter_request_var('target') == 'graph') {
 				$host_id = db_fetch_cell_prepared('SELECT host_id FROM graph_local WHERE id = ?', [get_filter_request_var('graph_id')]);
+
 				if ($host_id > 0) {
 					$save['host_id']  = $host_id;
 					$save['graph_id'] = get_filter_request_var('graph_id');
@@ -272,6 +273,7 @@ function form_save() {
 				}
 			} elseif (get_nfilter_request_var('target') == 'site') {
 				$site_id = db_fetch_cell_prepared('SELECT id FROM sites WHERE id = ?', [get_filter_request_var('site_id')]);
+
 				if ($site_id > 0) {
 					$save['site_id'] = $site_id;
 				} else {
@@ -306,7 +308,7 @@ function form_save() {
 		}
 
 		if (is_error_message()) {
-			header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false&action=edit&id=' . (empty($saved_id) ? get_nfilter_request_var('id') : $saved_id));
+			header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false&action=edit&id=' . get_nfilter_request_var('id'));
 		} else {
 			header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false');
 		}
@@ -327,26 +329,26 @@ function form_save() {
  * @global array $tags_colors The plugin's valid tag color palette, used to
  *                             populate the color field's options.
  */
-function tags_edit() {
+function tags_edit(): void {
 	global $tags_fields, $tags_colors;
 
 	// ================= input validation =================
 	get_filter_request_var('id');
 	// ====================================================
 
-
 	if (isset_request_var('id')) {
 		$data = db_fetch_row_prepared('SELECT *
 			FROM plugin_tags_event
 			WHERE id = ?',
 			[get_filter_request_var('id')]);
+		$data = is_array($data) ? $data : [];
 
 		$header_label = __('Tag [edit: %s]', $data['description']);
 
 		$tags_fields['color']['array'] = $tags_colors;
 	} else {
-		$data         = [];
-		$header_label = __('Tag [new]');
+		$data                          = [];
+		$header_label                  = __('Tag [new]');
 		$tags_fields['color']['array'] = $tags_colors;
 	}
 
@@ -377,7 +379,7 @@ function tags_edit() {
 
 	form_start(htmlspecialchars(basename($_SERVER['PHP_SELF'])));
 
-	html_start_box($header_label, '100%', true, '3', 'center', '');
+	html_start_box($header_label, '100%', true, 3, 'center', '');
 
 	draw_edit_form(
 		[
@@ -391,7 +393,7 @@ function tags_edit() {
 	html_end_box(true, true);
 
 	form_save_button(htmlspecialchars(basename($_SERVER['PHP_SELF'])));
-?>
+	?>
 	<script type='text/javascript'>
 
 	var dateOpen = false;
@@ -447,7 +449,6 @@ function tags_edit() {
 <?php
 }
 
-
 /**
  * Validates and persists (in session) the Tags list's filter request
  * variables (timespan, rows, page, filter, sort, target, type). Called
@@ -455,7 +456,7 @@ function tags_edit() {
  *
  * @return void
  */
-function request_validation() {
+function request_validation(): void {
 	$filters = [
 		'tag_timespan' => [
 			'filter'  => FILTER_VALIDATE_INT,
@@ -509,9 +510,9 @@ function request_validation() {
  * for the default (no 'action') request.
  *
  * @return void|bool Outputs the list page HTML directly; returns true
- *                    early (printing a configuration notice instead) when
- *                    filtering by the 'primary' target with no primary
- *                    device configured.
+ *                   early (printing a configuration notice instead) when
+ *                   filtering by the 'primary' target with no primary
+ *                   device configured.
  *
  * @global array $config             Cacti global configuration array;
  *                                    used to load timespan_settings.php.
@@ -552,7 +553,7 @@ function tags_list() {
 		$sql_where .= ($sql_where == '' ? 'WHERE ' : ' AND ') . 'host_id  = ' . get_filter_request_var('host_id');
 	}
 
-	if (get_nfilter_request_var('target') && in_array(get_nfilter_request_var('target'), array_keys($tags_target))) {
+	if (get_nfilter_request_var('target') && in_array(get_nfilter_request_var('target'), array_keys($tags_target), true)) {
 		$sql_where .= ($sql_where == '' ? 'WHERE ' : ' AND ') . 'target = "' . get_nfilter_request_var('target') . '"';
 	}
 
@@ -578,6 +579,7 @@ function tags_list() {
 
 	if (get_nfilter_request_var('target') == 'primary' && $primary == 0) {
 		print __('You have to set primary device in Console - Configuration - Settings - Tags');
+
 		return true;
 	}
 
@@ -640,22 +642,21 @@ function tags_list() {
 
 	print $nav;
 
-	html_start_box('', '100%', '', '3', 'center', '');
+	html_start_box('', '100%', false, 3, 'center', '');
 
 	html_header_sort_checkbox($display_text, get_request_var('sort_column'), get_request_var('sort_direction'), false);
 
 	if (cacti_sizeof($result)) {
 		foreach ($result as $row) {
-
 			if (array_key_exists($row['color'], $tags_colors)) {
 				$color = $tags_colors[$row['color']];
 			} else {
 				$color = '999999';
 			}
 
-			$row['host_id']  = $row['host_id']  > 0 ? $row['host_id']  : '-';
+			$row['host_id']  = $row['host_id'] > 0 ? $row['host_id'] : '-';
 			$row['graph_id'] = $row['graph_id'] > 0 ? $row['graph_id'] : '-';
-			$row['site_id']  = $row['site_id']  > 0 ? $row['site_id']  : '-';
+			$row['site_id']  = $row['site_id'] > 0 ? $row['site_id'] : '-';
 
 			$row['type']  = tags_is_automatic_type($row['type']) ? __('Yes', 'tags') : __('No', 'tags');
 
@@ -713,7 +714,7 @@ function tags_list() {
  *                                  options, used to populate the timespan
  *                                  selector.
  */
-function tags_filter() {
+function tags_filter(): void {
 	global $item_rows, $tags_target, $tags_type, $graph_timespans;
 
 	if (get_filter_request_var('host_id')) {
@@ -724,7 +725,7 @@ function tags_filter() {
 		$host_id = -1;
 	}
 
-	html_start_box(__('Tags Management', 'tags') , '100%', '', '3', 'center', htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?action=edit');
+	html_start_box(__('Tags Management', 'tags') , '100%', false, 3, 'center', htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?action=edit');
 
 	?>
 	<tr class='even'>
@@ -733,8 +734,8 @@ function tags_filter() {
 			<table class='filterTable'>
 				<tr>
 					<?php
-						print html_host_filter($host_id, 'applyFilter', '', false, true);
-					?>
+						html_host_filter($host_id, 'applyFilter', '', false, true);
+	?>
 					<td>
 						<?php print __('Search', 'tags'); ?>
 					</td>
@@ -747,18 +748,18 @@ function tags_filter() {
 					<td>
 						<select id='target' onChange='applyFilter()'>
 						<?php
-						print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
+		print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
-						if (cacti_sizeof($tags_target)) {
-							foreach ($tags_target as $key => $value) {
-								print "<option value='" . $key . "'";
+	if (cacti_sizeof($tags_target)) {
+		foreach ($tags_target as $key => $value) {
+			print "<option value='" . $key . "'";
 
-								if (get_request_var('target') == $key) {
-									print ' selected';
-								} print '>' . htmlspecialchars($value) . '</option>';
-							}
-						}
-						?>
+			if (get_request_var('target') == $key) {
+				print ' selected';
+			} print '>' . htmlspecialchars($value) . '</option>';
+		}
+	}
+	?>
 					</select>
 					</td>
 					<td>
@@ -767,18 +768,18 @@ function tags_filter() {
 					<td>
 						<select id='type' onChange='applyFilter()'>
 						<?php
-						print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
+	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
-						if (cacti_sizeof($tags_type)) {
-							foreach ($tags_type as $key => $value) {
-								print "<option value='" . $key . "'";
+	if (cacti_sizeof($tags_type)) {
+		foreach ($tags_type as $key => $value) {
+			print "<option value='" . $key . "'";
 
-								if (get_request_var('type') == $key) {
-									print ' selected';
-								} print '>' . htmlspecialchars($value) . '</option>';
-							}
-						}
-						?>
+			if (get_request_var('type') == $key) {
+				print ' selected';
+			} print '>' . htmlspecialchars($value) . '</option>';
+		}
+	}
+	?>
 					</select>
 					</td>
 					<td>
@@ -787,23 +788,23 @@ function tags_filter() {
 					<td>
 						<select id='rows' onChange='applyFilter()'>
 						<?php
-						print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Default', 'tags') . '</option>';
+	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Default', 'tags') . '</option>';
 
-						if (cacti_sizeof($item_rows)) {
-							foreach ($item_rows as $key => $value) {
-								print "<option value='" . $key . "'";
+	if (cacti_sizeof($item_rows)) {
+		foreach ($item_rows as $key => $value) {
+			print "<option value='" . $key . "'";
 
-								if (get_request_var('rows') == $key) {
-									print ' selected';
-								} print '>' . htmlspecialchars($value) . '</option>';
-							}
-						}
-						?>
+			if (get_request_var('rows') == $key) {
+				print ' selected';
+			} print '>' . htmlspecialchars($value) . '</option>';
+		}
+	}
+	?>
 					</select>
 					</td>
 					<td>
 					<input id="archive" type="checkbox" name="archive" value="1" class="ui-state-default ui-corner-all"
-					<?php echo (get_filter_request_var('archive') ? 'checked="checked"' : ''); ?>> Archive
+					<?php print(get_filter_request_var('archive') ? 'checked="checked"' : ''); ?>> Archive
 					</td>
 					<td>
 						<span class='nowrap'>
@@ -826,19 +827,23 @@ function tags_filter() {
 					<td>
 						<select id='predefined_timespan'>
 							<?php
-							$display_timespans = [
-								-1        => __('Any'),
-								GT_CUSTOM => __('Custom'),
-							] + $graph_timespans;
-							$start_val = 0;
-							$end_val   = cacti_sizeof($display_timespans);
+		$display_timespans = [
+			-1        => __('Any'),
+			GT_CUSTOM => __('Custom'),
+		] + $graph_timespans;
+	$start_val = 0;
+	$end_val   = cacti_sizeof($display_timespans);
 
-							if (cacti_sizeof($display_timespans)) {
-								foreach($display_timespans as $value => $text) {
-									print "<option value='$value'"; if (get_filter_request_var('tag_timespan') == $value) { print ' selected'; } print '>' . html_escape($text) . '</option>';
-								}
-							}
-							?>
+	if (cacti_sizeof($display_timespans)) {
+		foreach ($display_timespans as $value => $text) {
+			print "<option value='$value'";
+
+			if (get_filter_request_var('tag_timespan') == $value) {
+				print ' selected';
+			} print '>' . html_escape($text) . '</option>';
+		}
+	}
+	?>
 						</select>
 					</td>
 					<td>
@@ -847,8 +852,8 @@ function tags_filter() {
 					<td>
 						<span>
 
-							<input type='text' class='ui-state-default ui-corner-all' id='date1' size='18' value='<?php print (isset($_SESSION['sess_current_date1']) ? $_SESSION['sess_current_date1'] : '');?>'>
-							<i id='startDate' class='calendar fa fa-calendar' title='<?php print __esc('Start Date Selector');?>'></i>
+							<input type='text' class='ui-state-default ui-corner-all' id='date1' size='18' value='<?php print(isset($_SESSION['sess_current_date1']) ? $_SESSION['sess_current_date1'] : ''); ?>'>
+							<i id='startDate' class='calendar fa fa-calendar' title='<?php print __esc('Start Date Selector'); ?>'></i>
 						</span>
 					</td>
 					<td>
@@ -856,8 +861,8 @@ function tags_filter() {
 					</td>
 					<td>
 						<span>
-							<input type='text' class='ui-state-default ui-corner-all' id='date2' size='18' value='<?php print (isset($_SESSION['sess_current_date2']) ? $_SESSION['sess_current_date2'] : '');?>'>
-							<i id='endDate' class='calendar fa fa-calendar' title='<?php print __esc('End Date Selector');?>'></i>
+							<input type='text' class='ui-state-default ui-corner-all' id='date2' size='18' value='<?php print(isset($_SESSION['sess_current_date2']) ? $_SESSION['sess_current_date2'] : ''); ?>'>
+							<i id='endDate' class='calendar fa fa-calendar' title='<?php print __esc('End Date Selector'); ?>'></i>
 						</span>
 					</td>
 				</tr>
@@ -867,7 +872,7 @@ function tags_filter() {
 
 <?php
 	html_end_box();
-?>
+	?>
 	</form>
 	<script type='text/javascript'>
 
@@ -1001,30 +1006,29 @@ function tags_filter() {
 <?php
 }
 
-
 /**
  * Returns Cacti sites matching an autocomplete search term as a JSON array,
  * for the site-selection field on the tag edit form. Invoked from this
  * file's dispatcher when the request's 'action' is 'ajax_sites'.
  *
  * @param string $sql_where Optional SQL WHERE clause to further restrict
- *                           the site list; defaults to ''.
+ *                          the site list; defaults to ''.
  *
  * @return array|null Empty array (returned, not printed) for an
- *                     unauthorized user; otherwise prints the matching
- *                     sites as JSON and returns null (falls off the end
- *                     of the function without an explicit return).
+ *                    unauthorized user; otherwise prints the matching
+ *                    sites as JSON and returns null (falls off the end
+ *                    of the function without an explicit return).
  */
-function tags_get_ajax_sites($sql_where = '') {
+function tags_get_ajax_sites($sql_where = ''): ?array {
 	$user_id = $_SESSION['sess_user_id'];
 
 	if (!auth_valid_user($user_id)) {
-		return array();
+		return [];
 	}
 
-	$return = array();
+	$return = [];
 
-	$term = get_filter_request_var('term', FILTER_CALLBACK, array('options' => 'sanitize_search_string'));
+	$term = get_filter_request_var('term', FILTER_CALLBACK, ['options' => 'sanitize_search_string']);
 
 	if ($term != '') {
 		$sql_where .= ($sql_where != '' ? ' AND ' : '') .
@@ -1036,12 +1040,14 @@ function tags_get_ajax_sites($sql_where = '') {
 	$total_rows = -1;
 
 	$sites = db_fetch_assoc('SELECT id, name FROM sites ' . $sql_where);
+
 	if (cacti_sizeof($sites)) {
-		foreach($sites as $site) {
-			$return[] = array('label' => html_escape($site['name']),
-			'value' => html_escape($site['name']), 'id' => $site['id']);
+		foreach ($sites as $site) {
+			$return[] = ['label' => html_escape($site['name']),
+			'value'              => html_escape($site['name']), 'id' => $site['id']];
 		}
 	}
 	print json_encode($return);
-}
 
+	return null;
+}

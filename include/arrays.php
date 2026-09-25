@@ -54,7 +54,6 @@ $tags_auto_how = [
 	'all'     => __('All devices', 'tags'),
 ];
 
-
 $tags_event_types = [
 	'manual'                        => __('Manual', 'tags'),
 	'auto_device_added'             => __('Device Added', 'tags'),
@@ -246,10 +245,10 @@ $settings['tags'] = [
 	],
 	'tags_automatic_how' => [
 		'friendly_name' => __('Choose how to display tags listed below', 'tags'),
-		'description' => __('For which devices will the tags below displayed?', 'mactrack'),
-		'method' => 'drop_array',
-		'default' => 'all',
-		'array' => $tags_auto_how,
+		'description'   => __('For which devices will the tags below displayed?', 'mactrack'),
+		'method'        => 'drop_array',
+		'default'       => 'all',
+		'array'         => $tags_auto_how,
 	],
 	'tags_cacti_version' => [
 		'friendly_name' => __('Cacti version automatic tag', 'tags'),
@@ -301,5 +300,3 @@ $settings['tags'] = [
 		'array'         => $tags_colors,
 	],
 ];
-
-

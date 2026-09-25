@@ -34,7 +34,7 @@
  * @global array $config Cacti global configuration array; used to load
  *                        this plugin's functions.php.
  */
-function plugin_tags_upgrade() {
+function plugin_tags_upgrade(): bool {
 	global $config;
 
 	include_once($config['base_path'] . '/plugins/tags/include/functions.php');
@@ -58,8 +58,7 @@ function plugin_tags_upgrade() {
  *
  * @return void
  */
-function plugin_tags_setup_table() {
-
+function plugin_tags_setup_table(): void {
 	$data              = [];
 	$data['columns'][] = ['name' => 'id', 'type' => 'int(11)', 'NULL' => false, 'auto_increment' => true];
 	$data['columns'][] = ['name' => 'type', 'type' => 'varchar(32)', 'NULL' => false, 'default' => 'manual'];
@@ -98,7 +97,7 @@ function plugin_tags_setup_table() {
 	$data['primary']   = 'host_id';
 	$data['type']      = 'InnoDB';
 	$data['comment']   = 'Holds device uptime';
-	api_plugin_db_table_create ('tags', 'plugin_tags_uptime', $data);
+	api_plugin_db_table_create('tags', 'plugin_tags_uptime', $data);
 
 	plugin_tags_setup_state_table();
 }
@@ -110,7 +109,7 @@ function plugin_tags_setup_table() {
  *
  * @return void
  */
-function plugin_tags_setup_state_table() {
+function plugin_tags_setup_state_table(): void {
 	if (db_table_exists('plugin_tags_state')) {
 		return;
 	}

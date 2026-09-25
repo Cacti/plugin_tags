@@ -106,6 +106,11 @@ function form_actions(): void {
 	get_filter_request_var('drp_action', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_]+)$/']]);
 	// ====================================================
 
+	if (!in_array(get_filter_request_var('drp_action'), [1, 2, 3, 4], true)) {
+		header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false');
+		exit;
+	}
+
 	$sql_table = 'plugin_tags_event';
 
 	if (get_filter_request_var('is_archive')) {
@@ -343,7 +348,7 @@ function tags_edit(): void {
 			[get_filter_request_var('id')]);
 		$data = is_array($data) ? $data : [];
 
-		$header_label = __('Tag [edit: %s]', $data['description']);
+		$header_label = __('Tag [edit: %s]', $data['description'] ?? __('Not Found', 'tags'));
 
 		$tags_fields['color']['array'] = $tags_colors;
 	} else {

@@ -399,7 +399,7 @@ function tags_edit(): void {
 
 	form_save_button(htmlspecialchars(basename($_SERVER['PHP_SELF'])));
 	?>
-	<script type='text/javascript'>
+	<script type='text/javascript' <?php print plugin_tags_csp_nonce(); ?>>
 
 	var dateOpen = false;
 
@@ -879,7 +879,7 @@ function tags_filter(): void {
 	html_end_box();
 	?>
 	</form>
-	<script type='text/javascript'>
+	<script type='text/javascript' <?php print plugin_tags_csp_nonce(); ?>>
 
 		var graph_start     = <?php print get_current_graph_start(); ?>;
 		var graph_end       = <?php print get_current_graph_end(); ?>;

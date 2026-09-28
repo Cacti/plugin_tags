@@ -23,6 +23,22 @@
 */
 
 /**
+ * Return the CSP nonce attribute for inline <script> tags, safely across
+ * Cacti versions. Newer Cacti releases enforce a Content-Security-Policy that
+ * requires a per-request nonce on parser-inserted scripts; older releases lack
+ * the CactiSecureHeaders class, so this returns an empty string there.
+ *
+ * @return string The nonce attribute when supported, otherwise empty string.
+ */
+function plugin_tags_csp_nonce(): string {
+	if (class_exists('CactiSecureHeaders')) {
+		return CactiSecureHeaders::getNonceAttribute();
+	}
+
+	return '';
+}
+
+/**
  * Installs the tags plugin: registers its Cacti hooks (draw_navigation_text,
  * config_arrays, config_settings, page_head, poller_bottom, device_remove,
  * rrd_graph_graph_options, graph_buttons, graph_buttons_thumbnails,
@@ -291,5 +307,5 @@ function plugin_tags_config_settings(): void {
 function plugin_tags_page_head(): void {
 	global $config;
 
-	print "<link type='text/css' href='" . $config['url_path'] . "plugins/tags/themes/common.css' rel='stylesheet'>";
+	print get_md5_include_css('plugins/tags/themes/common.css');
 }

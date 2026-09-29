@@ -102,10 +102,6 @@ switch (get_request_var('action')) {
 function form_actions(): void {
 	global $tags_actions_menu;
 
-	// ================= input validation =================
-	get_filter_request_var('drp_action', FILTER_VALIDATE_REGEXP, ['options' => ['regexp' => '/^([a-zA-Z0-9_]+)$/']]);
-	// ====================================================
-
 	if (!in_array(get_filter_request_var('drp_action'), [1, 2, 3, 4], true)) {
 		header('Location: ' . htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false');
 		exit;
@@ -217,7 +213,7 @@ function form_actions(): void {
 		<td class='saveRow'>
 			<input type='hidden' name='action' value='actions'>
 			<input type='hidden' name='selected_items' value='" . serialize($items_array) . "'>
-			<input type='hidden' name='drp_action' value='" . get_request_var('drp_action') . "'>
+			<input type='hidden' name='drp_action' value='" . get_filter_request_var('drp_action') . "'>
 			<input type='hidden' name='is_archive' value='" . (get_filter_request_var('is_archive') ? 1 : 0) . "'>
 			$save_html
 		</td>
@@ -589,12 +585,12 @@ function tags_list() {
 	}
 
 	if (get_request_var('filter') != '') {
-		$sql_where .= ($sql_where == '' ? 'WHERE ' : ' AND ') . ' plugin_tags_event.description LIKE "%' . get_request_var('filter') . '%"';
+		$sql_where .= ($sql_where == '' ? 'WHERE ' : ' AND ') . ' plugin_tags_event.description LIKE ' .
+		db_qstr('%' . get_nfilter_request_var('filter') . '%');
 	}
 
 	$sql_order = get_order_string();
 	$sql_limit = ' LIMIT ' . ($rows * (get_request_var('page') - 1)) . ',' . $rows;
-
 	$total_rows = db_fetch_cell("SELECT COUNT(id)
 		FROM $sql_table
 		$sql_where");

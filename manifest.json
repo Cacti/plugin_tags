@@ -13,7 +13,6 @@
         "index.php",
         "locales/",
         "manifest.json",
-        "phpunit.xml",
         "poller_tags.php",
         "setup.php",
         "tags.php"

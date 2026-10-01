@@ -44,7 +44,7 @@ it('runs the version check when on a relevant page', function () {
 	$menu                            = array(__('Management') => array());
 	$GLOBALS['__test_current_page']  = 'tags.php';
 
-	// Sandbox base_path just for this drift case so plugin_tags_prune_files()
+	// Sandbox base_path just for this drift case so tags_prune_files()
 	// runs against a throwaway tree with no manifest.json (prune no-ops),
 	// never the real checkout. Pre-load the real library so the upgrade
 	// functions stay defined while the temp include/ stubs are empty.

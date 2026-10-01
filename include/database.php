@@ -48,7 +48,7 @@ function plugin_tags_upgrade(): bool {
 	plugin_tags_setup_state_table();
 
 	if ($new != $old) {
-		plugin_tags_prune_files();
+		tags_prune_files();
 	}
 
 	return true;

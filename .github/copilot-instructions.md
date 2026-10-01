@@ -24,15 +24,15 @@ When generating code for this repository:
 ## Project Structure
 
 ```
-tags/                 # Repository root (install to plugins/tags/ in Cacti)
-├── images/             # UI icons (including tags_example.png used in README)
-├── include/               # Shared functions/database helpers
-├── themes/                  # CSS theme overlays
-├── tags.php                    # Main tag administration/list UI
-├── poller_tags.php               # Background poller entry point (CLI)
-├── INFO                            # Plugin metadata (name, version, compat)
+tags/               # Repository root (install to plugins/tags/ in Cacti)
+├── images/         # UI icons (including tags_example.png used in README)
+├── include/        # Shared functions/database helpers
+├── themes/         # CSS theme overlays
+├── tags.php        # Main tag administration/list UI
+├── poller_tags.php # Background poller entry point (CLI)
+├── INFO            # Plugin metadata (name, version, compat)
 ├── README.md
-└── setup.php                          # Plugin install/uninstall/upgrade hooks
+└── setup.php       # Plugin install/uninstall/upgrade hooks
 ```
 
 ## Naming Conventions

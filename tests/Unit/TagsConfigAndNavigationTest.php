@@ -44,7 +44,25 @@ it('runs the version check when on a relevant page', function () {
 	$menu                            = array(__('Management') => array());
 	$GLOBALS['__test_current_page']  = 'tags.php';
 
-	plugin_tags_config_arrays();
+	// Sandbox base_path just for this drift case so tags_prune_files()
+	// runs against a throwaway tree with no manifest.json (prune no-ops),
+	// never the real checkout. Pre-load the real library so the upgrade
+	// functions stay defined while the temp include/ stubs are empty.
+	require_once __DIR__ . '/../../include/database.php';
+	require_once __DIR__ . '/../../include/functions.php';
+	$restore = $GLOBALS['config']['base_path'];
+	$base = sys_get_temp_dir() . '/tags-test-' . uniqid();
+	mkdir($base . '/plugins/tags/include', 0777, true);
+	copy(__DIR__ . '/../../INFO', $base . '/plugins/tags/INFO');
+	file_put_contents($base . '/plugins/tags/include/database.php', "<?php\n");
+	file_put_contents($base . '/plugins/tags/include/functions.php', "<?php\n");
+	$GLOBALS['config']['base_path'] = $base;
+
+	try {
+		plugin_tags_config_arrays();
+	} finally {
+		$GLOBALS['config']['base_path'] = $restore;
+	}
 
 	$updates = array_filter($GLOBALS['__test_db_calls'], function ($call) {
 		return $call['fn'] === 'db_execute_prepared' && stripos($call['sql'], 'UPDATE plugin_config') !== false;

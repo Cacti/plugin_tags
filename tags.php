@@ -747,7 +747,7 @@ function tags_filter(): void {
 					<?php print __('Target', 'tags'); ?>
 					</td>
 					<td>
-						<select id='target' onChange='applyFilter()'>
+						<select id='target'>
 						<?php
 		print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
@@ -767,7 +767,7 @@ function tags_filter(): void {
 					<?php print __('Type', 'tags'); ?>
 					</td>
 					<td>
-						<select id='type' onChange='applyFilter()'>
+						<select id='type'>
 						<?php
 	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
@@ -787,7 +787,7 @@ function tags_filter(): void {
 					<?php print __('Tags', 'tags'); ?>
 					</td>
 					<td>
-						<select id='rows' onChange='applyFilter()'>
+						<select id='rows'>
 						<?php
 	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Default', 'tags') . '</option>';
 
@@ -926,15 +926,15 @@ function tags_filter(): void {
 		}
 
 		$(function() {
-			$('#rows').click(function() {
+			$('#rows').change(function() {
 				applyFilter();
 			});
 
-			$('#target').click(function() {
+			$('#target').change(function() {
 				applyFilter();
 			});
 
-			$('#type').click(function() {
+			$('#type').change(function() {
 				applyFilter();
 			});
 

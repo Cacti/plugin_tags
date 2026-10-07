@@ -19,6 +19,21 @@ Instead, they are summarised and only the most recent few are shown.
 It is also possible to archive old tags. These are then not displayed in the graph.
 
 
+## Cacti compatibility
+
+If you are running a version of Cacti below 1.2.31, please add the function
+below to the `applySkin()` function in `include/layout.js` to enable the Cancel
+buttons on forms to work:
+
+```js
+$(document).off('click.cactiReturnTo', '.cactiReturnTo')
+    .on('click.cactiReturnTo', '.cactiReturnTo', function(event) {
+        event.preventDefault();
+        cactiReturnTo($(this).attr('data-url'));
+    });
+```
+
+
 ## Installation
 
 To install the Tags plugin, simply copy the plugin_tags directory to

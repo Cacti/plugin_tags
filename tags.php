@@ -174,7 +174,7 @@ function form_actions(): void {
 					</td>
 				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Delete item', 'Delete items', cacti_sizeof($items_array)) . "'>";
+			$save_html = "<input class='cactiReturnTo' type='button' value='" . __esc('Cancel') . "'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Delete item', 'Delete items', cacti_sizeof($items_array)) . "'>";
 		} elseif (get_filter_request_var('drp_action') == 2) { // disable
 			print "><tr>
 					<td class='topBoxAlt'>
@@ -183,7 +183,7 @@ function form_actions(): void {
 					</td>
 				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Disable item', 'Disable items', cacti_sizeof($items_array)) . "'>";
+			$save_html = "<input class='cactiReturnTo' type='button' value='" . __esc('Cancel') . "'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Disable item', 'Disable items', cacti_sizeof($items_array)) . "'>";
 		} elseif (get_filter_request_var('drp_action') == 3) { // enable
 			print "><tr>
 					<td class='topBoxAlt'>
@@ -192,7 +192,7 @@ function form_actions(): void {
 					</td>
 				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Enable item', 'Enable items', cacti_sizeof($items_array)) . "'>";
+			$save_html = "<input class='cactiReturnTo' type='button' value='" . __esc('Cancel') . "'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Enable item', 'Enable items', cacti_sizeof($items_array)) . "'>";
 		} elseif (get_filter_request_var('drp_action') == 4) { // archive
 			print "><tr>
 					<td class='topBoxAlt'>
@@ -201,7 +201,7 @@ function form_actions(): void {
 					</td>
 				</tr>";
 
-			$save_html = "<input type='button' value='" . __esc('Cancel') . "' onClick='cactiReturnTo()'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Archive item', 'Archive items', cacti_sizeof($items_array)) . "'>";
+			$save_html = "<input class='cactiReturnTo' type='button' value='" . __esc('Cancel') . "'>&nbsp;<input type='submit' value='" . __esc('Continue') . "' title='" . __esc_n('Archive item', 'Archive items', cacti_sizeof($items_array)) . "'>";
 		}
 	} else {
 		raise_message(40);
@@ -747,7 +747,7 @@ function tags_filter(): void {
 					<?php print __('Target', 'tags'); ?>
 					</td>
 					<td>
-						<select id='target' onChange='applyFilter()'>
+						<select id='target'>
 						<?php
 		print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
@@ -767,7 +767,7 @@ function tags_filter(): void {
 					<?php print __('Type', 'tags'); ?>
 					</td>
 					<td>
-						<select id='type' onChange='applyFilter()'>
+						<select id='type'>
 						<?php
 	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Any', 'tags') . '</option>';
 
@@ -787,7 +787,7 @@ function tags_filter(): void {
 					<?php print __('Tags', 'tags'); ?>
 					</td>
 					<td>
-						<select id='rows' onChange='applyFilter()'>
+						<select id='rows'>
 						<?php
 	print "<option value='-1'" . (get_request_var('rows') == -1 ? ' selected' : '') . '>' . __('Default', 'tags') . '</option>';
 
@@ -926,15 +926,15 @@ function tags_filter(): void {
 		}
 
 		$(function() {
-			$('#rows').click(function() {
+			$('#rows').change(function() {
 				applyFilter();
 			});
 
-			$('#target').click(function() {
+			$('#target').change(function() {
 				applyFilter();
 			});
 
-			$('#type').click(function() {
+			$('#type').change(function() {
 				applyFilter();
 			});
 

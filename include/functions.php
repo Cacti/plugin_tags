@@ -703,7 +703,7 @@ function plugin_tags_graph_button($data) {
 
 	$redir = $config['url_path'] . 'plugins/tags/tags.php?host_id=' . $host_id;
 
-	$fav = '<i class="fas fa-tags" title="' . __esc('Show tags for this graph', 'tags') . '"></i>';
+	$fav = '<i class="fas fa-tags" title="' . __esc('Tags', 'tags') . '"></i>';
 	print '<a class="iconLink" href="' . html_escape($redir) . '">' . $fav . '</a><br/>';
 }
 

@@ -718,9 +718,12 @@ function plugin_tags_graph_button($data) {
 		$_SESSION['sess_config_array']['tags_draw'] = $draw;
 	}
 
+	// Drop any existing tags_draw parameter (? or & form) so a click never
+	// leaves a duplicated, conflicting tags_draw in the URL.
 	$url = $_SERVER['REQUEST_URI'];
-	$url = str_replace('&tags_draw=on', '', $url);
-	$url = str_replace('&tags_draw=off', '', $url);
+	$url = preg_replace('/([?&])tags_draw=(?:on|off)/', '$1', $url);
+	$url = str_replace('?&', '?', $url);
+	$url = rtrim($url, '?&');
 
 	if (!substr_count($url, '?')) {
 		$separator = '?';

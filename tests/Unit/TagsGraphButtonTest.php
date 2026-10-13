@@ -83,6 +83,18 @@ it('reads the draw state from the session when no request var is set', function 
 		->and($html)->toContain('tags_draw=off');
 });
 
+it('replaces an existing first-parameter tags_draw instead of duplicating it', function () {
+	test_set_request(array('tags_draw' => 'on'));
+	$_SERVER['REQUEST_URI'] = '/cacti/graph_view.php?tags_draw=on';
+
+	ob_start();
+	plugin_tags_graph_button(array(1 => array('local_graph_id' => 42)));
+	$html = ob_get_clean();
+
+	expect($html)->toContain('?tags_draw=off')
+		->and($html)->not->toContain('tags_draw=on');
+});
+
 it('skips drawing tag legends when the session toggle is off', function () {
 	$_SESSION['sess_config_array']['tags_draw'] = 'off';
 

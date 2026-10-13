@@ -480,6 +480,12 @@ function plugin_tags_device_remove($ids) {
 function plugin_tags_rrd_graph_graph_options($data) {
 	global $config, $tags_colors;
 
+	// Respect the graph drilldown 'Enable/Disable Tags' toggle (session state
+	// set by plugin_tags_graph_button()); skip drawing when tags are disabled.
+	if (isset($_SESSION['sess_config_array']['tags_draw']) && $_SESSION['sess_config_array']['tags_draw'] == 'off') {
+		return $data;
+	}
+
 	require($config['base_path'] . '/plugins/tags/include/arrays.php');
 
 	$tags = [];
@@ -682,8 +688,9 @@ function plugin_tags_rrd_graph_graph_options($data) {
 
 /**
  * Hook implementation for Cacti's 'graph_buttons'/'graph_buttons_thumbnails'
- * filters. Prints a link/icon that opens tags.php filtered to the current
- * graph's device. Called by Cacti core via
+ * filters. Prints the drilldown action icon that toggles whether this
+ * plugin's tag legend lines are drawn on graphs, showing 'Enable Tags' or
+ * 'Disable Tags' per the current session state. Called by Cacti core via
  * api_plugin_hook('graph_buttons'/'graph_buttons_thumbnails', ...) while
  * rendering a graph's action buttons.
  *
@@ -691,20 +698,44 @@ function plugin_tags_rrd_graph_graph_options($data) {
  *                    the current graph.
  *
  * @return void Outputs HTML directly.
- *
- * @global array $config Cacti global configuration array; used to build
- *                        the tags.php link URL.
  */
 function plugin_tags_graph_button($data) {
-	global $config;
+	if (isset_request_var('tags_draw') || isset($_SESSION['sess_config_array']['tags_draw'])) {
+		if (isset_request_var('tags_draw')) {
+			if (get_nfilter_request_var('tags_draw') == 'on') {
+				$draw = 'off';
+			} else {
+				$draw = 'on';
+			}
 
-	$host_id = db_fetch_cell_prepared('SELECT host_id FROM graph_local 
-		WHERE id = ?',[$data[1]['local_graph_id']]);
+			$_SESSION['sess_config_array']['tags_draw'] = $draw;
+		} else {
+			$draw = $_SESSION['sess_config_array']['tags_draw'];
+		}
+	} else {
+		// Tags are drawn by default, preserving the plugin's prior behaviour.
+		$draw                                       = 'on';
+		$_SESSION['sess_config_array']['tags_draw'] = $draw;
+	}
 
-	$redir = $config['url_path'] . 'plugins/tags/tags.php?host_id=' . $host_id;
+	$url = $_SERVER['REQUEST_URI'];
+	$url = str_replace('&tags_draw=on', '', $url);
+	$url = str_replace('&tags_draw=off', '', $url);
 
-	$fav = '<i class="fas fa-tags" title="' . __esc('Tags', 'tags') . '"></i>';
-	print '<a class="iconLink" href="' . html_escape($redir) . '">' . $fav . '</a><br/>';
+	if (!substr_count($url, '?')) {
+		$separator = '?';
+	} else {
+		$separator = '&';
+	}
+
+	// Two complete strings so the label stays grammatical when translated.
+	if ($draw == 'on') {
+		$title = __esc('Disable Tags', 'tags');
+	} else {
+		$title = __esc('Enable Tags', 'tags');
+	}
+
+	print '<a class="iconLink tagsDraw" href="' . html_escape($url . $separator . 'tags_draw=' . $draw) . '" title="' . $title . '"><i class="tagsDraw fas fa-tags"></i></a><br/>';
 }
 
 /**

@@ -312,6 +312,12 @@ if (!function_exists('get_nfilter_request_var')) {
 	}
 }
 
+if (!function_exists('isset_request_var')) {
+	function isset_request_var($name) {
+		return isset($GLOBALS['__test_request'][$name]);
+	}
+}
+
 if (!function_exists('get_filter_request_var')) {
 	function get_filter_request_var($name) {
 		return isset($GLOBALS['__test_request'][$name]) ? $GLOBALS['__test_request'][$name] : '';

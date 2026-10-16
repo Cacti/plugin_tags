@@ -480,6 +480,10 @@ function plugin_tags_device_remove($ids) {
 function plugin_tags_rrd_graph_graph_options($data) {
 	global $config, $tags_colors;
 
+	if (read_config_option('tags_hide_tags') == 'on') {
+		return $data;
+	}
+
 	// Respect the graph drilldown 'Enable/Disable Tags' toggle (session state
 	// set by plugin_tags_graph_button()); skip drawing when tags are disabled.
 	if (isset($_SESSION['sess_config_array']['tags_draw']) && $_SESSION['sess_config_array']['tags_draw'] == 'off') {

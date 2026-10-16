@@ -162,6 +162,12 @@ $settings['tags'] = [
 		'friendly_name' => __('Settings', 'tags'),
 		'method'        => 'spacer',
 	],
+	'tags_hide_tags' => [
+		'friendly_name' => __('Hide tags in graphs', 'tags'),
+		'description'   => __('If checked, plugin will not display tags in graphs', 'tags'),
+		'method'        => 'checkbox',
+		'default'       => '',
+	],
 	'tags_retention' => [
 		'friendly_name' => __('Data Retention', 'tags'),
 		'description'   => __('After this time, tags will be moved to the archive and will no longer be displayed', 'mactrack'),

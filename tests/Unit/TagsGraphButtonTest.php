@@ -15,10 +15,12 @@
 */
 
 /*
- * Unit coverage for plugin_tags_graph_button() and the tag-draw gate in
+ * Unit coverage for plugin_tags_graph_button() and the tag-draw gates in
  * plugin_tags_rrd_graph_graph_options() (include/functions.php): the
  * 'graph_buttons' hook prints a drilldown toggle that enables/disables
- * drawing this plugin's tag legend lines on graphs for the session.
+ * drawing this plugin's tag legend lines on graphs for the session, and the
+ * graph options hook skips drawing when the session toggle is off or the
+ * 'tags_hide_tags' setting is enabled.
  */
 
 beforeAll(function () {
@@ -26,9 +28,10 @@ beforeAll(function () {
 });
 
 beforeEach(function () {
-	$GLOBALS['__test_request'] = array();
-	$_SESSION                  = array();
-	$_SERVER['REQUEST_URI']    = '/cacti/graph_view.php?action=preview';
+	$GLOBALS['__test_request']        = array();
+	$GLOBALS['__test_config_options'] = array();
+	$_SESSION                         = array();
+	$_SERVER['REQUEST_URI']           = '/cacti/graph_view.php?action=preview';
 });
 
 it('shows the Disable Tags toggle by default with tags drawn', function () {
@@ -97,6 +100,15 @@ it('replaces an existing first-parameter tags_draw instead of duplicating it', f
 
 it('skips drawing tag legends when the session toggle is off', function () {
 	$_SESSION['sess_config_array']['tags_draw'] = 'off';
+
+	$data   = array('graph_id' => 10, 'start' => 0, 'end' => 100, 'txt_graph_items' => 'ORIGINAL');
+	$result = plugin_tags_rrd_graph_graph_options($data);
+
+	expect($result)->toBe($data);
+});
+
+it('skips drawing tag legends when the tags_hide_tags setting is on', function () {
+	test_set_config_option('tags_hide_tags', 'on');
 
 	$data   = array('graph_id' => 10, 'start' => 0, 'end' => 100, 'txt_graph_items' => 'ORIGINAL');
 	$result = plugin_tags_rrd_graph_graph_options($data);

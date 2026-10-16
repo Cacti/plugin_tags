@@ -1,7 +1,7 @@
 # ChangeLog
 
 --- develop ---
-
+* feature: Add option to hide tags from graphs
 * feature: Turn the graph drilldown button into an 'Enable Tags'/'Disable Tags' toggle that reflects the current session state and shows or hides this plugin's tag legend lines on graphs, rather than a static link, so it reads cleanly as a label in Cacti's graph action menu
 * security: Replace the confirmation pages' inline `onClick='cactiReturnTo()'` Cancel buttons with the CSP-safe `cactiReturnTo` class so the pages no longer trip Cacti's Content-Security-Policy script-src-attr directive; see the README for the one-time `applySkin()` snippet needed when running Cacti below 1.2.31 (1.2.31+ binds the class automatically)
 * security: Move the filter selects' inline onChange handlers into the ready block (and bind them via change, not click) so the page no longer trips Cacti's Content-Security-Policy script-src-attr directive

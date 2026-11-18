@@ -19,6 +19,23 @@ Instead, they are summarised and only the most recent few are shown.
 It is also possible to archive old tags. These are then not displayed in the graph.
 
 
+## Versions and compatibility
+
+This README describes the `develop` source branch.
+
+| Code | Plugin version | Minimum Cacti declared in `INFO` |
+| --- | --- | --- |
+| [Source branch](INFO) | 0.1 | 1.2.29 |
+
+No GitHub release is published for this repository. The source version above
+is not a published-release designation. Follow the development caveats and
+requirements in this README before deployment.
+
+Install this plugin in **`<cacti-root>/plugins/tags`**, using the directory
+name `tags` rather than `plugin_tags`.
+
+See [CHANGELOG.md](CHANGELOG.md) for the version history.
+
 ## Cacti compatibility
 
 If you are running a version of Cacti below 1.2.31, please add the function

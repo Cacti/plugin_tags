@@ -56,9 +56,26 @@ $(document).off('click.cactiReturnTo', '.cactiReturnTo')
 To install the Tags plugin, simply copy the plugin_tags directory to
 Cacti's plugins directory and rename it to simply 'tags'. Once you have done
 this, goto Cacti's Plugin Management page, Install and Enable the Tags plugin. Once
-this is complete, you can grant users permission to manage tags.
+this is complete, you can grant users the **Plugin Tags - view** realm, which
+is the only realm the plugin registers.
 
 Go to Management -> Tags
+
+## Settings
+
+The **Tags** tab under Settings holds the following options:
+
+* **Hide tags in graphs** - do not display tags in graphs.
+* **Data Retention** - after this time, tags are moved to the archive and are no
+  longer displayed.
+* **Graph legend limit** - if the number of tags is bigger than the limit, the
+  legend is aggregated.
+* **Select Primary Device** - typically a local Cacti device, where tags
+  related to the Cacti system are displayed.
+
+The remaining options enable automatic tags (and their colors) for device
+restarts, added devices, device changes, data source reindexing, the Cacti
+version, poller overruns, data collector status and plugin status.
 
 
 ## Bugs and Feature Enhancements

@@ -25,7 +25,7 @@ This README describes the `develop` source branch.
 
 | Code | Plugin version | Minimum Cacti declared in `INFO` |
 | --- | --- | --- |
-| [Source branch](INFO) | 0.1 | 1.2.29 |
+| [Source branch](https://github.com/Cacti/plugin_tags/blob/develop/INFO) | 0.1 | 1.2.29 |
 
 No GitHub release is published for this repository. The source version above
 is not a published-release designation. Follow the development caveats and
@@ -34,7 +34,7 @@ requirements in this README before deployment.
 Install this plugin in **`<cacti-root>/plugins/tags`**, using the directory
 name `tags` rather than `plugin_tags`.
 
-See [CHANGELOG.md](CHANGELOG.md) for the version history.
+See [CHANGELOG.md](https://github.com/Cacti/plugin_tags/blob/develop/CHANGELOG.md) for the version history.
 
 ## Cacti compatibility
 

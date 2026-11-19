@@ -152,7 +152,7 @@ function form_actions(): void {
 			input_validate_input_number($matches[1]);
 			// ====================================================
 
-			$item_list .= '<li>' . db_fetch_cell_prepared("SELECT description FROM $sql_table WHERE id = ?", [$matches[1]]) . '</li>';
+			$item_list .= '<li>' . html_escape(db_fetch_cell_prepared("SELECT description FROM $sql_table WHERE id = ?", [$matches[1]])) . '</li>';
 			$items_array[] = $matches[1];
 		}
 	}
@@ -344,7 +344,7 @@ function tags_edit(): void {
 			[get_filter_request_var('id')]);
 		$data = is_array($data) ? $data : [];
 
-		$header_label = __('Tag [edit: %s]', $data['description'] ?? __('Not Found', 'tags'));
+		$header_label = __('Tag [edit: %s]', html_escape($data['description'] ?? __('Not Found', 'tags')));
 
 		$tags_fields['color']['array'] = $tags_colors;
 	} else {
@@ -662,10 +662,10 @@ function tags_list() {
 			$row['type']  = tags_is_automatic_type($row['type']) ? __('Yes', 'tags') : __('No', 'tags');
 
 			form_alternate_row('line' . $row['id'], false, $row['enabled']);
-			form_selectable_cell("<span class='color-box' style='--tagcolor: " . htmlspecialchars($color) . "'></span><a class='linkEditMain' href='" . html_escape(htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false&action=edit&id=' . $row['id']) . "'>" . $row['description'] . '</a>', $row['id']);
+			form_selectable_cell("<span class='color-box' style='--tagcolor: " . htmlspecialchars($color) . "'></span><a class='linkEditMain' href='" . html_escape(htmlspecialchars(basename($_SERVER['PHP_SELF'])) . '?header=false&action=edit&id=' . $row['id']) . "'>" . html_escape($row['description']) . '</a>', $row['id']);
 			form_selectable_cell(date('Y-m-d H:i', $row['tag_time']), $row['id']);
 			form_selectable_cell($tags_target[$row['target']], $row['id']);
-			form_selectable_cell($row['host_description'], $row['id']);
+			form_selectable_cell(html_escape($row['host_description'] ?? ''), $row['id']);
 			form_selectable_cell($row['graph_id'], $row['id']);
 			form_selectable_cell($row['site_id'], $row['id']);
 			form_selectable_cell($row['type'], $row['id']);

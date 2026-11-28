@@ -1,0 +1,582 @@
+# Latvian translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Latvian <https://translate.cacti.net/projects/cacti/core/lv/>\n"
+"Language: lv-LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Nekad"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d dienas"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d mēnesis"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d mēneši"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d gads"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d gadi"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Melna"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Sarkana"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Zaļa"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Zila"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Dzeltena"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Pelēka"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Brūna"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Rozā"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Automātiska"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Manuāla"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Primārā ierīce"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Visas ierīces"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Ierīce pievienota"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Ierīce mainīta"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Ierīces restartēšana"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti versija mainīta"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Citi automātiskie notikumi"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Datu avots pārindeksēts"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Aptaujātāja pārsniegums"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Datu vācējs nedarbojas"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Datu vācējs atjaunots"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Pamatiestatījumi"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Apraksts"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Birkas ziņojums, maks. garums 64 rakstzīmes"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Kurai ierīcei"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Birku var piešķirt vienai vai vairākām ierīcēm"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Ierīce"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Atlasīt ierīci"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Atlasiet ierīci"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Grafiks"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Atlasīt grafiku"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Nav"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Atrašanās vieta"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Atlasīt atrašanās vietu"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Birkas datums un laiks"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Šīs birkas datums / laiks."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Izvēlēties krāsu"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Atlasiet krāsu šai birkai"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Iespējot"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Atspējota birka grafikā netiks rādīta."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Iestatījumi"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Paslēpt birkas grafikos"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Ja atzīmēts, spraudnis nerādīs birkas grafikos"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Datu saglabāšana"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Pēc šī laika birkas tiks pārvietotas uz arhīvu un vairs netiks rādītas"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Grafika leģendas ierobežojums"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Ja birku skaits pārsniedz ierobežojumu, leģenda tiks apkopota. Iespējamo attēlošanas problēmu dēļ vertikālo līniju skaits ir ierobežots līdz 5 reizēm šīs vērtības."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Atlasīt primāro ierīci"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Parasti vietējā Cacti ierīce. Šeit tiks rādītas ar Cacti sistēmu saistītās birkas."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Automātiskās birkas - konkrētam resursdatoram"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Resursdatora restartēšanas automātiskā birka"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Ja atzīmēts, spraudnis izveidos automātisku birku, kad ierīce tiks restartēta"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Resursdatora restartēšanas birkas krāsa"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Ieteikums: katrai automātiskajai birkai izmantojiet citu krāsu"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Resursdatora pievienošanas automātiskā birka. Tiks rādīta 'Noklusējuma' ierīcē un konkrētajā ierīcē"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Ja atzīmēts, spraudnis izveidos automātiskas birkas, kad tiks pievienota ierīce"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Resursdatora pievienošanas birkas krāsa"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Ierīces saglabāšanas/maiņas automātiskā birka"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Ja atzīmēts, spraudnis izveidos automātisku birku, kad ierīce tiks saglabāta (mainīta)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Ierīces saglabāšanas/maiņas birkas krāsa"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Datu avota pārindeksēšanas automātiskā birka"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Izveidot birku, kad mainās ierīces datu vaicājuma atgrieztā indeksu kopa."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Datu avota pārindeksēšanas birkas krāsa"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Automātiskās birkas - citas"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Izvēlieties, kā rādīt tālāk norādītās birkas"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Kurām ierīcēm tiks rādītas tālāk norādītās birkas?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti versijas automātiskā birka"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Ja atzīmēts, spraudnis izveidos automātisku birku, kad mainīsies Cacti versija. Birka attiecas uz visiem grafikiem."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti versijas birkas krāsa"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Aptaujātāja pārsnieguma automātiskā birka"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Izveidot birku, kad datu vācēja aptaujas cikls pārsniedz konfigurēto aptaujātāja intervālu."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Aptaujātāja pārsnieguma birkas krāsa"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Datu vācēja statusa automātiskās birkas"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Izveidot birkas, kad attālais datu vācējs pārstāj darboties vai tiek atjaunots."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Datu vācēja statusa birkas krāsa"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Spraudņa statusa automātiskā birka"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Izveidot birku, kad mainās jebkura spraudņa statuss (iespējošana/atspējošana/jaunināšana)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Spraudņa stāvokļa birkas krāsa"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Ierīce saglabāta/mainīta, ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Ierīce pievienota, ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Ierīce pievienota"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Restartēšana, darbības laiks bija %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Atspējot birkas"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Iespējot birkas"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Spraudnis Birkas - skatījums"
+
+#: setup.php
+msgid "Management"
+msgstr "Vadība"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Birkas"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Birku rediģēšana"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Birku saglabāšana"
+
+#: tags.php
+msgid "Delete"
+msgstr "Dzēst"
+
+#: tags.php
+msgid "Disable"
+msgstr "Atspējot"
+
+#: tags.php
+msgid "Archive"
+msgstr "Arhivēt"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Noklikšķiniet uz 'Turpināt', lai dzēstu tālāk norādītos vienumus."
+msgstr[1] "Noklikšķiniet uz 'Turpināt', lai dzēstu tālāk norādīto vienumu."
+msgstr[2] "Noklikšķiniet uz 'Turpināt', lai dzēstu tālāk norādītos vienumus."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: tags.php
+msgid "Continue"
+msgstr "Turpināt"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Dzēst vienumus"
+msgstr[1] "Dzēst vienumu"
+msgstr[2] "Dzēst vienumus"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Noklikšķiniet uz 'Turpināt', lai atspējotu tālāk norādītos vienumus."
+msgstr[1] "Noklikšķiniet uz 'Turpināt', lai atspējotu tālāk norādīto vienumu."
+msgstr[2] "Noklikšķiniet uz 'Turpināt', lai atspējotu tālāk norādītos vienumus."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Atspējot vienumus"
+msgstr[1] "Atspējot vienumu"
+msgstr[2] "Atspējot vienumus"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Noklikšķiniet uz 'Turpināt', lai iespējotu tālāk norādītos vienumus."
+msgstr[1] "Noklikšķiniet uz 'Turpināt', lai iespējotu tālāk norādīto vienumu."
+msgstr[2] "Noklikšķiniet uz 'Turpināt', lai iespējotu tālāk norādītos vienumus."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Iespējot vienumus"
+msgstr[1] "Iespējot vienumu"
+msgstr[2] "Iespējot vienumus"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Noklikšķiniet uz 'Turpināt', lai arhivētu tālāk norādītos vienumus."
+msgstr[1] "Noklikšķiniet uz 'Turpināt', lai arhivētu tālāk norādīto vienumu."
+msgstr[2] "Noklikšķiniet uz 'Turpināt', lai arhivētu tālāk norādītos vienumus."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Arhivēt vienumus"
+msgstr[1] "Arhivēt vienumu"
+msgstr[2] "Arhivēt vienumus"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Nav atrasts"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Birka [rediģēt: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Birka [jauna]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Sākuma datuma/laika atlasītājs"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Jums jāiestata primārā ierīce sadaļā Konsole - Konfigurācija - Iestatījumi - Birkas"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Birkas laiks"
+
+#: tags.php
+msgid "Target"
+msgstr "Mērķis"
+
+#: tags.php
+msgid "No"
+msgstr "Nē"
+
+#: tags.php
+msgid "Yes"
+msgstr "Jā"
+
+#: tags.php
+msgid "Empty"
+msgstr "Tukšs"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Birku pārvaldība"
+
+#: tags.php
+msgid "Search"
+msgstr "Meklēt"
+
+#: tags.php
+msgid "Any"
+msgstr "Jebkurš"
+
+#: tags.php
+msgid "Type"
+msgstr "Tips"
+
+#: tags.php
+msgid "Default"
+msgstr "Noklusējuma"
+
+#: tags.php
+msgid "Go"
+msgstr "Doties"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Atlasīt/atjaunināt filtrus"
+
+#: tags.php
+msgid "Clear"
+msgstr "Notīrīt"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Notīrīt filtrus"
+
+#: tags.php
+msgid "Presets"
+msgstr "Standarti"
+
+#: tags.php
+msgid "Custom"
+msgstr "Pielāgots"
+
+#: tags.php
+msgid "From"
+msgstr "No"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Sākuma datuma atlasītājs"
+
+#: tags.php
+msgid "To"
+msgstr "Līdz"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Beigu datuma atlasītājs"

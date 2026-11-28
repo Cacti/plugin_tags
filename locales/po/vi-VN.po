@@ -1,0 +1,566 @@
+# Vietnamese translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Vietnamese <https://translate.cacti.net/projects/cacti/core/vi/>\n"
+"Language: vi-VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Không bao giờ"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d Ngày"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d Tháng"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d Tháng"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d Năm"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d Năm"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Đen"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Đỏ"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Xanh lục"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Xanh lam"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Vàng"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Xám"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Nâu"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Hồng"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Tự động"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Thủ công"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Thiết bị chính"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Tất cả thiết bị"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Đã thêm thiết bị"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Thiết bị đã thay đổi"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Khởi động lại thiết bị"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Phiên bản Cacti đã thay đổi"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Các sự kiện tự động khác"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Đã lập chỉ mục lại nguồn dữ liệu"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Vượt quá thời gian thăm dò"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Bộ thu thập dữ liệu ngừng hoạt động"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Bộ thu thập dữ liệu đã khôi phục"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Cài đặt chung"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Mô tả"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Thông điệp thẻ, độ dài tối đa 64 ký tự"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Cho thiết bị nào"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Thẻ có thể được gán cho một hoặc nhiều thiết bị"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Thiết bị"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Chọn thiết bị"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Chọn một thiết bị"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Biểu đồ"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Chọn biểu đồ"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Không có"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Địa điểm"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Chọn địa điểm"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Ngày và giờ của thẻ"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Ngày / giờ cho thẻ này."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Chọn màu"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Chọn màu cho thẻ này"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Bật"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Thẻ bị vô hiệu hóa sẽ không hiển thị trên biểu đồ."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Ẩn thẻ trên biểu đồ"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Nếu được chọn, plugin sẽ không hiển thị thẻ trên biểu đồ"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Lưu trữ dữ liệu"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Sau khoảng thời gian này, thẻ sẽ được chuyển vào kho lưu trữ và không còn hiển thị nữa"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Giới hạn chú giải biểu đồ"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Nếu số lượng thẻ lớn hơn giới hạn, chú giải sẽ được gộp lại. Do các sự cố hiển thị tiềm ẩn, số đường dọc được giới hạn ở mức gấp 5 lần giá trị này."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Chọn thiết bị chính"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Thường là một thiết bị Cacti cục bộ. Các thẻ liên quan đến hệ thống Cacti sẽ được hiển thị tại đây."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Thẻ tự động - theo máy chủ"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Thẻ tự động khi máy chủ khởi động lại"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Nếu được chọn, plugin sẽ tạo thẻ tự động khi thiết bị khởi động lại"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Màu thẻ khởi động lại máy chủ"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Khuyến nghị: Sử dụng màu khác nhau cho mỗi thẻ tự động"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Thẻ tự động khi thêm máy chủ. Sẽ hiển thị trên thiết bị 'Mặc định' và thiết bị cụ thể"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Nếu được chọn, plugin sẽ tạo thẻ tự động khi thêm thiết bị"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Màu thẻ thêm máy chủ"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Thẻ tự động khi lưu/thay đổi thiết bị"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Nếu được chọn, plugin sẽ tạo thẻ tự động khi thiết bị được lưu (thay đổi)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Màu thẻ lưu/thay đổi thiết bị"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Thẻ tự động khi lập chỉ mục lại nguồn dữ liệu"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Tạo thẻ khi tập chỉ mục do truy vấn dữ liệu thiết bị trả về thay đổi."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Màu thẻ lập chỉ mục lại nguồn dữ liệu"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Thẻ tự động - khác"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Chọn cách hiển thị các thẻ được liệt kê bên dưới"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Các thẻ bên dưới sẽ được hiển thị cho những thiết bị nào?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Thẻ tự động phiên bản Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Nếu được chọn, plugin sẽ tạo thẻ tự động khi phiên bản Cacti thay đổi. Thẻ áp dụng cho tất cả biểu đồ."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Màu thẻ phiên bản Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Thẻ tự động khi vượt quá thời gian thăm dò"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Tạo thẻ khi chu kỳ thăm dò của bộ thu thập dữ liệu vượt quá khoảng thời gian thăm dò đã cấu hình."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Màu thẻ vượt quá thời gian thăm dò"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Thẻ tự động trạng thái bộ thu thập dữ liệu"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Tạo thẻ khi bộ thu thập dữ liệu từ xa ngừng hoạt động hoặc khôi phục."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Màu thẻ trạng thái bộ thu thập dữ liệu"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Thẻ tự động trạng thái plugin"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Tạo thẻ khi trạng thái của bất kỳ plugin nào thay đổi (bật/tắt/nâng cấp)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Màu thẻ trạng thái plugin"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Đã lưu/thay đổi thiết bị, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Đã thêm thiết bị, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Đã thêm thiết bị"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Khởi động lại, thời gian hoạt động là %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Vô hiệu hóa thẻ"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Bật thẻ"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Plugin Thẻ - xem"
+
+#: setup.php
+msgid "Management"
+msgstr "Quản lý"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Thẻ"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Chỉnh sửa thẻ"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Lưu thẻ"
+
+#: tags.php
+msgid "Delete"
+msgstr "Xóa"
+
+#: tags.php
+msgid "Disable"
+msgstr "Vô hiệu hóa"
+
+#: tags.php
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Nhấn 'Tiếp tục' để xóa mục sau."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Hủy"
+
+#: tags.php
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Xóa mục"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Nhấn 'Tiếp tục' để vô hiệu hóa mục sau."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Vô hiệu hóa mục"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Nhấn 'Tiếp tục' để bật mục sau."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Bật mục"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Nhấn 'Tiếp tục' để lưu trữ mục sau."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Lưu trữ mục"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Không tìm thấy"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Thẻ [chỉnh sửa: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Thẻ [mới]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Bộ chọn ngày/giờ bắt đầu"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Bạn phải đặt thiết bị chính trong Bảng điều khiển - Cấu hình - Cài đặt - Thẻ"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Thời gian thẻ"
+
+#: tags.php
+msgid "Target"
+msgstr "Mục tiêu"
+
+#: tags.php
+msgid "No"
+msgstr "Không"
+
+#: tags.php
+msgid "Yes"
+msgstr "Có"
+
+#: tags.php
+msgid "Empty"
+msgstr "Trống"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Quản lý thẻ"
+
+#: tags.php
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: tags.php
+msgid "Any"
+msgstr "Bất kỳ"
+
+#: tags.php
+msgid "Type"
+msgstr "Loại"
+
+#: tags.php
+msgid "Default"
+msgstr "Mặc định"
+
+#: tags.php
+msgid "Go"
+msgstr "Đi"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Đặt/Làm mới bộ lọc"
+
+#: tags.php
+msgid "Clear"
+msgstr "Xóa"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Xóa bộ lọc"
+
+#: tags.php
+msgid "Presets"
+msgstr "Đặt trước"
+
+#: tags.php
+msgid "Custom"
+msgstr "Tùy chỉnh"
+
+#: tags.php
+msgid "From"
+msgstr "Từ"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Bộ chọn ngày bắt đầu"
+
+#: tags.php
+msgid "To"
+msgstr "Đến"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Bộ chọn ngày kết thúc"

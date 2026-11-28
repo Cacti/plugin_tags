@@ -1,0 +1,574 @@
+# Somali translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Somali <developers@cacti.net>\n"
+"Language: so_SO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Marna"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d Maalmood"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d Bil"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d Bilood"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d Sano"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d Sano"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Madow"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Guduud"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Cagaar"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Buluug"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Jaalle"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Cawl"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Buni"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Basali"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Otomaatig"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Gacanta"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Qalabka aasaasiga ah"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Dhammaan qalabka"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Qalab La Daray"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Qalab La Beddelay"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Dib-u-bilowga Qalabka"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Nooca Cacti Waa La Beddelay"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Dhacdooyinka Kale ee Otomaatiga ah"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Isha Xogta Dib Ayaa Loo Tixraacay"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Xad-dhaafka Waqtiga Poller-ka"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Xog-ururiyuhu Wuu Go'ay"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Xog-ururiyuhu Wuu Soo Kabtay"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Dejinta Guud"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Sharaxaadda"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Farriinta calaamadda, dhererka ugu badan 64 xaraf"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Qalabkee loogu talagalay"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Calaamadda waxaa lagu meeleyn karaa hal qalab ama in ka badan"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Qalab"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Dooro qalab"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Dooro Qalab"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Garaafka"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Dooro garaaf"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Midna"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Goob"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Dooro goob"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Taariikhda iyo waqtiga calaamadda"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Taariikhda / waqtiga calaamaddan."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Dooro midab"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Dooro midabka calaamaddan"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Hawl-geli"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Calaamadda la hawl-joojiyay laguma muujin doono garaafka."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Dejinta"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Ku qari calaamadaha garaafyada"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Haddii la calaamadeeyo, plugin-ku kuma muujin doono calaamadaha garaafyada"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Haynta Xogta"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Waqtigan ka dib, calaamadaha waxaa loo rari doonaa kaydka mana la muujin doono mar dambe"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Xadka furaha garaafka"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Haddii tirada calaamaduhu ka weyn tahay xadka, furaha waa la isku dari doonaa. Sababo la xiriira arrimo muujin oo suurtagal ah, tirada xariiqyada toosan waxay ku xaddidan tahay 5 jeer qiimahan."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Dooro Qalabka Aasaasiga ah"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Caadi ahaan waa qalab Cacti oo maxalli ah. Calaamadaha la xiriira nidaamka Cacti waxaa lagu muujin doonaa halkan."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Calaamadaha otomaatiga ah - gaar u ah martigeliyaha"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Calaamadda otomaatiga ah ee dib-u-bilowga martigeliyaha"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Haddii la calaamadeeyo, plugin-ku wuxuu abuurayaa calaamad otomaatig ah marka qalabku dib u bilowdo"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Midabka calaamadda dib-u-bilowga martigeliyaha"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Talo: U adeegso midab ka duwan calaamad kasta oo otomaatig ah"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Calaamadda otomaatiga ah ee martigeliyaha la daray. Waxaa lagu muujin doonaa qalabka 'Asal ah' iyo qalabka gaarka ah"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Haddii la calaamadeeyo, plugin-ku wuxuu abuurayaa calaamado otomaatig ah marka qalab lagu daro"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Midabka calaamadda martigeliyaha la daray"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Calaamadda otomaatiga ah ee kaydinta/beddelka qalabka"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Haddii la calaamadeeyo, plugin-ku wuxuu abuurayaa calaamad otomaatig ah marka qalabka la kaydiyo (la beddelo)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Midabka calaamadda kaydinta/beddelka qalabka"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Calaamadda otomaatiga ah ee dib-u-tixraaca isha xogta"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Abuur calaamad marka xirmada tixraacyada ee uu soo celiyo weydiinta xogta qalabku isbeddesho."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Midabka calaamadda dib-u-tixraaca isha xogta"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Calaamadaha otomaatiga ah - kuwa kale"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Dooro sida loo muujinayo calaamadaha hoos ku taxan"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Qalabyadee ayaa lagu muujin doonaa calaamadaha hoose?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Calaamadda otomaatiga ah ee nooca Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Haddii la calaamadeeyo, plugin-ku wuxuu abuurayaa calaamad otomaatig ah marka nooca Cacti la beddelo. Calaamaduhu waxay khuseeyaan dhammaan garaafyada."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Midabka calaamadda nooca Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Calaamadda otomaatiga ah ee xad-dhaafka poller-ka"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Abuur calaamad marka wareegga xog-qaadista xog-ururiyuhu dhaafo muddada loo dejiyay poller-ka."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Midabka calaamadda xad-dhaafka poller-ka"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Calaamadaha otomaatiga ah ee xaaladda xog-ururiyaha"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Abuur calaamado marka xog-ururiye fog uu go'o ama soo kabto."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Midabka calaamadda xaaladda xog-ururiyaha"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Calaamadda otomaatiga ah ee xaaladda plugin-ka"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Abuur calaamad marka xaaladda plugin kasta isbeddesho (hawl-geli/hawl-jooji/casriyee)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Midabka calaamadda xaaladda plugin-ka"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Qalabka waa la kaydiyay/beddelay, ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Qalabka waa la daray, ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Qalabka waa la daray"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Dib-u-bilow, waqtiga shaqadu wuxuu ahaa %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Hawl-jooji Calaamadaha"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Hawl-geli Calaamadaha"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Plugin-ka Calaamadaha - aragti"
+
+#: setup.php
+msgid "Management"
+msgstr "Maamul"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Calaamado"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Wax ka beddel Calaamadaha"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Kaydi Calaamadaha"
+
+#: tags.php
+msgid "Delete"
+msgstr "Tirtir"
+
+#: tags.php
+msgid "Disable"
+msgstr "Hawl-jooji"
+
+#: tags.php
+msgid "Archive"
+msgstr "Kaydi"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Guji 'Sii wad' si aad u tirtirto shayga soo socda."
+msgstr[1] "Guji 'Sii wad' si aad u tirtirto waxyaabaha soo socda."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Jooji"
+
+#: tags.php
+msgid "Continue"
+msgstr "Sii wad"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Tirtir shayga"
+msgstr[1] "Tirtir waxyaabaha"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Guji 'Sii wad' si aad u hawl-joojiso shayga soo socda."
+msgstr[1] "Guji 'Sii wad' si aad u hawl-joojiso waxyaabaha soo socda."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Hawl-jooji shayga"
+msgstr[1] "Hawl-jooji waxyaabaha"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Guji 'Sii wad' si aad u hawl-geliso shayga soo socda."
+msgstr[1] "Guji 'Sii wad' si aad u hawl-geliso waxyaabaha soo socda."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Hawl-geli shayga"
+msgstr[1] "Hawl-geli waxyaabaha"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Guji 'Sii wad' si aad u kaydiso shayga soo socda."
+msgstr[1] "Guji 'Sii wad' si aad u kaydiso waxyaabaha soo socda."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Kaydi shayga"
+msgstr[1] "Kaydi waxyaabaha"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Lama Helin"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Calaamad [wax ka beddel: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Calaamad [cusub]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Xulashada Taariikhda/Waqtiga Bilowga"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Waa inaad ku dejisaa qalabka aasaasiga ah Qeybta Console - Habaynta - Dejinta - Calaamadaha"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Waqtiga calaamadda"
+
+#: tags.php
+msgid "Target"
+msgstr "Bartilmaameed"
+
+#: tags.php
+msgid "No"
+msgstr "Maya"
+
+#: tags.php
+msgid "Yes"
+msgstr "Haa"
+
+#: tags.php
+msgid "Empty"
+msgstr "Madhan"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Maamulka Calaamadaha"
+
+#: tags.php
+msgid "Search"
+msgstr "Raadi"
+
+#: tags.php
+msgid "Any"
+msgstr "Mid kasta"
+
+#: tags.php
+msgid "Type"
+msgstr "Nooca"
+
+#: tags.php
+msgid "Default"
+msgstr "Asal ah"
+
+#: tags.php
+msgid "Go"
+msgstr "Soco"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Deji/Cusboonaysii Shaandheeyayaasha"
+
+#: tags.php
+msgid "Clear"
+msgstr "Nadiifi"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Nadiifi Shaandheeyayaasha"
+
+#: tags.php
+msgid "Presets"
+msgstr "Dejinnada Hore"
+
+#: tags.php
+msgid "Custom"
+msgstr "Gaar ah"
+
+#: tags.php
+msgid "From"
+msgstr "Laga bilaabo"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Xulashada Taariikhda Bilowga"
+
+#: tags.php
+msgid "To"
+msgstr "Ilaa"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Xulashada Taariikhda Dhammaadka"

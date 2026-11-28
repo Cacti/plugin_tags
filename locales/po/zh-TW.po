@@ -1,0 +1,566 @@
+# Chinese (Traditional Han script) translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://translate.cacti.net/projects/cacti/core/zh_Hant/>\n"
+"Language: zh-TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "從不"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d 天"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d 個月"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d 個月"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d 年"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d 年"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "黑色"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "紅色"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "綠色"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "藍色"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "黃色"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "灰色"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "棕色"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "粉紅色"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "自動"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "手動"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "主要裝置"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "所有裝置"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "已新增裝置"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "裝置已變更"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "裝置重新啟動"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti 版本已變更"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "其他自動事件"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "資料來源已重新建立索引"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "輪詢逾時"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "資料收集器離線"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "資料收集器已恢復"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "一般設定"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "描述"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "標籤訊息，最大長度 64 個字元"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "適用於哪個裝置"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "標籤可指派給一個或多個裝置"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "裝置"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "選擇裝置"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "選擇一個裝置"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "圖表"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "選擇圖表"
+
+#: include/arrays.php
+msgid "None"
+msgstr "無"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "站點"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "選擇站點"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "標籤日期與時間"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "此標籤的日期 / 時間。"
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "選擇顏色"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "為此標籤選擇顏色"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "啟用"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "停用的標籤將不會顯示在圖表中。"
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "設定"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "在圖表中隱藏標籤"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "若勾選，外掛程式將不會在圖表中顯示標籤"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "資料保留"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "超過此時間後，標籤將移至封存區並不再顯示"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "圖表圖例上限"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "若標籤數量大於此上限，圖例將會彙整。基於潛在的顯示問題，垂直線數量上限為此數值的 5 倍。"
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "選擇主要裝置"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "通常為本機 Cacti 裝置。與 Cacti 系統相關的標籤將顯示於此。"
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "自動標籤 - 特定主機"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "主機重新啟動自動標籤"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "若勾選，外掛程式將在裝置重新啟動時建立自動標籤"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "主機重新啟動標籤顏色"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "建議：為每個自動標籤使用不同的顏色"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "新增主機自動標籤。將顯示於「預設」裝置及特定裝置上"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "若勾選，外掛程式將在新增裝置時建立自動標籤"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "新增主機標籤顏色"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "裝置儲存/變更自動標籤"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "若勾選，外掛程式將在儲存（變更）裝置時建立自動標籤"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "裝置儲存/變更標籤顏色"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "資料來源重新建立索引自動標籤"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "當裝置資料查詢傳回的索引集合變更時建立標籤。"
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "資料來源重新建立索引標籤顏色"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "自動標籤 - 其他"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "選擇下方所列標籤的顯示方式"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "下方的標籤將顯示在哪些裝置上？"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti 版本自動標籤"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "若勾選，外掛程式將在 Cacti 版本變更時建立自動標籤。此標籤適用於所有圖表。"
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti 版本標籤顏色"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "輪詢逾時自動標籤"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "當資料收集器輪詢週期超過設定的輪詢間隔時建立標籤。"
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "輪詢逾時標籤顏色"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "資料收集器狀態自動標籤"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "當遠端資料收集器離線或恢復時建立標籤。"
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "資料收集器狀態標籤顏色"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "外掛程式狀態自動標籤"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "當任何外掛程式的狀態變更（啟用/停用/升級）時建立標籤"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "外掛程式狀態標籤顏色"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "裝置已儲存/變更，ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "已新增裝置，ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "已新增裝置"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "已重新啟動，先前運作時間為 %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "停用標籤"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "啟用標籤"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "標籤外掛程式 - 檢視"
+
+#: setup.php
+msgid "Management"
+msgstr "管理"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "標籤"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "編輯標籤"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "儲存標籤"
+
+#: tags.php
+msgid "Delete"
+msgstr "刪除"
+
+#: tags.php
+msgid "Disable"
+msgstr "停用"
+
+#: tags.php
+msgid "Archive"
+msgstr "封存"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "點擊「繼續」以刪除以下項目。"
+
+#: tags.php
+msgid "Cancel"
+msgstr "取消"
+
+#: tags.php
+msgid "Continue"
+msgstr "繼續"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "刪除項目"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "點擊「繼續」以停用以下項目。"
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "停用項目"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "點擊「繼續」以啟用以下項目。"
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "啟用項目"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "點擊「繼續」以封存以下項目。"
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "封存項目"
+
+#: tags.php
+msgid "Not Found"
+msgstr "未找到"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "標籤 [編輯: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "標籤 [新增]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "開始日期/時間選擇器"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "您必須在 主控台 - 組態 - 設定 - 標籤 中設定主要裝置"
+
+#: tags.php
+msgid "Tag time"
+msgstr "標籤時間"
+
+#: tags.php
+msgid "Target"
+msgstr "目標"
+
+#: tags.php
+msgid "No"
+msgstr "否"
+
+#: tags.php
+msgid "Yes"
+msgstr "是"
+
+#: tags.php
+msgid "Empty"
+msgstr "空白"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "標籤管理"
+
+#: tags.php
+msgid "Search"
+msgstr "搜尋"
+
+#: tags.php
+msgid "Any"
+msgstr "任何"
+
+#: tags.php
+msgid "Type"
+msgstr "類型"
+
+#: tags.php
+msgid "Default"
+msgstr "預設"
+
+#: tags.php
+msgid "Go"
+msgstr "送出"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "設定/重新整理過濾器"
+
+#: tags.php
+msgid "Clear"
+msgstr "清除"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "清除過濾器"
+
+#: tags.php
+msgid "Presets"
+msgstr "預設集"
+
+#: tags.php
+msgid "Custom"
+msgstr "自訂"
+
+#: tags.php
+msgid "From"
+msgstr "從"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "開始日期選擇器"
+
+#: tags.php
+msgid "To"
+msgstr "到"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "結束日期選擇器"

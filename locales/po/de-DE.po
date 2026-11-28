@@ -1,0 +1,574 @@
+# German translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: German <https://translate.cacti.net/projects/cacti/core/de/>\n"
+"Language: de-DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Nie"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d Tage"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d Monat"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d Monate"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d Jahr"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d Jahre"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Schwarz"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Rot"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Grün"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Blau"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Gelb"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Grau"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Braun"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Rosa"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Manuell"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Primäres Gerät"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Alle Geräte"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Gerät hinzugefügt"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Gerät geändert"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Geräteneustart"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti-Version geändert"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Weitere automatische Ereignisse"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Datenquelle neu indiziert"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Poller-Zeitüberschreitung"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Datensammler ausgefallen"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Datensammler wiederhergestellt"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Beschreibung"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Tag-Meldung, max. Länge 64 Zeichen"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Für welches Gerät"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Das Tag kann einem oder mehreren Geräten zugewiesen werden"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Gerät"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Gerät auswählen"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Ein Gerät auswählen"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Diagramm"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Diagramm auswählen"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Keine"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Standort"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Standort auswählen"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Datum und Uhrzeit des Tags"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Datum / Uhrzeit für dieses Tag."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Farbe wählen"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Farbe für dieses Tag auswählen"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Ein deaktiviertes Tag wird nicht im Diagramm angezeigt."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Tags in Diagrammen ausblenden"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Wenn aktiviert, zeigt das Plugin keine Tags in Diagrammen an"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Datenaufbewahrung"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Nach dieser Zeit werden Tags ins Archiv verschoben und nicht mehr angezeigt"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Limit für Diagrammlegende"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Wenn die Anzahl der Tags größer als das Limit ist, wird die Legende zusammengefasst. Aufgrund möglicher Darstellungsprobleme ist die Anzahl der vertikalen Linien auf das 5-Fache dieses Wertes begrenzt."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Primäres Gerät auswählen"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Typischerweise ein lokales Cacti-Gerät. Tags zum Cacti-System werden hier angezeigt."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Automatische Tags - hostspezifisch"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Automatisches Tag bei Host-Neustart"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Wenn aktiviert, erstellt das Plugin ein automatisches Tag, wenn das Gerät neu startet"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Tag-Farbe für Host-Neustart"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Empfehlung: Verwenden Sie für jedes automatische Tag eine andere Farbe"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Automatisches Tag bei hinzugefügtem Host. Wird beim Gerät 'Standard' und dem jeweiligen Gerät angezeigt"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Wenn aktiviert, erstellt das Plugin automatische Tags, wenn ein Gerät hinzugefügt wird"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Tag-Farbe für hinzugefügten Host"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Automatisches Tag bei Gerätespeicherung/-änderung"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Wenn aktiviert, erstellt das Plugin ein automatisches Tag, wenn ein Gerät gespeichert (geändert) wird"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Tag-Farbe für Gerätespeicherung/-änderung"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Automatisches Tag bei Neuindizierung einer Datenquelle"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Ein Tag erstellen, wenn sich die Menge der von einer Geräte-Datenabfrage zurückgegebenen Indizes ändert."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Tag-Farbe für Datenquellen-Neuindizierung"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Automatische Tags - sonstige"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Auswählen, wie die unten aufgeführten Tags angezeigt werden"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Für welche Geräte sollen die unten aufgeführten Tags angezeigt werden?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Automatisches Tag bei Cacti-Version"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Wenn aktiviert, erstellt das Plugin ein automatisches Tag, wenn sich die Cacti-Version ändert. Das Tag gilt für alle Diagramme."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Tag-Farbe für Cacti-Version"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Automatisches Tag bei Poller-Zeitüberschreitung"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Ein Tag erstellen, wenn ein Abfragezyklus eines Datensammlers das konfigurierte Poller-Intervall überschreitet."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Tag-Farbe für Poller-Zeitüberschreitung"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Automatische Tags für Datensammler-Status"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Tags erstellen, wenn ein entfernter Datensammler ausfällt oder wiederhergestellt wird."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Tag-Farbe für Datensammler-Status"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Automatisches Tag für Plugin-Status"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Ein Tag erstellen, wenn sich der Status eines Plugins ändert (Aktivieren/Deaktivieren/Aktualisieren)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Tag-Farbe für Plugin-Status"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Gerät gespeichert/geändert, ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Gerät hinzugefügt, ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Gerät hinzugefügt"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Neustart, Betriebszeit war %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Tags deaktivieren"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Tags aktivieren"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Plugin Tags - Ansicht"
+
+#: setup.php
+msgid "Management"
+msgstr "Verwaltung"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Tags"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Tags bearbeiten"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Tags speichern"
+
+#: tags.php
+msgid "Delete"
+msgstr "Löschen"
+
+#: tags.php
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: tags.php
+msgid "Archive"
+msgstr "Archivieren"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicken Sie auf 'Fortsetzen', um das folgende Element zu löschen."
+msgstr[1] "Klicken Sie auf 'Fortsetzen', um die folgenden Elemente zu löschen."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: tags.php
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Element löschen"
+msgstr[1] "Elemente löschen"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicken Sie auf 'Fortsetzen', um das folgende Element zu deaktivieren."
+msgstr[1] "Klicken Sie auf 'Fortsetzen', um die folgenden Elemente zu deaktivieren."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Element deaktivieren"
+msgstr[1] "Elemente deaktivieren"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicken Sie auf 'Fortsetzen', um das folgende Element zu aktivieren."
+msgstr[1] "Klicken Sie auf 'Fortsetzen', um die folgenden Elemente zu aktivieren."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Element aktivieren"
+msgstr[1] "Elemente aktivieren"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Klicken Sie auf 'Fortsetzen', um das folgende Element zu archivieren."
+msgstr[1] "Klicken Sie auf 'Fortsetzen', um die folgenden Elemente zu archivieren."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Element archivieren"
+msgstr[1] "Elemente archivieren"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Tag [bearbeiten: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Tag [neu]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Startdatum/-zeit-Auswahl"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Sie müssen das primäre Gerät unter Konsole - Konfiguration - Einstellungen - Tags festlegen"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Tag-Zeitpunkt"
+
+#: tags.php
+msgid "Target"
+msgstr "Ziel"
+
+#: tags.php
+msgid "No"
+msgstr "Nein"
+
+#: tags.php
+msgid "Yes"
+msgstr "Ja"
+
+#: tags.php
+msgid "Empty"
+msgstr "Leer"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Tags-Verwaltung"
+
+#: tags.php
+msgid "Search"
+msgstr "Suche"
+
+#: tags.php
+msgid "Any"
+msgstr "Beliebig"
+
+#: tags.php
+msgid "Type"
+msgstr "Typ"
+
+#: tags.php
+msgid "Default"
+msgstr "Standard"
+
+#: tags.php
+msgid "Go"
+msgstr "Los"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Filter setzen/aktualisieren"
+
+#: tags.php
+msgid "Clear"
+msgstr "Zurücksetzen"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Filter zurücksetzen"
+
+#: tags.php
+msgid "Presets"
+msgstr "Voreinstellungen"
+
+#: tags.php
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: tags.php
+msgid "From"
+msgstr "Von"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Startdatum-Auswahl"
+
+#: tags.php
+msgid "To"
+msgstr "Bis"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Enddatum-Auswahl"

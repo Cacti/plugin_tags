@@ -1,0 +1,574 @@
+# Greek translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Greek <https://translate.cacti.net/projects/cacti/core/el/>\n"
+"Language: el-GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Ποτέ"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d ημέρες"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d μήνας"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d μήνες"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d έτος"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d έτη"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Μαύρο"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Κόκκινο"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Πράσινο"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Μπλε"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Κίτρινο"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Γκρι"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Καφέ"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Ροζ"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Αυτόματο"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Χειροκίνητο"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Κύρια συσκευή"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Όλες οι συσκευές"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Προστέθηκε συσκευή"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Τροποποιήθηκε συσκευή"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Επανεκκίνηση συσκευής"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Αλλαγή έκδοσης Cacti"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Άλλα αυτόματα συμβάντα"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Επαναευρετηρίαση πηγής δεδομένων"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Υπέρβαση χρόνου Poller"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Συλλέκτης δεδομένων εκτός λειτουργίας"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Επαναφορά συλλέκτη δεδομένων"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Γενικές ρυθμίσεις"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Μήνυμα ετικέτας, μέγ. μήκος 64 χαρακτήρες"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Για ποια συσκευή"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Η ετικέτα μπορεί να αντιστοιχιστεί σε μία ή περισσότερες συσκευές"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Συσκευή"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Επιλογή συσκευής"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Επιλέξτε μια συσκευή"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Γράφημα"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Επιλογή γραφήματος"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Κανένα"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Τοποθεσία"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Επιλογή τοποθεσίας"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Ημερομηνία και ώρα ετικέτας"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Η ημερομηνία / ώρα για αυτήν την ετικέτα."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Επιλογή χρώματος"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Επιλέξτε χρώμα για αυτήν την ετικέτα"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Μια απενεργοποιημένη ετικέτα δεν θα εμφανίζεται στο γράφημα."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Απόκρυψη ετικετών στα γραφήματα"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Εάν επιλεγεί, το πρόσθετο δεν θα εμφανίζει ετικέτες στα γραφήματα"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Διατήρηση δεδομένων"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Μετά από αυτό το διάστημα, οι ετικέτες θα μεταφέρονται στο αρχείο και δεν θα εμφανίζονται πλέον"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Όριο υπομνήματος γραφήματος"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Εάν ο αριθμός των ετικετών υπερβαίνει το όριο, το υπόμνημα θα ομαδοποιείται. Λόγω πιθανών προβλημάτων εμφάνισης, ο αριθμός των κατακόρυφων γραμμών περιορίζεται στο 5πλάσιο αυτής της τιμής."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Επιλογή κύριας συσκευής"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Συνήθως μια τοπική συσκευή Cacti. Οι ετικέτες που σχετίζονται με το σύστημα Cacti θα εμφανίζονται εδώ."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Αυτόματες ετικέτες - ανά συσκευή"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Αυτόματη ετικέτα επανεκκίνησης κεντρικού υπολογιστή"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Εάν επιλεγεί, το πρόσθετο θα δημιουργεί αυτόματη ετικέτα κατά την επανεκκίνηση της συσκευής"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Χρώμα ετικέτας επανεκκίνησης κεντρικού υπολογιστή"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Σύσταση: Χρησιμοποιήστε διαφορετικό χρώμα για κάθε αυτόματη ετικέτα"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Αυτόματη ετικέτα προσθήκης κεντρικού υπολογιστή. Θα εμφανίζεται στην 'Προεπιλογή' συσκευή και στη συγκεκριμένη συσκευή"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Εάν επιλεγεί, το πρόσθετο θα δημιουργεί αυτόματες ετικέτες όταν προστίθεται μια συσκευή"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Χρώμα ετικέτας προσθήκης κεντρικού υπολογιστή"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Αυτόματη ετικέτα αποθήκευσης/αλλαγής συσκευής"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Εάν επιλεγεί, το πρόσθετο θα δημιουργεί αυτόματη ετικέτα όταν αποθηκεύεται (τροποποιείται) μια συσκευή"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Χρώμα ετικέτας αποθήκευσης/αλλαγής συσκευής"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Αυτόματη ετικέτα επαναευρετηρίασης πηγής δεδομένων"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Δημιουργία ετικέτας όταν αλλάζει το σύνολο των δεικτών που επιστρέφει ένα ερώτημα δεδομένων συσκευής."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Χρώμα ετικέτας επαναευρετηρίασης πηγής δεδομένων"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Αυτόματες ετικέτες - άλλες"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Επιλέξτε πώς θα εμφανίζονται οι παρακάτω ετικέτες"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Για ποιες συσκευές θα εμφανίζονται οι παρακάτω ετικέτες;"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Αυτόματη ετικέτα έκδοσης Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Εάν επιλεγεί, το πρόσθετο θα δημιουργεί αυτόματη ετικέτα όταν αλλάζει η έκδοση του Cacti. Η ετικέτα ισχύει για όλα τα γραφήματα."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Χρώμα ετικέτας έκδοσης Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Αυτόματη ετικέτα υπέρβασης χρόνου Poller"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Δημιουργία ετικέτας όταν ένας κύκλος δειγματοληψίας ενός συλλέκτη δεδομένων υπερβαίνει το διαμορφωμένο διάστημα του poller."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Χρώμα ετικέτας υπέρβασης χρόνου Poller"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Αυτόματες ετικέτες κατάστασης συλλέκτη δεδομένων"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Δημιουργία ετικετών όταν ένας απομακρυσμένος συλλέκτης δεδομένων τίθεται εκτός λειτουργίας ή επανέρχεται."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Χρώμα ετικέτας κατάστασης συλλέκτη δεδομένων"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Αυτόματη ετικέτα κατάστασης πρόσθετου"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Δημιουργία ετικέτας όταν αλλάζει η κατάσταση οποιουδήποτε πρόσθετου (ενεργοποίηση/απενεργοποίηση/αναβάθμιση)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Χρώμα ετικέτας κατάστασης πρόσθετου"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Αποθήκευση/αλλαγή συσκευής, αναγνωριστικό %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Προσθήκη συσκευής, αναγνωριστικό %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Προσθήκη συσκευής"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Επανεκκίνηση, ο χρόνος λειτουργίας ήταν %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Απενεργοποίηση ετικετών"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Ενεργοποίηση ετικετών"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Πρόσθετο Ετικέτες - προβολή"
+
+#: setup.php
+msgid "Management"
+msgstr "Διαχείριση"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Ετικέτες"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Επεξεργασία ετικετών"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Αποθήκευση ετικετών"
+
+#: tags.php
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: tags.php
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+#: tags.php
+msgid "Archive"
+msgstr "Αρχειοθέτηση"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Κάντε κλικ στο 'Συνέχεια' για να διαγράψετε το ακόλουθο στοιχείο."
+msgstr[1] "Κάντε κλικ στο 'Συνέχεια' για να διαγράψετε τα ακόλουθα στοιχεία."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: tags.php
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Διαγραφή στοιχείου"
+msgstr[1] "Διαγραφή στοιχείων"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Κάντε κλικ στο 'Συνέχεια' για να απενεργοποιήσετε το ακόλουθο στοιχείο."
+msgstr[1] "Κάντε κλικ στο 'Συνέχεια' για να απενεργοποιήσετε τα ακόλουθα στοιχεία."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Απενεργοποίηση στοιχείου"
+msgstr[1] "Απενεργοποίηση στοιχείων"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Κάντε κλικ στο 'Συνέχεια' για να ενεργοποιήσετε το ακόλουθο στοιχείο."
+msgstr[1] "Κάντε κλικ στο 'Συνέχεια' για να ενεργοποιήσετε τα ακόλουθα στοιχεία."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Ενεργοποίηση στοιχείου"
+msgstr[1] "Ενεργοποίηση στοιχείων"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Κάντε κλικ στο 'Συνέχεια' για να αρχειοθετήσετε το ακόλουθο στοιχείο."
+msgstr[1] "Κάντε κλικ στο 'Συνέχεια' για να αρχειοθετήσετε τα ακόλουθα στοιχεία."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Αρχειοθέτηση στοιχείου"
+msgstr[1] "Αρχειοθέτηση στοιχείων"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Δεν βρέθηκε"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Ετικέτα [επεξεργασία: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Ετικέτα [νέα]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Επιλογέας ημερομηνίας/ώρας έναρξης"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Πρέπει να ορίσετε κύρια συσκευή στο Κονσόλα - Διαμόρφωση - Ρυθμίσεις - Ετικέτες"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Ώρα ετικέτας"
+
+#: tags.php
+msgid "Target"
+msgstr "Στόχος"
+
+#: tags.php
+msgid "No"
+msgstr "Όχι"
+
+#: tags.php
+msgid "Yes"
+msgstr "Ναι"
+
+#: tags.php
+msgid "Empty"
+msgstr "Κενό"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Διαχείριση ετικετών"
+
+#: tags.php
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: tags.php
+msgid "Any"
+msgstr "Οποιοδήποτε"
+
+#: tags.php
+msgid "Type"
+msgstr "Τύπος"
+
+#: tags.php
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: tags.php
+msgid "Go"
+msgstr "Μετάβαση"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Ορισμός/Ανανέωση φίλτρων"
+
+#: tags.php
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Καθαρισμός φίλτρων"
+
+#: tags.php
+msgid "Presets"
+msgstr "Προρυθμίσεις"
+
+#: tags.php
+msgid "Custom"
+msgstr "Προσαρμοσμένο"
+
+#: tags.php
+msgid "From"
+msgstr "Από"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Επιλογέας ημερομηνίας έναρξης"
+
+#: tags.php
+msgid "To"
+msgstr "Έως"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Επιλογέας ημερομηνίας λήξης"

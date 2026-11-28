@@ -1,0 +1,582 @@
+# Ukrainian translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Ukrainian <https://translate.cacti.net/projects/cacti/core/uk/>\n"
+"Language: uk-UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Ніколи"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d днів"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d місяць"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d місяців"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d рік"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d років"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Чорний"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Червоний"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Зелений"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Синій"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Жовтий"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Сірий"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Коричневий"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Рожевий"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Автоматично"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Вручну"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Основний пристрій"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Усі пристрої"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Пристрій додано"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Пристрій змінено"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Перезавантаження пристрою"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Змінено версію Cacti"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Інші автоматичні події"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Джерело даних переіндексовано"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Перевищення часу опитування"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Збирач даних недоступний"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Збирач даних відновлено"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Основні налаштування"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Опис"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Текст тегу, макс. довжина 64 символи"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Для якого пристрою"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Тег можна призначити одному або кільком пристроям"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Пристрій"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Виберіть пристрій"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Виберіть пристрій"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Графік"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Виберіть графік"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Немає"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Вузол"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Виберіть вузол"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Дата і час тегу"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Дата і час для цього тегу."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Виберіть колір"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Виберіть колір для цього тегу"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Увімкнути"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Вимкнений тег не відображатиметься на графіку."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Налаштування"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Приховати теги на графіках"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Якщо позначено, плагін не відображатиме теги на графіках"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Зберігання даних"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Після цього часу теги будуть переміщені в архів і більше не відображатимуться"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Обмеження легенди графіка"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Якщо кількість тегів перевищує обмеження, легенда буде об'єднана. Через можливі проблеми відображення кількість вертикальних ліній обмежена значенням, у 5 разів більшим за це."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Виберіть основний пристрій"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Зазвичай це локальний пристрій Cacti. Теги, пов'язані із системою Cacti, відображатимуться тут."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Автоматичні теги - для окремих хостів"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Автоматичний тег перезавантаження хоста"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Якщо позначено, плагін створюватиме автоматичний тег під час перезавантаження пристрою"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Колір тегу перезавантаження хоста"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Рекомендація: використовуйте різний колір для кожного автоматичного тегу"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Автоматичний тег додавання хоста. Відображатиметься на пристрої 'Типово' та на відповідному пристрої"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Якщо позначено, плагін створюватиме автоматичні теги під час додавання пристрою"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Колір тегу додавання хоста"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Автоматичний тег збереження/зміни пристрою"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Якщо позначено, плагін створюватиме автоматичний тег під час збереження (зміни) пристрою"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Колір тегу збереження/зміни пристрою"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Автоматичний тег переіндексації джерела даних"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Створювати тег, коли змінюється набір індексів, повернутих запитом даних пристрою."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Колір тегу переіндексації джерела даних"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Автоматичні теги - інші"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Виберіть спосіб відображення наведених нижче тегів"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Для яких пристроїв відображатимуться наведені нижче теги?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Автоматичний тег версії Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Якщо позначено, плагін створюватиме автоматичний тег у разі зміни версії Cacti. Тег застосовується до всіх графіків."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Колір тегу версії Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Автоматичний тег перевищення часу опитування"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Створювати тег, коли цикл опитування збирача даних перевищує налаштований інтервал опитування."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Колір тегу перевищення часу опитування"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Автоматичні теги стану збирача даних"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Створювати теги, коли віддалений збирач даних стає недоступним або відновлює роботу."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Колір тегу стану збирача даних"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Автоматичний тег стану плагіна"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Створювати тег у разі зміни стану будь-якого плагіна (увімкнення/вимкнення/оновлення)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Колір тегу стану плагіна"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Пристрій збережено/змінено, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Пристрій додано, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Пристрій додано"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Перезавантаження, час роботи становив %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Вимкнути теги"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Увімкнути теги"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Плагін «Теги» - перегляд"
+
+#: setup.php
+msgid "Management"
+msgstr "Керування"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Теги"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Редагування тегів"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Збереження тегів"
+
+#: tags.php
+msgid "Delete"
+msgstr "Видалити"
+
+#: tags.php
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: tags.php
+msgid "Archive"
+msgstr "Архівувати"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Натисніть 'Продовжити', щоб видалити наведений елемент."
+msgstr[1] "Натисніть 'Продовжити', щоб видалити наведені елементи."
+msgstr[2] "Натисніть 'Продовжити', щоб видалити наведені елементи."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: tags.php
+msgid "Continue"
+msgstr "Продовжити"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Видалити елемент"
+msgstr[1] "Видалити елементи"
+msgstr[2] "Видалити елементи"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Натисніть 'Продовжити', щоб вимкнути наведений елемент."
+msgstr[1] "Натисніть 'Продовжити', щоб вимкнути наведені елементи."
+msgstr[2] "Натисніть 'Продовжити', щоб вимкнути наведені елементи."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Вимкнути елемент"
+msgstr[1] "Вимкнути елементи"
+msgstr[2] "Вимкнути елементи"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Натисніть 'Продовжити', щоб увімкнути наведений елемент."
+msgstr[1] "Натисніть 'Продовжити', щоб увімкнути наведені елементи."
+msgstr[2] "Натисніть 'Продовжити', щоб увімкнути наведені елементи."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Увімкнути елемент"
+msgstr[1] "Увімкнути елементи"
+msgstr[2] "Увімкнути елементи"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Натисніть 'Продовжити', щоб архівувати наведений елемент."
+msgstr[1] "Натисніть 'Продовжити', щоб архівувати наведені елементи."
+msgstr[2] "Натисніть 'Продовжити', щоб архівувати наведені елементи."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Архівувати елемент"
+msgstr[1] "Архівувати елементи"
+msgstr[2] "Архівувати елементи"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Не знайдено"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Тег [редагування: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Тег [новий]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Вибір дати/часу початку"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Необхідно вказати основний пристрій у меню Консоль - Конфігурація - Налаштування - Теги"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Час тегу"
+
+#: tags.php
+msgid "Target"
+msgstr "Ціль"
+
+#: tags.php
+msgid "No"
+msgstr "Ні"
+
+#: tags.php
+msgid "Yes"
+msgstr "Так"
+
+#: tags.php
+msgid "Empty"
+msgstr "Порожньо"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Керування тегами"
+
+#: tags.php
+msgid "Search"
+msgstr "Пошук"
+
+#: tags.php
+msgid "Any"
+msgstr "Будь-який"
+
+#: tags.php
+msgid "Type"
+msgstr "Тип"
+
+#: tags.php
+msgid "Default"
+msgstr "Типово"
+
+#: tags.php
+msgid "Go"
+msgstr "Вперед"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Встановити/оновити фільтри"
+
+#: tags.php
+msgid "Clear"
+msgstr "Очистити"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Очистити фільтри"
+
+#: tags.php
+msgid "Presets"
+msgstr "Пресети"
+
+#: tags.php
+msgid "Custom"
+msgstr "Користувацький"
+
+#: tags.php
+msgid "From"
+msgstr "Від"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Вибір дати початку"
+
+#: tags.php
+msgid "To"
+msgstr "До"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Вибір дати завершення"

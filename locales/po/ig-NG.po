@@ -1,0 +1,566 @@
+# Igbo translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Igbo <developers@cacti.net>\n"
+"Language: ig_NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Ọ dịtụbeghị"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "Ụbọchị %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "Ọnwa %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "Ọnwa %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "Afọ %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "Afọ %d"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Ojii"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Uhie"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Akwụkwọ ndụ"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Anụnụ anụnụ"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Odo"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Ntụ"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Agba aja aja"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Uhie ocha"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Nke Akpaghị Aka"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Nke Aka"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Ngwaọrụ isi"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Ngwaọrụ niile"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Agbakwunyere Ngwaọrụ"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Agbanwere Ngwaọrụ"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Mmalitegharị Ngwaọrụ"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Agbanwere Ụdị Cacti"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Ihe Omume Akpaghị Aka Ndị Ọzọ"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Edezigharịrị Ndepụta Isi Iyi Data"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Nfefe Oge Poller"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Ngwa Nchịkọta Data Adịghị Arụ Ọrụ"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Ngwa Nchịkọta Data Alaghachila n'Ọrụ"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Ntọala Izugbe"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Nkọwa"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Ozi mkpado, ogologo kachasị mkpụrụedemede 64"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Maka ngwaọrụ dị aṅaa"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Enwere ike inye otu ngwaọrụ ma ọ bụ karịa mkpado"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Ngwaọrụ"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Họrọ ngwaọrụ"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Họrọ Ngwaọrụ"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Eserese"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Họrọ eserese"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Ọ Dịghị Nke Ọ Bụla"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Saịtị"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Họrọ saịtị"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Ụbọchị na oge nke mkpado"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Ụbọchị / oge maka mkpado a."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Họrọ agba"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Họrọ agba maka mkpado a"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Gbanye"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Agaghị egosi mkpado agbanyụrụ na eserese."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Ntọala"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Zoo mkpado na eserese"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Ọ bụrụ na ahọrọ ya, ngwa mgbakwunye agaghị egosi mkpado na eserese"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Nchekwa Data"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Mgbe oge a gasịrị, a ga-ebufe mkpado n'ebe nchekwa ma agaghị egosikwa ha ọzọ"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Oke nkọwa eserese"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Ọ bụrụ na ọnụọgụ mkpado karịrị oke, a ga-achịkọta nkọwa eserese. N'ihi nsogbu ngosi nwere ike ibilite, ọnụọgụ ahịrị kwụ ọtọ nwere oke ruo okpukpu 5 nke ọnụ ahịa a."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Họrọ Ngwaọrụ Isi"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Ọ na-abụkarị ngwaọrụ Cacti mpaghara. A ga-egosi mkpado metụtara usoro Cacti ebe a."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Mkpado akpaghị aka - maka host kpọmkwem"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Mkpado akpaghị aka maka mmalitegharị host"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Ọ bụrụ na ahọrọ ya, ngwa mgbakwunye ga-emepụta mkpado akpaghị aka mgbe ngwaọrụ malitegharịrị"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Agba mkpado mmalitegharị host"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Ndụmọdụ: Jiri agba dị iche maka mkpado akpaghị aka ọ bụla"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Mkpado akpaghị aka mgbe agbakwunyere host. A ga-egosi ya na ngwaọrụ 'Nke Ndabere' na ngwaọrụ kpọmkwem"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Ọ bụrụ na ahọrọ ya, ngwa mgbakwunye ga-emepụta mkpado akpaghị aka mgbe agbakwunyere ngwaọrụ"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Agba mkpado agbakwunyere host"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Mkpado akpaghị aka maka nchekwa/mgbanwe ngwaọrụ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Ọ bụrụ na ahọrọ ya, ngwa mgbakwunye ga-emepụta mkpado akpaghị aka mgbe echekwara (gbanwere) ngwaọrụ"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Agba mkpado nchekwa/mgbanwe ngwaọrụ"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Mkpado akpaghị aka maka ndezigharị ndepụta isi iyi data"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Mepụta mkpado mgbe ndepụta nke ajụjụ data ngwaọrụ weghachiri gbanwere."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Agba mkpado ndezigharị ndepụta isi iyi data"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Mkpado akpaghị aka - ndị ọzọ"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Họrọ otu a ga-esi gosi mkpado edepụtara n'okpuru"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Maka ngwaọrụ ndị dị aṅaa ka a ga-egosi mkpado ndị dị n'okpuru?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Mkpado akpaghị aka maka ụdị Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Ọ bụrụ na ahọrọ ya, ngwa mgbakwunye ga-emepụta mkpado akpaghị aka mgbe agbanwere ụdị Cacti. Mkpado bụ maka eserese niile."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Agba mkpado ụdị Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Mkpado akpaghị aka maka nfefe oge poller"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Mepụta mkpado mgbe usoro nyocha nke ngwa nchịkọta data karịrị oge poller ahaziri."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Agba mkpado nfefe oge poller"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Mkpado akpaghị aka maka ọnọdụ ngwa nchịkọta data"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Mepụta mkpado mgbe ngwa nchịkọta data dị anya kwụsịrị ịrụ ọrụ ma ọ bụ laghachi n'ọrụ."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Agba mkpado ọnọdụ ngwa nchịkọta data"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Mkpado akpaghị aka maka ọnọdụ ngwa mgbakwunye"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Mepụta mkpado mgbe ọnọdụ ngwa mgbakwunye ọ bụla gbanwere (gbanye/gbanyụọ/kwalite)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Agba mkpado ọnọdụ ngwa mgbakwunye"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Echekwara/gbanwere ngwaọrụ, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Agbakwunyere ngwaọrụ, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Agbakwunyere ngwaọrụ"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Mmalitegharị, oge ọrụ bụ %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Gbanyụọ Mkpado"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Gbanye Mkpado"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Ngwa mgbakwunye Mkpado - nlele"
+
+#: setup.php
+msgid "Management"
+msgstr "Njikwa"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Mkpado"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Ndezi Mkpado"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Nchekwa Mkpado"
+
+#: tags.php
+msgid "Delete"
+msgstr "Hichapụ"
+
+#: tags.php
+msgid "Disable"
+msgstr "Gbanyụọ"
+
+#: tags.php
+msgid "Archive"
+msgstr "Chekwaa n'Ebe Nchekwa"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Pịa 'Gaa n'ihu' iji hichapụ ihe na-esonụ."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Kagbuo"
+
+#: tags.php
+msgid "Continue"
+msgstr "Gaa n'ihu"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Hichapụ ihe"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Pịa 'Gaa n'ihu' iji gbanyụọ ihe na-esonụ."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Gbanyụọ ihe"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Pịa 'Gaa n'ihu' iji gbanye ihe na-esonụ."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Gbanye ihe"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Pịa 'Gaa n'ihu' iji chekwaa ihe na-esonụ n'ebe nchekwa."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Chekwaa ihe n'ebe nchekwa"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Ahụghị Ya"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Mkpado [dezie: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Mkpado [ọhụrụ]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Nhọrọ Ụbọchị/Oge Mmalite"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Ị ga-atọ ngwaọrụ isi na Console - Nhazi - Ntọala - Mkpado"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Oge mkpado"
+
+#: tags.php
+msgid "Target"
+msgstr "Ebumnuche"
+
+#: tags.php
+msgid "No"
+msgstr "Mba"
+
+#: tags.php
+msgid "Yes"
+msgstr "Ee"
+
+#: tags.php
+msgid "Empty"
+msgstr "Tọgbọ chakoo"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Njikwa Mkpado"
+
+#: tags.php
+msgid "Search"
+msgstr "Chọọ"
+
+#: tags.php
+msgid "Any"
+msgstr "Ọ Bụla"
+
+#: tags.php
+msgid "Type"
+msgstr "Ụdị"
+
+#: tags.php
+msgid "Default"
+msgstr "Nke Ndabere"
+
+#: tags.php
+msgid "Go"
+msgstr "Gaa"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Tọọ/Megharịa Ihe nzacha"
+
+#: tags.php
+msgid "Clear"
+msgstr "Kpochapụ"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Kpochapụ Ihe nzacha"
+
+#: tags.php
+msgid "Presets"
+msgstr "Nhazi Edebere"
+
+#: tags.php
+msgid "Custom"
+msgstr "Ahaziri"
+
+#: tags.php
+msgid "From"
+msgstr "Site na"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Nhọrọ Ụbọchị Mmalite"
+
+#: tags.php
+msgid "To"
+msgstr "Ruo"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Nhọrọ Ụbọchị Njedebe"

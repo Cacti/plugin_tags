@@ -1,0 +1,590 @@
+# Hebrew (Israel) translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Hebrew (Israel) <https://translate.cacti.net/projects/cacti/core/he_IL/>\n"
+"Language: he-IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "לעולם לא"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d ימים"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d חודש"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d חודשים"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d שנה"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d שנים"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "שחור"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "אדום"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "ירוק"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "כחול"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "צהוב"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "אפור"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "חום"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "ורוד"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "אוטומטי"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "ידני"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "התקן ראשי"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "כל ההתקנים"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "התקן נוסף"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "התקן שונה"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "הפעלה מחדש של התקן"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "גרסת Cacti שונתה"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "אירועים אוטומטיים אחרים"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "מקור נתונים אונדקס מחדש"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "חריגת זמן של הדוגם"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "אוסף נתונים לא זמין"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "אוסף נתונים התאושש"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "תיאור"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "הודעת תגית, אורך מרבי 64 תווים"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "עבור איזה התקן"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "ניתן לשייך תגית להתקן אחד או יותר"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "התקן"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "בחר התקן"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "בחר התקן"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "גרף"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "בחר גרף"
+
+#: include/arrays.php
+msgid "None"
+msgstr "ללא"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "אתר"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "בחר אתר"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "תאריך ושעה של התגית"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "התאריך / השעה עבור תגית זו."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "בחר צבע"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "בחר צבע עבור תגית זו"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "אפשר"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "תגית מושבתת לא תוצג בגרף."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "הגדרות"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "הסתר תגיות בגרפים"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "אם מסומן, התוסף לא יציג תגיות בגרפים"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "שמירת נתונים"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "לאחר זמן זה, תגיות יועברו לארכיון ולא יוצגו עוד"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "מגבלת מקרא בגרף"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "אם מספר התגיות גדול מהמגבלה, המקרא יאוחד. עקב בעיות תצוגה אפשריות, מספר הקווים האנכיים מוגבל לפי 5 מערך זה."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "בחר התקן ראשי"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "בדרך כלל התקן Cacti מקומי. תגיות הקשורות למערכת Cacti יוצגו כאן."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "תגיות אוטומטיות - ספציפיות למארח"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "תגית אוטומטית להפעלה מחדש של מארח"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "אם מסומן, התוסף ייצור תגית אוטומטית כאשר ההתקן מופעל מחדש"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "צבע תגית הפעלה מחדש של מארח"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "המלצה: השתמש בצבע שונה עבור כל תגית אוטומטית"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "תגית אוטומטית להוספת מארח. תוצג בהתקן 'ברירת מחדל' ובהתקן הספציפי"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "אם מסומן, התוסף ייצור תגיות אוטומטיות כאשר נוסף התקן"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "צבע תגית הוספת מארח"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "תגית אוטומטית לשמירת/שינוי התקן"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "אם מסומן, התוסף ייצור תגית אוטומטית כאשר ההתקן נשמר (משתנה)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "צבע תגית שמירת/שינוי התקן"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "תגית אוטומטית לאינדוקס מחדש של מקור נתונים"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "צור תגית כאשר קבוצת האינדקסים שמוחזרת משאילתת נתוני התקן משתנה."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "צבע תגית אינדוקס מחדש של מקור נתונים"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "תגיות אוטומטיות - אחרות"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "בחר כיצד להציג את התגיות הרשומות למטה"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "עבור אילו התקנים יוצגו התגיות שלמטה?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "תגית אוטומטית לגרסת Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "אם מסומן, התוסף ייצור תגית אוטומטית כאשר גרסת Cacti משתנה. התגית מיועדת לכל הגרפים."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "צבע תגית גרסת Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "תגית אוטומטית לחריגת זמן של הדוגם"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "צור תגית כאשר מחזור דגימה של אוסף נתונים חורג ממרווח הדגימה המוגדר."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "צבע תגית חריגת זמן של הדוגם"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "תגיות אוטומטיות למצב אוסף נתונים"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "צור תגיות כאשר אוסף נתונים מרוחק מפסיק לפעול או מתאושש."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "צבע תגית מצב אוסף נתונים"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "תגית אוטומטית למצב תוסף"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "צור תגית כאשר מצב של תוסף כלשהו משתנה (הפעלה/השבתה/שדרוג)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "צבע תגית מצב תוסף"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "התקן נשמר/שונה, מזהה %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "התקן נוסף, מזהה %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "התקן נוסף"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "הפעלה מחדש, זמן פעילות היה %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "השבת תגיות"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "אפשר תגיות"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "תוסף תגיות - תצוגה"
+
+#: setup.php
+msgid "Management"
+msgstr "ניהול"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "תגיות"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "עריכת תגיות"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "שמירת תגיות"
+
+#: tags.php
+msgid "Delete"
+msgstr "מחק"
+
+#: tags.php
+msgid "Disable"
+msgstr "השבת"
+
+#: tags.php
+msgid "Archive"
+msgstr "העבר לארכיון"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "לחץ על 'המשך' כדי למחוק את הפריט הבא."
+msgstr[1] "לחץ על 'המשך' כדי למחוק את הפריטים הבאים."
+msgstr[2] "לחץ על 'המשך' כדי למחוק את הפריטים הבאים."
+msgstr[3] "לחץ על 'המשך' כדי למחוק את הפריטים הבאים."
+
+#: tags.php
+msgid "Cancel"
+msgstr "ביטול"
+
+#: tags.php
+msgid "Continue"
+msgstr "המשך"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "מחק פריט"
+msgstr[1] "מחק פריטים"
+msgstr[2] "מחק פריטים"
+msgstr[3] "מחק פריטים"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "לחץ על 'המשך' כדי להשבית את הפריט הבא."
+msgstr[1] "לחץ על 'המשך' כדי להשבית את הפריטים הבאים."
+msgstr[2] "לחץ על 'המשך' כדי להשבית את הפריטים הבאים."
+msgstr[3] "לחץ על 'המשך' כדי להשבית את הפריטים הבאים."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "השבת פריט"
+msgstr[1] "השבת פריטים"
+msgstr[2] "השבת פריטים"
+msgstr[3] "השבת פריטים"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "לחץ על 'המשך' כדי לאפשר את הפריט הבא."
+msgstr[1] "לחץ על 'המשך' כדי לאפשר את הפריטים הבאים."
+msgstr[2] "לחץ על 'המשך' כדי לאפשר את הפריטים הבאים."
+msgstr[3] "לחץ על 'המשך' כדי לאפשר את הפריטים הבאים."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "אפשר פריט"
+msgstr[1] "אפשר פריטים"
+msgstr[2] "אפשר פריטים"
+msgstr[3] "אפשר פריטים"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "לחץ על 'המשך' כדי להעביר לארכיון את הפריט הבא."
+msgstr[1] "לחץ על 'המשך' כדי להעביר לארכיון את הפריטים הבאים."
+msgstr[2] "לחץ על 'המשך' כדי להעביר לארכיון את הפריטים הבאים."
+msgstr[3] "לחץ על 'המשך' כדי להעביר לארכיון את הפריטים הבאים."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "העבר פריט לארכיון"
+msgstr[1] "העבר פריטים לארכיון"
+msgstr[2] "העבר פריטים לארכיון"
+msgstr[3] "העבר פריטים לארכיון"
+
+#: tags.php
+msgid "Not Found"
+msgstr "לא נמצא"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "תגית [עריכה: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "תגית [חדשה]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "בורר תאריך/שעה להתחלה"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "יש להגדיר התקן ראשי תחת מסוף - תצורה - הגדרות - תגיות"
+
+#: tags.php
+msgid "Tag time"
+msgstr "זמן תגית"
+
+#: tags.php
+msgid "Target"
+msgstr "יעד"
+
+#: tags.php
+msgid "No"
+msgstr "לא"
+
+#: tags.php
+msgid "Yes"
+msgstr "כן"
+
+#: tags.php
+msgid "Empty"
+msgstr "ריק"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "ניהול תגיות"
+
+#: tags.php
+msgid "Search"
+msgstr "חיפוש"
+
+#: tags.php
+msgid "Any"
+msgstr "הכל"
+
+#: tags.php
+msgid "Type"
+msgstr "סוג"
+
+#: tags.php
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: tags.php
+msgid "Go"
+msgstr "עבור"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "הגדר/רענן מסננים"
+
+#: tags.php
+msgid "Clear"
+msgstr "נקה"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "נקה מסננים"
+
+#: tags.php
+msgid "Presets"
+msgstr "קבועים מראש"
+
+#: tags.php
+msgid "Custom"
+msgstr "מותאם אישית"
+
+#: tags.php
+msgid "From"
+msgstr "מ-"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "בורר תאריך התחלה"
+
+#: tags.php
+msgid "To"
+msgstr "עד"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "בורר תאריך סיום"

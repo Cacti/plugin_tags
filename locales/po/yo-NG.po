@@ -1,0 +1,566 @@
+# Yoruba translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Yoruba <developers@cacti.net>\n"
+"Language: yo_NG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Kò ṣẹlẹ̀ rí"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "Ọjọ́ %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "Oṣù %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "Oṣù %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "Ọdún %d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "Ọdún %d"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Dúdú"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Pupa"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Àwọ̀ ewé"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Búlúù"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Àwọ̀ ìyeyè"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Àwọ̀ eérú"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Àwọ̀ ilẹ̀"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Píǹkì"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Aládàáṣe"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Àfọwọ́ṣe"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Ẹ̀rọ àkọ́kọ́"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Gbogbo àwọn ẹ̀rọ"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "A Ti Fi Ẹ̀rọ Kún Un"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Ẹ̀rọ Ti Yípadà"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Àtúntàn Ẹ̀rọ"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Ẹ̀yà Cacti Ti Yípadà"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Àwọn Ìṣẹ̀lẹ̀ Aládàáṣe Mìíràn"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "A Ti Tún Àtọ́ka Orísun Dátà Ṣe"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Àṣejù Àkókò Ìṣàyẹ̀wò Dátà"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Olùkójọ Dátà Dúró"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Olùkójọ Dátà Ti Pada Bọ̀ Sípò"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Àwọn Ètò Gbogbogbòò"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Àpèjúwe"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Ìfiránṣẹ́ àmì, gígùn púpọ̀ jù lọ jẹ́ lẹ́tà 64"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Fún ẹ̀rọ wo"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "A lè yan àmì fún ẹ̀rọ kan tàbí jù bẹ́ẹ̀ lọ"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Ẹ̀rọ"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Yan ẹ̀rọ"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Yan Ẹ̀rọ kan"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Gíráfù"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Yan gíráfù"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Kò Sí"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Ibùdó"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Yan ibùdó"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Ọjọ́ àti àkókò àmì"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Ọjọ́ / àkókò fún àmì yìí."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Yan àwọ̀"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Yan àwọ̀ fún àmì yìí"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Mú Ṣiṣẹ́"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Àmì tí a dá dúró kò ní hàn nínú gíráfù."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Àwọn Ètò"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Fi àwọn àmì pamọ́ nínú gíráfù"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Tí a bá fọwọ́ sí i, àfikún kò ní fi àwọn àmì hàn nínú gíráfù"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Ìtọ́jú Dátà"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Lẹ́yìn àkókò yìí, a ó gbé àwọn àmì lọ sí àká ìpamọ́, wọn kò sì ní hàn mọ́"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Ààlà àlàyé gíráfù"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Tí iye àwọn àmì bá pọ̀ ju ààlà lọ, a ó pa àlàyé pọ̀. Nítorí àwọn ìṣòro ìfihàn tó ṣeé ṣe, iye àwọn ìlà inaro wà ní ààlà ìlọ́po 5 ti iye yìí."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Yan Ẹ̀rọ Àkọ́kọ́"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Lọ́pọ̀ ìgbà ẹ̀rọ Cacti abẹ́lé ni. Àwọn àmì tó jẹ mọ́ ètò Cacti ni a ó fi hàn níbí."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Àwọn àmì aládàáṣe - fún ẹ̀rọ olùgbàlejò pàtó"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Àmì aládàáṣe àtúntàn ẹ̀rọ olùgbàlejò"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Tí a bá fọwọ́ sí i, àfikún yóò ṣẹ̀dá àmì aládàáṣe nígbà tí ẹ̀rọ bá tún tàn"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Àwọ̀ àmì àtúntàn ẹ̀rọ olùgbàlejò"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Ìmọ̀ràn: Lo àwọ̀ tó yàtọ̀ fún àmì aládàáṣe kọ̀ọ̀kan"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Àmì aládàáṣe fífi ẹ̀rọ olùgbàlejò kún un. Yóò hàn lórí ẹ̀rọ 'Àìyípadà' àti ẹ̀rọ pàtó náà"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Tí a bá fọwọ́ sí i, àfikún yóò ṣẹ̀dá àwọn àmì aládàáṣe nígbà tí a bá fi ẹ̀rọ kún un"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Àwọ̀ àmì fífi ẹ̀rọ olùgbàlejò kún un"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Àmì aládàáṣe ìfipamọ́/àyípadà ẹ̀rọ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Tí a bá fọwọ́ sí i, àfikún yóò ṣẹ̀dá àmì aládàáṣe nígbà tí a bá fi ẹ̀rọ pamọ́ (yí i padà)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Àwọ̀ àmì ìfipamọ́/àyípadà ẹ̀rọ"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Àmì aládàáṣe àtúnṣe àtọ́ka orísun dátà"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Ṣẹ̀dá àmì nígbà tí àkójọ àwọn àtọ́ka tí ìbéèrè dátà ẹ̀rọ dá padà bá yípadà."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Àwọ̀ àmì àtúnṣe àtọ́ka orísun dátà"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Àwọn àmì aládàáṣe - àwọn mìíràn"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Yan bí a ṣe máa fi àwọn àmì tó wà nísàlẹ̀ hàn"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Fún àwọn ẹ̀rọ wo ni a ó fi àwọn àmì nísàlẹ̀ hàn?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Àmì aládàáṣe ẹ̀yà Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Tí a bá fọwọ́ sí i, àfikún yóò ṣẹ̀dá àmì aládàáṣe nígbà tí ẹ̀yà Cacti bá yípadà. Àmì wà fún gbogbo gíráfù."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Àwọ̀ àmì ẹ̀yà Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Àmì aládàáṣe àṣejù àkókò ìṣàyẹ̀wò dátà"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Ṣẹ̀dá àmì nígbà tí ìyípo ìṣàyẹ̀wò olùkójọ dátà bá ré ààlà àkókò ìṣàyẹ̀wò tí a ṣètò."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Àwọ̀ àmì àṣejù àkókò ìṣàyẹ̀wò dátà"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Àwọn àmì aládàáṣe ipò olùkójọ dátà"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Ṣẹ̀dá àwọn àmì nígbà tí olùkójọ dátà ọ̀nà jíjìn bá dúró tàbí pada bọ̀ sípò."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Àwọ̀ àmì ipò olùkójọ dátà"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Àmì aládàáṣe ipò àfikún"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Ṣẹ̀dá àmì nígbà tí ipò àfikún èyíkéyìí bá yípadà (mú ṣiṣẹ́/dá dúró/gbéga)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Àwọ̀ àmì ipò àfikún"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "A ti fi ẹ̀rọ pamọ́/yí i padà, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "A ti fi ẹ̀rọ kún un, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "A ti fi ẹ̀rọ kún un"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Àtúntàn, àkókò iṣẹ́ jẹ́ %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Dá Àwọn Àmì Dúró"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Mú Àwọn Àmì Ṣiṣẹ́"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Àfikún Àwọn Àmì - ìwòran"
+
+#: setup.php
+msgid "Management"
+msgstr "Ìṣàkóso"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Àwọn Àmì"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Ṣàtúnṣe Àwọn Àmì"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Fi Àwọn Àmì Pamọ́"
+
+#: tags.php
+msgid "Delete"
+msgstr "Pa rẹ́"
+
+#: tags.php
+msgid "Disable"
+msgstr "Dá Dúró"
+
+#: tags.php
+msgid "Archive"
+msgstr "Fi sínú àká ìpamọ́"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti pa ohun tí ó tẹ̀lé e rẹ́."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Fagilé"
+
+#: tags.php
+msgid "Continue"
+msgstr "Tẹ̀síwájú"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Pa ohun rẹ́"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti dá ohun tí ó tẹ̀lé e dúró."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Dá ohun dúró"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti mú ohun tí ó tẹ̀lé e ṣiṣẹ́."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Mú ohun ṣiṣẹ́"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Tẹ 'Tẹ̀síwájú' láti fi ohun tí ó tẹ̀lé e sínú àká ìpamọ́."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Fi ohun sínú àká ìpamọ́"
+
+#: tags.php
+msgid "Not Found"
+msgstr "A Kò Rí I"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Àmì [ṣàtúnṣe: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Àmì [tuntun]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Olùyàn Ọjọ́/Àkókò Ìbẹ̀rẹ̀"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "O ní láti ṣètò ẹ̀rọ àkọ́kọ́ nínú Kọ́ńsólù - Ìṣètò - Àwọn Ètò - Àwọn Àmì"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Àkókò àmì"
+
+#: tags.php
+msgid "Target"
+msgstr "Àfojúsùn"
+
+#: tags.php
+msgid "No"
+msgstr "Rárá"
+
+#: tags.php
+msgid "Yes"
+msgstr "Bẹ́ẹ̀ Ni"
+
+#: tags.php
+msgid "Empty"
+msgstr "Òfo"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Ìṣàkóso Àwọn Àmì"
+
+#: tags.php
+msgid "Search"
+msgstr "Ṣàwárí"
+
+#: tags.php
+msgid "Any"
+msgstr "Èyíkéyìí"
+
+#: tags.php
+msgid "Type"
+msgstr "Irú"
+
+#: tags.php
+msgid "Default"
+msgstr "Àìyípadà"
+
+#: tags.php
+msgid "Go"
+msgstr "Lọ"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Ṣètò/Sọ Àwọn Àlẹ̀mọ́ Dọ̀tun"
+
+#: tags.php
+msgid "Clear"
+msgstr "Nu Kúrò"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Pa Àwọn Àlẹ̀mọ́ Rẹ́"
+
+#: tags.php
+msgid "Presets"
+msgstr "Àwọn Àtòtẹ́lẹ̀"
+
+#: tags.php
+msgid "Custom"
+msgstr "Àdáni"
+
+#: tags.php
+msgid "From"
+msgstr "Láti"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Olùyàn Ọjọ́ Ìbẹ̀rẹ̀"
+
+#: tags.php
+msgid "To"
+msgstr "Sí"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Olùyàn Ọjọ́ Ìparí"

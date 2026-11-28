@@ -1,0 +1,566 @@
+# Japanese translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Japanese <https://translate.cacti.net/projects/cacti/core/ja/>\n"
+"Language: ja-JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "無期限"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d 日"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d ヶ月"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d ヶ月"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d 年"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d 年"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "黒"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "赤"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "緑"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "青"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "黄"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "灰"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "茶"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "ピンク"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "自動"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "手動"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "プライマリデバイス"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "すべてのデバイス"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "デバイス追加"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "デバイス変更"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "デバイス再起動"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti バージョン変更"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "その他の自動イベント"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "データソース再インデックス"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "ポーラー時間超過"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "データコレクタ停止"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "データコレクタ復旧"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "一般設定"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "説明"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "タグメッセージ (最大 64 文字)"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "対象デバイス"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "タグは 1 つ以上のデバイスに割り当てることができます"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "デバイス"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "デバイスを選択"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "デバイスを選択"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "グラフ"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "グラフを選択"
+
+#: include/arrays.php
+msgid "None"
+msgstr "なし"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "サイト"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "サイトを選択"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "タグの日時"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "このタグの日時。"
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "色を選択"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "このタグの色を選択"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "有効"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "無効なタグはグラフに表示されません。"
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "設定"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "グラフ内のタグを非表示にする"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "チェックすると、プラグインはグラフ内にタグを表示しません"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "データ保持"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "この期間が経過すると、タグはアーカイブに移動され表示されなくなります"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "グラフ凡例の上限"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "タグ数が上限を超える場合、凡例は集約されます。表示上の問題を防ぐため、垂直線の本数はこの値の 5 倍までに制限されます。"
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "プライマリデバイスを選択"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "通常はローカルの Cacti デバイスです。Cacti システムに関連するタグがここに表示されます。"
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "自動タグ - ホスト固有"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "ホスト再起動の自動タグ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "チェックすると、デバイスの再起動時にプラグインが自動タグを作成します"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "ホスト再起動タグの色"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "推奨: 自動タグごとに異なる色を使用してください"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "ホスト追加の自動タグ。「デフォルト」デバイスおよび対象デバイスに表示されます"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "チェックすると、デバイスの追加時にプラグインが自動タグを作成します"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "ホスト追加タグの色"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "デバイス保存/変更の自動タグ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "チェックすると、デバイスの保存 (変更) 時にプラグインが自動タグを作成します"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "デバイス保存/変更タグの色"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "データソース再インデックスの自動タグ"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "デバイスのデータクエリが返すインデックスのセットが変更されたときにタグを作成します。"
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "データソース再インデックスタグの色"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "自動タグ - その他"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "以下のタグの表示方法を選択"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "以下のタグをどのデバイスに表示しますか?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti バージョンの自動タグ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "チェックすると、Cacti のバージョン変更時にプラグインが自動タグを作成します。タグはすべてのグラフに適用されます。"
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti バージョンタグの色"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "ポーラー時間超過の自動タグ"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "データコレクタのポーリングサイクルが設定されたポーラー間隔を超過したときにタグを作成します。"
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "ポーラー時間超過タグの色"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "データコレクタ状態の自動タグ"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "リモートデータコレクタが停止または復旧したときにタグを作成します。"
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "データコレクタ状態タグの色"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "プラグイン状態の自動タグ"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "いずれかのプラグインの状態が変更されたとき (有効化/無効化/アップグレード) にタグを作成します"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "プラグイン状態タグの色"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "デバイス保存/変更、ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "デバイス追加、ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "デバイス追加"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "再起動、稼働時間は %s でした"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "タグを無効にする"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "タグを有効にする"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "タグプラグイン - 表示"
+
+#: setup.php
+msgid "Management"
+msgstr "管理"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "タグ"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "タグ編集"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "タグ保存"
+
+#: tags.php
+msgid "Delete"
+msgstr "削除"
+
+#: tags.php
+msgid "Disable"
+msgstr "無効"
+
+#: tags.php
+msgid "Archive"
+msgstr "アーカイブ"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "以下の項目を削除するには「続行」をクリックしてください。"
+
+#: tags.php
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: tags.php
+msgid "Continue"
+msgstr "続行"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "項目の削除"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "以下の項目を無効にするには「続行」をクリックしてください。"
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "項目の無効化"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "以下の項目を有効にするには「続行」をクリックしてください。"
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "項目の有効化"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "以下の項目をアーカイブするには「続行」をクリックしてください。"
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "項目のアーカイブ"
+
+#: tags.php
+msgid "Not Found"
+msgstr "見つかりません"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "タグ [編集: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "タグ [新規]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "開始日時セレクタ"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "コンソール - 構成 - 設定 - タグでプライマリデバイスを設定する必要があります"
+
+#: tags.php
+msgid "Tag time"
+msgstr "タグ時刻"
+
+#: tags.php
+msgid "Target"
+msgstr "対象"
+
+#: tags.php
+msgid "No"
+msgstr "いいえ"
+
+#: tags.php
+msgid "Yes"
+msgstr "はい"
+
+#: tags.php
+msgid "Empty"
+msgstr "空"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "タグ管理"
+
+#: tags.php
+msgid "Search"
+msgstr "検索"
+
+#: tags.php
+msgid "Any"
+msgstr "任意"
+
+#: tags.php
+msgid "Type"
+msgstr "タイプ"
+
+#: tags.php
+msgid "Default"
+msgstr "デフォルト"
+
+#: tags.php
+msgid "Go"
+msgstr "実行"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "フィルタの設定/更新"
+
+#: tags.php
+msgid "Clear"
+msgstr "クリア"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "フィルタをクリア"
+
+#: tags.php
+msgid "Presets"
+msgstr "プリセット"
+
+#: tags.php
+msgid "Custom"
+msgstr "カスタム"
+
+#: tags.php
+msgid "From"
+msgstr "開始"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "開始日セレクタ"
+
+#: tags.php
+msgid "To"
+msgstr "終了"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "終了日セレクタ"

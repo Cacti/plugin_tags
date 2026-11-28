@@ -1,0 +1,574 @@
+# Swedish translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Swedish <https://translate.cacti.net/projects/cacti/core/sv/>\n"
+"Language: sv-SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Aldrig"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d dagar"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d månad"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d månader"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d år"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d år"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Svart"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Röd"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Grön"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Blå"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Gul"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Grå"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Brun"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Rosa"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Automatisk"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Manuell"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Primär enhet"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Alla enheter"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Enhet tillagd"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Enhet ändrad"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Omstart av enhet"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti-version ändrad"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Andra automatiska händelser"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Datakälla omindexerad"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Polleröverskridning"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Datainsamlare nere"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Datainsamlare återställd"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Allmänna inställningar"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Beskrivning"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Taggmeddelande, maxlängd 64 tecken"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "För vilken enhet"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Taggen kan tilldelas en eller flera enheter"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Enhet"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Välj enhet"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Välj en enhet"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Graf"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Välj graf"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Ingen"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Plats"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Välj plats"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Datum och tid för tagg"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Datum / tid för denna tagg."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Välj färg"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Välj färg för denna tagg"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Aktivera"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Inaktiverad tagg visas inte i grafen."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Inställningar"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Dölj taggar i grafer"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Om markerad visar insticksprogrammet inte taggar i grafer"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Lagringstid"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Efter denna tid flyttas taggar till arkivet och visas inte längre"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Gräns för grafförklaring"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Om antalet taggar överstiger gränsen slås förklaringen samman. På grund av eventuella visningsproblem begränsas antalet vertikala linjer till 5 gånger detta värde."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Välj primär enhet"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Vanligtvis en lokal Cacti-enhet. Taggar relaterade till Cacti-systemet visas här."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Automatiska taggar - värdspecifika"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Automatisk tagg för värdomstart"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Om markerad skapar insticksprogrammet en automatisk tagg när enheten startas om"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Färg på tagg för värdomstart"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Rekommendation: Använd olika färger för varje automatisk tagg"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Automatisk tagg för tillagd värd. Visas på 'Standard'-enheten och den specifika enheten"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Om markerad skapar insticksprogrammet automatiska taggar när en enhet läggs till"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Färg på tagg för tillagd värd"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Automatisk tagg för sparad/ändrad enhet"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Om markerad skapar insticksprogrammet en automatisk tagg när enheten sparas (ändras)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Färg på tagg för sparad/ändrad enhet"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Automatisk tagg för omindexering av datakälla"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Skapa en tagg när uppsättningen index som returneras av en enhets datafråga ändras."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Färg på tagg för omindexering av datakälla"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Automatiska taggar - övriga"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Välj hur taggarna nedan ska visas"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "För vilka enheter ska taggarna nedan visas?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Automatisk tagg för Cacti-version"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Om markerad skapar insticksprogrammet en automatisk tagg när Cacti-versionen ändras. Taggen gäller alla grafer."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Färg på tagg för Cacti-version"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Automatisk tagg för polleröverskridning"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Skapa en tagg när en datainsamlares pollercykel överskrider det konfigurerade pollerintervallet."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Färg på tagg för polleröverskridning"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Automatiska taggar för datainsamlarstatus"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Skapa taggar när en fjärrdatainsamlare går ner eller återhämtar sig."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Färg på tagg för datainsamlarstatus"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Automatisk tagg för insticksprogramsstatus"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Skapa en tagg när något insticksprograms status ändras (aktivera/inaktivera/uppgradera)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Färg på tagg för insticksprogramstillstånd"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Enhet sparad/ändrad, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Enhet tillagd, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Enhet tillagd"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Omstart, drifttiden var %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Inaktivera taggar"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Aktivera taggar"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Insticksprogram Taggar - visa"
+
+#: setup.php
+msgid "Management"
+msgstr "Hantering"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Taggar"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Redigera taggar"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Spara taggar"
+
+#: tags.php
+msgid "Delete"
+msgstr "Ta bort"
+
+#: tags.php
+msgid "Disable"
+msgstr "Inaktivera"
+
+#: tags.php
+msgid "Archive"
+msgstr "Arkivera"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicka på 'Fortsätt' för att ta bort följande post."
+msgstr[1] "Klicka på 'Fortsätt' för att ta bort följande poster."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: tags.php
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Ta bort post"
+msgstr[1] "Ta bort poster"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicka på 'Fortsätt' för att inaktivera följande post."
+msgstr[1] "Klicka på 'Fortsätt' för att inaktivera följande poster."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Inaktivera post"
+msgstr[1] "Inaktivera poster"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Klicka på 'Fortsätt' för att aktivera följande post."
+msgstr[1] "Klicka på 'Fortsätt' för att aktivera följande poster."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Aktivera post"
+msgstr[1] "Aktivera poster"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Klicka på 'Fortsätt' för att arkivera följande post."
+msgstr[1] "Klicka på 'Fortsätt' för att arkivera följande poster."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Arkivera post"
+msgstr[1] "Arkivera poster"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Hittades inte"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Tagg [redigera: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Tagg [ny]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Välj startdatum/tid"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Du måste ange primär enhet i Konsol - Konfiguration - Inställningar - Taggar"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Taggtid"
+
+#: tags.php
+msgid "Target"
+msgstr "Mål"
+
+#: tags.php
+msgid "No"
+msgstr "Nej"
+
+#: tags.php
+msgid "Yes"
+msgstr "Ja"
+
+#: tags.php
+msgid "Empty"
+msgstr "Tom"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Tagghantering"
+
+#: tags.php
+msgid "Search"
+msgstr "Sök"
+
+#: tags.php
+msgid "Any"
+msgstr "Valfri"
+
+#: tags.php
+msgid "Type"
+msgstr "Typ"
+
+#: tags.php
+msgid "Default"
+msgstr "Standard"
+
+#: tags.php
+msgid "Go"
+msgstr "Gå"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Ange/uppdatera filter"
+
+#: tags.php
+msgid "Clear"
+msgstr "Rensa"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Rensa filter"
+
+#: tags.php
+msgid "Presets"
+msgstr "Förinställningar"
+
+#: tags.php
+msgid "Custom"
+msgstr "Anpassad"
+
+#: tags.php
+msgid "From"
+msgstr "Från"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Välj startdatum"
+
+#: tags.php
+msgid "To"
+msgstr "Till"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Välj slutdatum"

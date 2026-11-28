@@ -1,0 +1,582 @@
+# Bosnian translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Bosnian <developers@cacti.net>\n"
+"Language: bs-BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Nikada"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d dana"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d mjesec"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d mjeseci"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d godina"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d godina"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Crna"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Crvena"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Zelena"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Plava"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Žuta"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Siva"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Smeđa"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Roza"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Automatski"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Ručno"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Primarni uređaj"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Svi uređaji"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Uređaj dodan"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Uređaj izmijenjen"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Ponovno pokretanje uređaja"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Verzija Cacti izmijenjena"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Ostali automatski događaji"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Izvor podataka ponovo indeksiran"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Prekoračenje vremena pollera"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Sakupljač podataka nije dostupan"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Sakupljač podataka oporavljen"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Opće postavke"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Opis"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Poruka oznake, maks. dužina 64 znaka"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Za koji uređaj"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Oznaka se može dodijeliti jednom ili više uređaja"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Uređaj"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Odaberite uređaj"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Odaberite uređaj"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Grafikon"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Odaberite grafikon"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Nijedan"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Lokacija"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Odaberite lokaciju"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Datum i vrijeme oznake"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Datum / vrijeme za ovu oznaku."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Odaberite boju"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Odaberite boju za ovu oznaku"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Omogući"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Onemogućena oznaka neće biti prikazana na grafikonu."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Postavke"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Sakrij oznake na grafikonima"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Ako je označeno, dodatak neće prikazivati oznake na grafikonima"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Zadržavanje podataka"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Nakon ovog vremena oznake će biti premještene u arhivu i više neće biti prikazane"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Ograničenje legende grafikona"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Ako je broj oznaka veći od ograničenja, legenda će biti objedinjena. Zbog mogućih problema s prikazom, broj vertikalnih linija ograničen je na 5 puta ove vrijednosti."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Odaberite primarni uređaj"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Obično lokalni Cacti uređaj. Oznake povezane sa Cacti sistemom bit će prikazane ovdje."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Automatske oznake - specifične za host"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Automatska oznaka za ponovno pokretanje hosta"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Ako je označeno, dodatak će kreirati automatsku oznaku kada se uređaj ponovo pokrene"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Boja oznake za ponovno pokretanje hosta"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Preporuka: Koristite drugu boju za svaku automatsku oznaku"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Automatska oznaka za dodani host. Bit će prikazana na uređaju 'Podrazumijevano' i na određenom uređaju"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Ako je označeno, dodatak će kreirati automatske oznake kada se uređaj doda"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Boja oznake za dodani host"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Automatska oznaka za spremanje/izmjenu uređaja"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Ako je označeno, dodatak će kreirati automatsku oznaku kada se uređaj spremi (izmijeni)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Boja oznake za spremanje/izmjenu uređaja"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Automatska oznaka za ponovno indeksiranje izvora podataka"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Kreira oznaku kada se promijeni skup indeksa koje vraća upit za podatke uređaja."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Boja oznake za ponovno indeksiranje izvora podataka"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Automatske oznake - ostalo"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Odaberite kako prikazati oznake navedene ispod"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Za koje uređaje će biti prikazane oznake ispod?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Automatska oznaka za verziju Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Ako je označeno, dodatak će kreirati automatsku oznaku kada se promijeni verzija Cacti. Oznaka važi za sve grafikone."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Boja oznake za verziju Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Automatska oznaka za prekoračenje vremena pollera"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Kreira oznaku kada ciklus prikupljanja podataka sakupljača prekorači podešeni interval pollera."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Boja oznake za prekoračenje vremena pollera"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Automatske oznake za status sakupljača podataka"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Kreira oznake kada udaljeni sakupljač podataka prestane raditi ili se oporavi."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Boja oznake za status sakupljača podataka"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Automatska oznaka za status dodatka"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Kreira oznaku kada se promijeni status bilo kojeg dodatka (omogući/onemogući/nadogradi)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Boja oznake za stanje dodatka"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Uređaj spremljen/izmijenjen, ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Uređaj dodan, ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Uređaj dodan"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Ponovno pokretanje, vrijeme rada je bilo %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Onemogući oznake"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Omogući oznake"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Dodatak Oznake - prikaz"
+
+#: setup.php
+msgid "Management"
+msgstr "Upravljanje"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Oznake"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Uređivanje oznaka"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Spremanje oznaka"
+
+#: tags.php
+msgid "Delete"
+msgstr "Obriši"
+
+#: tags.php
+msgid "Disable"
+msgstr "Onemogući"
+
+#: tags.php
+msgid "Archive"
+msgstr "Arhiviraj"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Kliknite 'Nastavi' da obrišete sljedeću stavku."
+msgstr[1] "Kliknite 'Nastavi' da obrišete sljedeće stavke."
+msgstr[2] "Kliknite 'Nastavi' da obrišete sljedeće stavke."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: tags.php
+msgid "Continue"
+msgstr "Nastavi"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Obriši stavku"
+msgstr[1] "Obriši stavke"
+msgstr[2] "Obriši stavke"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Kliknite 'Nastavi' da onemogućite sljedeću stavku."
+msgstr[1] "Kliknite 'Nastavi' da onemogućite sljedeće stavke."
+msgstr[2] "Kliknite 'Nastavi' da onemogućite sljedeće stavke."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Onemogući stavku"
+msgstr[1] "Onemogući stavke"
+msgstr[2] "Onemogući stavke"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Kliknite 'Nastavi' da omogućite sljedeću stavku."
+msgstr[1] "Kliknite 'Nastavi' da omogućite sljedeće stavke."
+msgstr[2] "Kliknite 'Nastavi' da omogućite sljedeće stavke."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Omogući stavku"
+msgstr[1] "Omogući stavke"
+msgstr[2] "Omogući stavke"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Kliknite 'Nastavi' da arhivirate sljedeću stavku."
+msgstr[1] "Kliknite 'Nastavi' da arhivirate sljedeće stavke."
+msgstr[2] "Kliknite 'Nastavi' da arhivirate sljedeće stavke."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Arhiviraj stavku"
+msgstr[1] "Arhiviraj stavke"
+msgstr[2] "Arhiviraj stavke"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Nije pronađeno"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Oznaka [uredi: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Oznaka [nova]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Birač početnog datuma/vremena"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Morate postaviti primarni uređaj u Konzola - Konfiguracija - Postavke - Oznake"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Vrijeme oznake"
+
+#: tags.php
+msgid "Target"
+msgstr "Cilj"
+
+#: tags.php
+msgid "No"
+msgstr "Ne"
+
+#: tags.php
+msgid "Yes"
+msgstr "Da"
+
+#: tags.php
+msgid "Empty"
+msgstr "Prazno"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Upravljanje oznakama"
+
+#: tags.php
+msgid "Search"
+msgstr "Pretraži"
+
+#: tags.php
+msgid "Any"
+msgstr "Bilo koji"
+
+#: tags.php
+msgid "Type"
+msgstr "Tip"
+
+#: tags.php
+msgid "Default"
+msgstr "Podrazumijevano"
+
+#: tags.php
+msgid "Go"
+msgstr "Idi"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Postavi/osvježi filtere"
+
+#: tags.php
+msgid "Clear"
+msgstr "Očisti"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Očisti filtere"
+
+#: tags.php
+msgid "Presets"
+msgstr "Unaprijed zadane postavke"
+
+#: tags.php
+msgid "Custom"
+msgstr "Prilagođeno"
+
+#: tags.php
+msgid "From"
+msgstr "Od"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Birač početnog datuma"
+
+#: tags.php
+msgid "To"
+msgstr "Do"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Birač krajnjeg datuma"

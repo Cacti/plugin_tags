@@ -1,0 +1,574 @@
+# Amharic translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Amharic <developers@cacti.net>\n"
+"Language: am_ET\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "ፈጽሞ"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d ቀናት"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d ወር"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d ወራት"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d ዓመት"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d ዓመታት"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "ጥቁር"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "ቀይ"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "አረንጓዴ"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "ሰማያዊ"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "ቢጫ"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "ግራጫ"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "ቡናማ"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "ሮዝ"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "ራስ-ሰር"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "በእጅ"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "ዋና መሣሪያ"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "ሁሉም መሣሪያዎች"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "መሣሪያ ታክሏል"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "መሣሪያ ተቀይሯል"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "መሣሪያ እንደገና ተጀምሯል"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "የCacti ስሪት ተቀይሯል"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "ሌሎች ራስ-ሰር ክስተቶች"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "የውሂብ ምንጭ እንደገና ተመዝግቧል"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "የፖለር ጊዜ መብለጥ"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "የውሂብ ሰብሳቢ ቆሟል"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "የውሂብ ሰብሳቢ ተመልሷል"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "አጠቃላይ ቅንብሮች"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "መግለጫ"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "የመለያ መልዕክት፣ ከፍተኛ ርዝመት 64 ቁምፊዎች"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "ለየትኛው መሣሪያ"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "መለያው ለአንድ ወይም ከዚያ በላይ መሣሪያዎች ሊመደብ ይችላል"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "መሣሪያ"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "መሣሪያ ይምረጡ"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "መሣሪያ ይምረጡ"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "ግራፍ"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "ግራፍ ይምረጡ"
+
+#: include/arrays.php
+msgid "None"
+msgstr "ምንም"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "ጣቢያ"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "ጣቢያ ይምረጡ"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "የመለያው ቀን እና ሰዓት"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "ለዚህ መለያ ቀን / ሰዓት።"
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "ቀለም ይምረጡ"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "ለዚህ መለያ ቀለም ይምረጡ"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "አንቃ"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "የተሰናከለ መለያ በግራፍ ውስጥ አይታይም።"
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "መለያዎችን በግራፎች ውስጥ ደብቅ"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "ከተመረጠ ተሰኪው በግራፎች ውስጥ መለያዎችን አያሳይም"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "የውሂብ ማቆያ"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "ከዚህ ጊዜ በኋላ መለያዎች ወደ ማህደር ይዛወራሉ እና ከእንግዲህ አይታዩም"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "የግራፍ መግለጫ ገደብ"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "የመለያዎች ብዛት ከገደቡ በላይ ከሆነ መግለጫው ይጠቃለላል። ሊከሰቱ ከሚችሉ የማሳያ ችግሮች የተነሳ የቋሚ መስመሮች ብዛት ከዚህ እሴት 5 እጥፍ ድረስ ብቻ ተገድቧል።"
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "ዋና መሣሪያ ይምረጡ"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "በተለምዶ የአካባቢ Cacti መሣሪያ ነው። ከCacti ስርዓት ጋር የተያያዙ መለያዎች እዚህ ይታያሉ።"
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "ራስ-ሰር መለያዎች - ለአስተናጋጅ የተለዩ"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "የአስተናጋጅ ዳግም መጀመር ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "ከተመረጠ መሣሪያው እንደገና ሲጀምር ተሰኪው ራስ-ሰር መለያ ይፈጥራል"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "የአስተናጋጅ ዳግም መጀመር መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "ምክር: ለእያንዳንዱ ራስ-ሰር መለያ የተለየ ቀለም ይጠቀሙ"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "አስተናጋጅ ሲታከል ራስ-ሰር መለያ። በ'ነባሪ' መሣሪያ እና በተለየው መሣሪያ ላይ ይታያል"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "ከተመረጠ መሣሪያ ሲታከል ተሰኪው ራስ-ሰር መለያዎችን ይፈጥራል"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "የተጨመረ አስተናጋጅ መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "መሣሪያ ሲቀመጥ/ሲቀየር ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "ከተመረጠ መሣሪያው ሲቀመጥ (ሲቀየር) ተሰኪው ራስ-ሰር መለያ ይፈጥራል"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "የመሣሪያ ማስቀመጥ/መቀየር መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "የውሂብ ምንጭ ዳግም መረጃ ጠቋሚ ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "የመሣሪያ ውሂብ መጠይቅ የሚመልሰው የመረጃ ጠቋሚ ስብስብ ሲቀየር መለያ ይፍጠሩ።"
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "የውሂብ ምንጭ ዳግም መረጃ ጠቋሚ መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "ራስ-ሰር መለያዎች - ሌሎች"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "ከዚህ በታች የተዘረዘሩትን መለያዎች እንዴት እንደሚያሳዩ ይምረጡ"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "ከዚህ በታች ያሉት መለያዎች ለየትኞቹ መሣሪያዎች ይታያሉ?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "የCacti ስሪት ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "ከተመረጠ የCacti ስሪት ሲቀየር ተሰኪው ራስ-ሰር መለያ ይፈጥራል። መለያው ለሁሉም ግራፎች ነው።"
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "የCacti ስሪት መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "የፖለር ጊዜ መብለጥ ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "የውሂብ ሰብሳቢ የመጠይቅ ዑደት ከተዋቀረው የፖለር ክፍተት ሲበልጥ መለያ ይፍጠሩ።"
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "የፖለር ጊዜ መብለጥ መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "የውሂብ ሰብሳቢ ሁኔታ ራስ-ሰር መለያዎች"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "የርቀት ውሂብ ሰብሳቢ ሲቆም ወይም ሲመለስ መለያዎችን ይፍጠሩ።"
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "የውሂብ ሰብሳቢ ሁኔታ መለያ ቀለም"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "የተሰኪ ሁኔታ ራስ-ሰር መለያ"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "የማንኛውም ተሰኪ ሁኔታ ሲቀየር (ማንቃት/ማሰናከል/ማሻሻል) መለያ ይፍጠሩ"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "የተሰኪ ሁኔታ መለያ ቀለም"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "መሣሪያ ተቀምጧል/ተቀይሯል፣ መታወቂያ %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "መሣሪያ ታክሏል፣ መታወቂያ %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "መሣሪያ ታክሏል"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "እንደገና ተጀምሯል፣ የስራ ጊዜው %s ነበር"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "መለያዎችን አሰናክል"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "መለያዎችን አንቃ"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "የመለያዎች ተሰኪ - እይታ"
+
+#: setup.php
+msgid "Management"
+msgstr "አስተዳደር"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "መለያዎች"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "መለያዎችን አርትዕ"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "መለያዎችን አስቀምጥ"
+
+#: tags.php
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#: tags.php
+msgid "Disable"
+msgstr "አሰናክል"
+
+#: tags.php
+msgid "Archive"
+msgstr "ማህደር"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "የሚከተለውን ንጥል ለመሰረዝ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን ንጥሎች ለመሰረዝ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: tags.php
+msgid "Cancel"
+msgstr "ይቅር"
+
+#: tags.php
+msgid "Continue"
+msgstr "ቀጥል"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "ንጥል ሰርዝ"
+msgstr[1] "ንጥሎችን ሰርዝ"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "የሚከተለውን ንጥል ለማሰናከል 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን ንጥሎች ለማሰናከል 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "ንጥል አሰናክል"
+msgstr[1] "ንጥሎችን አሰናክል"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "የሚከተለውን ንጥል ለማንቃት 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን ንጥሎች ለማንቃት 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "ንጥል አንቃ"
+msgstr[1] "ንጥሎችን አንቃ"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "የሚከተለውን ንጥል በማህደር ለማስቀመጥ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+msgstr[1] "የሚከተሉትን ንጥሎች በማህደር ለማስቀመጥ 'ቀጥል' የሚለውን ጠቅ ያድርጉ።"
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "ንጥል በማህደር አስቀምጥ"
+msgstr[1] "ንጥሎችን በማህደር አስቀምጥ"
+
+#: tags.php
+msgid "Not Found"
+msgstr "አልተገኘም"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "መለያ [አርትዕ: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "መለያ [አዲስ]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "የመጀመሪያ ቀን/ሰዓት መምረጫ"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "ዋና መሣሪያን በ ኮንሶል - ውቅር - ቅንብሮች - መለያዎች ውስጥ ማዘጋጀት አለብዎት"
+
+#: tags.php
+msgid "Tag time"
+msgstr "የመለያ ሰዓት"
+
+#: tags.php
+msgid "Target"
+msgstr "ዒላማ"
+
+#: tags.php
+msgid "No"
+msgstr "አይ"
+
+#: tags.php
+msgid "Yes"
+msgstr "አዎ"
+
+#: tags.php
+msgid "Empty"
+msgstr "ባዶ"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "የመለያዎች አስተዳደር"
+
+#: tags.php
+msgid "Search"
+msgstr "ፈልግ"
+
+#: tags.php
+msgid "Any"
+msgstr "ማንኛውም"
+
+#: tags.php
+msgid "Type"
+msgstr "ዓይነት"
+
+#: tags.php
+msgid "Default"
+msgstr "ነባሪ"
+
+#: tags.php
+msgid "Go"
+msgstr "ሂድ"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "ማጣሪያዎችን አዘጋጅ/አድስ"
+
+#: tags.php
+msgid "Clear"
+msgstr "አጽዳ"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "ማጣሪያዎችን አጽዳ"
+
+#: tags.php
+msgid "Presets"
+msgstr "ቅድመ-ቅንብሮች"
+
+#: tags.php
+msgid "Custom"
+msgstr "ብጁ"
+
+#: tags.php
+msgid "From"
+msgstr "ከ"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "የመጀመሪያ ቀን መምረጫ"
+
+#: tags.php
+msgid "To"
+msgstr "እስከ"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "የመጨረሻ ቀን መምረጫ"

@@ -1,0 +1,566 @@
+# Korean translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Korean <https://translate.cacti.net/projects/cacti/core/ko/>\n"
+"Language: ko-KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "안함"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d일"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d개월"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d개월"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d년"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d년"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "검정"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "빨강"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "초록"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "파랑"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "노랑"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "회색"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "갈색"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "분홍"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "자동"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "수동"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "기본 장치"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "모든 장치"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "장치 추가됨"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "장치 변경됨"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "장치 재시작"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti 버전 변경됨"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "기타 자동 이벤트"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "데이터 소스 재색인됨"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "폴러 시간 초과"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "데이터 수집기 중단"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "데이터 수집기 복구됨"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "일반 설정"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "설명"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "태그 메시지, 최대 길이 64자"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "대상 장치"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "태그는 하나 이상의 장치에 할당할 수 있습니다"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "장치"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "장치 선택"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "장치 선택"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "그래프"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "그래프 선택"
+
+#: include/arrays.php
+msgid "None"
+msgstr "없음"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "사이트"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "사이트 선택"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "태그 날짜 및 시간"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "이 태그의 날짜 / 시간입니다."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "색상 선택"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "이 태그의 색상을 선택하세요"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "활성화"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "비활성화된 태그는 그래프에 표시되지 않습니다."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "설정"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "그래프에서 태그 숨기기"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "선택하면 플러그인이 그래프에 태그를 표시하지 않습니다"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "데이터 보유"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "이 시간이 지나면 태그는 아카이브로 이동되어 더 이상 표시되지 않습니다"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "그래프 범례 제한"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "태그 수가 제한보다 많으면 범례가 집계됩니다. 표시 문제를 방지하기 위해 세로선 수는 이 값의 5배로 제한됩니다."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "기본 장치 선택"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "일반적으로 로컬 Cacti 장치입니다. Cacti 시스템과 관련된 태그가 여기에 표시됩니다."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "자동 태그 - 호스트별"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "호스트 재시작 자동 태그"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "선택하면 장치가 재시작될 때 플러그인이 자동 태그를 생성합니다"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "호스트 재시작 태그 색상"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "권장 사항: 각 자동 태그에 서로 다른 색상을 사용하세요"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "호스트 추가 자동 태그. '기본값' 장치와 해당 장치에 표시됩니다"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "선택하면 장치가 추가될 때 플러그인이 자동 태그를 생성합니다"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "호스트 추가 태그 색상"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "장치 저장/변경 자동 태그"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "선택하면 장치가 저장(변경)될 때 플러그인이 자동 태그를 생성합니다"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "장치 저장/변경 태그 색상"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "데이터 소스 재색인 자동 태그"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "장치 데이터 쿼리가 반환하는 인덱스 집합이 변경될 때 태그를 생성합니다."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "데이터 소스 재색인 태그 색상"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "자동 태그 - 기타"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "아래 나열된 태그의 표시 방법 선택"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "아래 태그를 어떤 장치에 표시하시겠습니까?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti 버전 자동 태그"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "선택하면 Cacti 버전이 변경될 때 플러그인이 자동 태그를 생성합니다. 태그는 모든 그래프에 적용됩니다."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti 버전 태그 색상"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "폴러 시간 초과 자동 태그"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "데이터 수집기 폴링 주기가 구성된 폴러 간격을 초과할 때 태그를 생성합니다."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "폴러 시간 초과 태그 색상"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "데이터 수집기 상태 자동 태그"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "원격 데이터 수집기가 중단되거나 복구될 때 태그를 생성합니다."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "데이터 수집기 상태 태그 색상"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "플러그인 상태 자동 태그"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "플러그인 상태가 변경(활성화/비활성화/업그레이드)될 때 태그를 생성합니다"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "플러그인 상태 태그 색상"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "장치 저장/변경됨, ID %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "장치 추가됨, ID %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "장치 추가됨"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "재시작됨, 가동 시간 %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "태그 비활성화"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "태그 활성화"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "태그 플러그인 - 보기"
+
+#: setup.php
+msgid "Management"
+msgstr "관리"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "태그"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "태그 편집"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "태그 저장"
+
+#: tags.php
+msgid "Delete"
+msgstr "삭제"
+
+#: tags.php
+msgid "Disable"
+msgstr "비활성화"
+
+#: tags.php
+msgid "Archive"
+msgstr "아카이브"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "다음 항목을 삭제하려면 '계속'을 클릭하세요."
+
+#: tags.php
+msgid "Cancel"
+msgstr "취소"
+
+#: tags.php
+msgid "Continue"
+msgstr "계속"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "항목 삭제"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "다음 항목을 비활성화하려면 '계속'을 클릭하세요."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "항목 비활성화"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "다음 항목을 활성화하려면 '계속'을 클릭하세요."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "항목 활성화"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "다음 항목을 아카이브하려면 '계속'을 클릭하세요."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "항목 아카이브"
+
+#: tags.php
+msgid "Not Found"
+msgstr "찾을 수 없습니다"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "태그 [편집: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "태그 [새로 만들기]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "시작 날짜/시간 선택기"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "콘솔 - 구성 - 설정 - 태그에서 기본 장치를 설정해야 합니다"
+
+#: tags.php
+msgid "Tag time"
+msgstr "태그 시간"
+
+#: tags.php
+msgid "Target"
+msgstr "대상"
+
+#: tags.php
+msgid "No"
+msgstr "아니요"
+
+#: tags.php
+msgid "Yes"
+msgstr "예"
+
+#: tags.php
+msgid "Empty"
+msgstr "비어 있음"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "태그 관리"
+
+#: tags.php
+msgid "Search"
+msgstr "검색"
+
+#: tags.php
+msgid "Any"
+msgstr "모두"
+
+#: tags.php
+msgid "Type"
+msgstr "유형"
+
+#: tags.php
+msgid "Default"
+msgstr "기본값"
+
+#: tags.php
+msgid "Go"
+msgstr "이동"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "필터 설정/새로고침"
+
+#: tags.php
+msgid "Clear"
+msgstr "지우기"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "필터 지우기"
+
+#: tags.php
+msgid "Presets"
+msgstr "사전 설정"
+
+#: tags.php
+msgid "Custom"
+msgstr "사용자 정의"
+
+#: tags.php
+msgid "From"
+msgstr "시작"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "시작 날짜 선택기"
+
+#: tags.php
+msgid "To"
+msgstr "종료"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "종료 날짜 선택기"

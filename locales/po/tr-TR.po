@@ -1,0 +1,574 @@
+# Turkish translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Turkish <https://translate.cacti.net/projects/cacti/core/tr/>\n"
+"Language: tr-TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Asla"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d Gün"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d Ay"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d Ay"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d Yıl"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d Yıl"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Siyah"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Kırmızı"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Yeşil"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Mavi"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Sarı"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Gri"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Kahverengi"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Pembe"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Otomatik"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Manuel"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Birincil cihaz"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Tüm cihazlar"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Cihaz Eklendi"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Cihaz Değiştirildi"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Cihaz Yeniden Başlatıldı"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti Sürümü Değişti"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Diğer Otomatik Olaylar"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Veri Kaynağı Yeniden İndekslendi"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Poller Aşımı"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Veri Toplayıcı Çevrimdışı"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Veri Toplayıcı Kurtarıldı"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Genel Ayarlar"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Açıklama"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Etiket mesajı, maks. uzunluk 64 karakter"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Hangi cihaz için"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Etiket bir veya daha fazla cihaza atanabilir"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Cihaz"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Cihaz seçin"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Bir cihaz seçin"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Grafik"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Grafik seçin"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Yok"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Site"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Site seçin"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Etiket tarihi ve saati"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Bu etiket için tarih / saat."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Renk seçin"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Bu etiket için renk seçin"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Etkinleştir"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Devre dışı bırakılan etiket grafikte gösterilmeyecektir."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Etiketleri grafiklerde gizle"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "İşaretlenirse, eklenti etiketleri grafiklerde göstermez"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Verilerin Saklanması"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Bu süreden sonra etiketler arşive taşınır ve artık gösterilmez"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Grafik açıklama sınırı"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Etiket sayısı sınırdan büyükse açıklama birleştirilir. Olası görüntüleme sorunları nedeniyle dikey çizgi sayısı bu değerin 5 katı ile sınırlıdır."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Birincil Cihazı Seçin"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Genellikle yerel bir Cacti cihazıdır. Cacti sistemiyle ilgili etiketler burada gösterilir."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Otomatik etiketler - ana bilgisayara özel"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Ana bilgisayar yeniden başlatma otomatik etiketi"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "İşaretlenirse, cihaz yeniden başlatıldığında eklenti otomatik etiket oluşturur"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Ana bilgisayar yeniden başlatma etiketi rengi"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Öneri: Her otomatik etiket için farklı bir renk kullanın"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Ana bilgisayar eklendi otomatik etiketi. 'Varsayılan' cihazda ve ilgili cihazda gösterilir"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "İşaretlenirse, cihaz eklendiğinde eklenti otomatik etiketler oluşturur"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Ana bilgisayar eklendi etiketi rengi"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Cihaz kaydetme/değiştirme otomatik etiketi"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "İşaretlenirse, cihaz kaydedildiğinde (değiştirildiğinde) eklenti otomatik etiket oluşturur"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Cihaz kaydetme/değiştirme etiketi rengi"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Veri kaynağı yeniden indeksleme otomatik etiketi"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Bir cihaz veri sorgusunun döndürdüğü indeks kümesi değiştiğinde etiket oluştur."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Veri kaynağı yeniden indeksleme etiketi rengi"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Otomatik etiketler - diğerleri"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Aşağıda listelenen etiketlerin nasıl gösterileceğini seçin"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Aşağıdaki etiketler hangi cihazlar için gösterilsin?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti sürümü otomatik etiketi"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "İşaretlenirse, Cacti sürümü değiştiğinde eklenti otomatik etiket oluşturur. Etiket tüm grafikler içindir."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti sürümü etiketi rengi"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Poller aşımı otomatik etiketi"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Bir veri toplayıcı yoklama döngüsü yapılandırılan poller aralığını aştığında etiket oluştur."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Poller aşımı etiketi rengi"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Veri toplayıcı durumu otomatik etiketleri"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Uzak bir veri toplayıcı çevrimdışı olduğunda veya kurtarıldığında etiket oluştur."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Veri toplayıcı durumu etiketi rengi"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Eklenti durumu otomatik etiketi"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Herhangi bir eklentinin durumu değiştiğinde (etkinleştirme/devre dışı bırakma/yükseltme) etiket oluştur"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Eklenti durumu etiketi rengi"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Cihaz kaydedildi/değiştirildi, kimlik %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Cihaz eklendi, kimlik %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Cihaz eklendi"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Yeniden başlatma, çalışma süresi %s idi"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Etiketleri Devre Dışı Bırak"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Etiketleri Etkinleştir"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Etiketler Eklentisi - görüntüle"
+
+#: setup.php
+msgid "Management"
+msgstr "Yönetim"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Etiketler"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Etiketleri Düzenle"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Etiketleri Kaydet"
+
+#: tags.php
+msgid "Delete"
+msgstr "Sil"
+
+#: tags.php
+msgid "Disable"
+msgstr "Devre Dışı Bırak"
+
+#: tags.php
+msgid "Archive"
+msgstr "Arşivle"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Aşağıdaki öğeyi silmek için 'Devam Et' düğmesine tıklayın."
+msgstr[1] "Aşağıdaki öğeleri silmek için 'Devam Et' düğmesine tıklayın."
+
+#: tags.php
+msgid "Cancel"
+msgstr "İptal"
+
+#: tags.php
+msgid "Continue"
+msgstr "Devam Et"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Öğeyi sil"
+msgstr[1] "Öğeleri sil"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Aşağıdaki öğeyi devre dışı bırakmak için 'Devam Et' düğmesine tıklayın."
+msgstr[1] "Aşağıdaki öğeleri devre dışı bırakmak için 'Devam Et' düğmesine tıklayın."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Öğeyi devre dışı bırak"
+msgstr[1] "Öğeleri devre dışı bırak"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Aşağıdaki öğeyi etkinleştirmek için 'Devam Et' düğmesine tıklayın."
+msgstr[1] "Aşağıdaki öğeleri etkinleştirmek için 'Devam Et' düğmesine tıklayın."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Öğeyi etkinleştir"
+msgstr[1] "Öğeleri etkinleştir"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Aşağıdaki öğeyi arşivlemek için 'Devam Et' düğmesine tıklayın."
+msgstr[1] "Aşağıdaki öğeleri arşivlemek için 'Devam Et' düğmesine tıklayın."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Öğeyi arşivle"
+msgstr[1] "Öğeleri arşivle"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Bulunamadı"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Etiket [düzenle: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Etiket [yeni]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Başlangıç Tarihi/Saati Seçicisi"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Konsol - Yapılandırma - Ayarlar - Etiketler bölümünden birincil cihazı ayarlamanız gerekir"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Etiket zamanı"
+
+#: tags.php
+msgid "Target"
+msgstr "Hedef"
+
+#: tags.php
+msgid "No"
+msgstr "Hayır"
+
+#: tags.php
+msgid "Yes"
+msgstr "Evet"
+
+#: tags.php
+msgid "Empty"
+msgstr "Boş"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Etiket Yönetimi"
+
+#: tags.php
+msgid "Search"
+msgstr "Ara"
+
+#: tags.php
+msgid "Any"
+msgstr "Herhangi"
+
+#: tags.php
+msgid "Type"
+msgstr "Tip"
+
+#: tags.php
+msgid "Default"
+msgstr "Varsayılan"
+
+#: tags.php
+msgid "Go"
+msgstr "Git"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Filtreleri Ayarla / Yenile"
+
+#: tags.php
+msgid "Clear"
+msgstr "Temizle"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Filtreleri Temizle"
+
+#: tags.php
+msgid "Presets"
+msgstr "Hazır Ayarlar"
+
+#: tags.php
+msgid "Custom"
+msgstr "Özel"
+
+#: tags.php
+msgid "From"
+msgstr "Başlangıç"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Başlangıç Tarihi Seçicisi"
+
+#: tags.php
+msgid "To"
+msgstr "Bitiş"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Bitiş Tarihi Seçicisi"

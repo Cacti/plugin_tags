@@ -1,0 +1,574 @@
+# Georgian translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Georgian <https://translate.cacti.net/projects/cacti/core/ka/>\n"
+"Language: ka-GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "არასდროს"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "%d დღე"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "%d თვე"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "%d თვე"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "%d წელი"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "%d წელი"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "შავი"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "წითელი"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "მწვანე"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "ლურჯი"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "ყვითელი"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "ნაცრისფერი"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "ყავისფერი"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "ვარდისფერი"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "ავტომატური"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "ხელით"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "ძირითადი მოწყობილობა"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "ყველა მოწყობილობა"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "მოწყობილობა დაემატა"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "მოწყობილობა შეიცვალა"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "მოწყობილობის გადატვირთვა"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Cacti-ს ვერსია შეიცვალა"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "სხვა ავტომატური მოვლენები"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "მონაცემთა წყარო ხელახლა დაინდექსდა"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "პოლერის დროის გადაჭარბება"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "მონაცემთა შემგროვებელი გათიშულია"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "მონაცემთა შემგროვებელი აღდგა"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "ზოგადი პარამეტრები"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "აღწერა"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "ტეგის შეტყობინება, მაქს. სიგრძე 64 სიმბოლო"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "რომელი მოწყობილობისთვის"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "ტეგი შეიძლება მიენიჭოს ერთ ან მეტ მოწყობილობას"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "მოწყობილობა"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "აირჩიეთ მოწყობილობა"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "აირჩიეთ მოწყობილობა"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "გრაფიკი"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "აირჩიეთ გრაფიკი"
+
+#: include/arrays.php
+msgid "None"
+msgstr "არცერთი"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "საიტი"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "აირჩიეთ საიტი"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "ტეგის თარიღი და დრო"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "ამ ტეგის თარიღი / დრო."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "აირჩიეთ ფერი"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "აირჩიეთ ფერი ამ ტეგისთვის"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "ჩართვა"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "გათიშული ტეგი გრაფიკზე არ გამოჩნდება."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "ტეგების დამალვა გრაფიკებზე"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "თუ მონიშნულია, პლაგინი გრაფიკებზე ტეგებს არ აჩვენებს"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "მონაცემების შენახვა"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "ამ დროის გასვლის შემდეგ ტეგები არქივში გადაინაცვლებს და აღარ გამოჩნდება"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "გრაფიკის ლეგენდის ლიმიტი"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "თუ ტეგების რაოდენობა ლიმიტზე მეტია, ლეგენდა გაერთიანდება. გამოსახვის შესაძლო პრობლემების გამო, ვერტიკალური ხაზების რაოდენობა ამ მნიშვნელობაზე 5-ჯერ მეტით არის შეზღუდული."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "აირჩიეთ ძირითადი მოწყობილობა"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "როგორც წესი, ლოკალური Cacti მოწყობილობა. Cacti სისტემასთან დაკავშირებული ტეგები აქ გამოჩნდება."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "ავტომატური ტეგები - ჰოსტზე დამოკიდებული"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "ჰოსტის გადატვირთვის ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "თუ მონიშნულია, მოწყობილობის გადატვირთვისას პლაგინი შექმნის ავტომატურ ტეგს"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "ჰოსტის გადატვირთვის ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "რეკომენდაცია: გამოიყენეთ განსხვავებული ფერი თითოეული ავტომატური ტეგისთვის"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "ჰოსტის დამატების ავტომატური ტეგი. გამოჩნდება 'ნაგულისხმევი' მოწყობილობაზე და კონკრეტულ მოწყობილობაზე"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "თუ მონიშნულია, მოწყობილობის დამატებისას პლაგინი შექმნის ავტომატურ ტეგებს"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "ჰოსტის დამატების ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "მოწყობილობის შენახვის/ცვლილების ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "თუ მონიშნულია, მოწყობილობის შენახვისას (შეცვლისას) პლაგინი შექმნის ავტომატურ ტეგს"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "მოწყობილობის შენახვის/ცვლილების ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "მონაცემთა წყაროს ხელახალი ინდექსირების ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "შექმენით ტეგი, როდესაც მოწყობილობის მონაცემთა მოთხოვნის მიერ დაბრუნებული ინდექსების ნაკრები შეიცვლება."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "მონაცემთა წყაროს ხელახალი ინდექსირების ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "ავტომატური ტეგები - სხვა"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "აირჩიეთ ქვემოთ ჩამოთვლილი ტეგების ჩვენების წესი"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "რომელი მოწყობილობებისთვის გამოჩნდება ქვემოთ მოცემული ტეგები?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Cacti-ს ვერსიის ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "თუ მონიშნულია, Cacti-ს ვერსიის შეცვლისას პლაგინი შექმნის ავტომატურ ტეგს. ტეგი ყველა გრაფიკისთვისაა."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Cacti-ს ვერსიის ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "პოლერის დროის გადაჭარბების ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "შექმენით ტეგი, როდესაც მონაცემთა შემგროვებლის გამოკითხვის ციკლი აღემატება კონფიგურირებულ პოლერის ინტერვალს."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "პოლერის დროის გადაჭარბების ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "მონაცემთა შემგროვებლის სტატუსის ავტომატური ტეგები"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "შექმენით ტეგები, როდესაც დაშორებული მონაცემთა შემგროვებელი გაითიშება ან აღდგება."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "მონაცემთა შემგროვებლის სტატუსის ტეგის ფერი"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "პლაგინის სტატუსის ავტომატური ტეგი"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "შექმენით ტეგი, როდესაც ნებისმიერი პლაგინის სტატუსი შეიცვლება (ჩართვა/გათიშვა/განახლება)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "პლაგინის მდგომარეობის ტეგის ფერი"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "მოწყობილობა შენახულია/შეცვლილია, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "მოწყობილობა დაემატა, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "მოწყობილობა დაემატა"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "გადატვირთვა, უწყვეტი მუშაობის დრო იყო %s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "ტეგების გათიშვა"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "ტეგების ჩართვა"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "ტეგების პლაგინი - ნახვა"
+
+#: setup.php
+msgid "Management"
+msgstr "მართვა"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "ტეგები"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "ტეგების რედაქტირება"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "ტეგების შენახვა"
+
+#: tags.php
+msgid "Delete"
+msgstr "წაშლა"
+
+#: tags.php
+msgid "Disable"
+msgstr "გათიშვა"
+
+#: tags.php
+msgid "Archive"
+msgstr "დაარქივება"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტის წასაშლელად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტების წასაშლელად."
+
+#: tags.php
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: tags.php
+msgid "Continue"
+msgstr "გაგრძელება"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "ელემენტის წაშლა"
+msgstr[1] "ელემენტების წაშლა"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტის გასათიშად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტების გასათიშად."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "ელემენტის გათიშვა"
+msgstr[1] "ელემენტების გათიშვა"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტის ჩასართავად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტების ჩასართავად."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "ელემენტის ჩართვა"
+msgstr[1] "ელემენტების ჩართვა"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტის დასაარქივებლად."
+msgstr[1] "დააწკაპუნეთ 'გაგრძელება' შემდეგი ელემენტების დასაარქივებლად."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "ელემენტის დაარქივება"
+msgstr[1] "ელემენტების დაარქივება"
+
+#: tags.php
+msgid "Not Found"
+msgstr "ვერ მოიძებნა"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "ტეგი [რედაქტირება: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "ტეგი [ახალი]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "საწყისი თარიღის/დროის ამომრჩევი"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "ძირითადი მოწყობილობა უნდა დააყენოთ განყოფილებაში კონსოლი - კონფიგურაცია - პარამეტრები - ტეგები"
+
+#: tags.php
+msgid "Tag time"
+msgstr "ტეგის დრო"
+
+#: tags.php
+msgid "Target"
+msgstr "მიზანი"
+
+#: tags.php
+msgid "No"
+msgstr "არა"
+
+#: tags.php
+msgid "Yes"
+msgstr "დიახ"
+
+#: tags.php
+msgid "Empty"
+msgstr "ცარიელი"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "ტეგების მართვა"
+
+#: tags.php
+msgid "Search"
+msgstr "ძებნა"
+
+#: tags.php
+msgid "Any"
+msgstr "ნებისმიერი"
+
+#: tags.php
+msgid "Type"
+msgstr "ტიპი"
+
+#: tags.php
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
+#: tags.php
+msgid "Go"
+msgstr "გადასვლა"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "ფილტრების დაყენება/განახლება"
+
+#: tags.php
+msgid "Clear"
+msgstr "გასუფთავება"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "ფილტრების გასუფთავება"
+
+#: tags.php
+msgid "Presets"
+msgstr "წინასწარ განსაზღვრული"
+
+#: tags.php
+msgid "Custom"
+msgstr "მორგებული"
+
+#: tags.php
+msgid "From"
+msgstr "საწყისი"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "საწყისი თარიღის ამომრჩევი"
+
+#: tags.php
+msgid "To"
+msgstr "საბოლოო"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "საბოლოო თარიღის ამომრჩევი"

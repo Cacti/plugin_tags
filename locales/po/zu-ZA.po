@@ -1,0 +1,574 @@
+# Zulu translation for Cacti plugin_tags.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.2.32\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 12:52+0200\n"
+"PO-Revision-Date: 2026-11-28 02:00+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Zulu <developers@cacti.net>\n"
+"Language: zu_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: include/arrays.php
+msgid "Never"
+msgstr "Akukaze"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Days"
+msgstr "Izinsuku ezingu-%d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Month"
+msgstr "Inyanga engu-%d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Months"
+msgstr "Izinyanga ezingu-%d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Year"
+msgstr "Unyaka ongu-%d"
+
+#: include/arrays.php
+#, php-format
+msgid "%d Years"
+msgstr "Iminyaka engu-%d"
+
+#: include/arrays.php
+msgid "Black"
+msgstr "Okumnyama"
+
+#: include/arrays.php
+msgid "Red"
+msgstr "Okubomvu"
+
+#: include/arrays.php
+msgid "Green"
+msgstr "Okuluhlaza okotshani"
+
+#: include/arrays.php
+msgid "Blue"
+msgstr "Okuluhlaza okwesibhakabhaka"
+
+#: include/arrays.php
+msgid "Yellow"
+msgstr "Okuphuzi"
+
+#: include/arrays.php
+msgid "Grey"
+msgstr "Okumpunga"
+
+#: include/arrays.php
+msgid "Brown"
+msgstr "Okunsundu"
+
+#: include/arrays.php
+msgid "Pink"
+msgstr "Okuphinki"
+
+#: include/arrays.php tags.php
+msgid "Automatic"
+msgstr "Okuzenzakalelayo"
+
+#: include/arrays.php
+msgid "Manual"
+msgstr "Okwenziwa ngesandla"
+
+#: include/arrays.php
+msgid "Primary device"
+msgstr "Idivayisi eyinhloko"
+
+#: include/arrays.php
+msgid "All devices"
+msgstr "Wonke amadivayisi"
+
+#: include/arrays.php
+msgid "Device Added"
+msgstr "Idivayisi Yengeziwe"
+
+#: include/arrays.php
+msgid "Device Changed"
+msgstr "Idivayisi Ishintshiwe"
+
+#: include/arrays.php
+msgid "Device Restart"
+msgstr "Ukuqalwa Kabusha Kwedivayisi"
+
+#: include/arrays.php
+msgid "Cacti Version Changed"
+msgstr "Inguqulo Ye-Cacti Ishintshile"
+
+#: include/arrays.php
+msgid "Other Automatic Events"
+msgstr "Ezinye Izehlakalo Ezizenzakalelayo"
+
+#: include/arrays.php
+msgid "Data Source Reindexed"
+msgstr "Umthombo Wedatha Uphinde Wahlelwa Ngezinkomba"
+
+#: include/arrays.php
+msgid "Poller Overrun"
+msgstr "Ukweqa Kwesikhathi Se-Poller"
+
+#: include/arrays.php
+msgid "Data Collector Down"
+msgstr "Umqoqi Wedatha Ufile"
+
+#: include/arrays.php
+msgid "Data Collector Recovered"
+msgstr "Umqoqi Wedatha Ululeme"
+
+#: include/arrays.php
+msgid "General Settings"
+msgstr "Izilungiselelo Ezivamile"
+
+#: include/arrays.php tags.php
+msgid "Description"
+msgstr "Incazelo"
+
+#: include/arrays.php
+msgid "Tag message, max. length 64 chars"
+msgstr "Umlayezo wethegi, ubude obuphezulu izinhlamvu ezingu-64"
+
+#: include/arrays.php
+msgid "For which device"
+msgstr "Yeyiphi idivayisi"
+
+#: include/arrays.php
+msgid "Tag can be assigned with on or more devices"
+msgstr "Ithegi ingabelwa kudivayisi eyodwa noma ngaphezulu"
+
+#: include/arrays.php tags.php
+msgid "Device"
+msgstr "Idivayisi"
+
+#: include/arrays.php
+msgid "Select device"
+msgstr "Khetha idivayisi"
+
+#: include/arrays.php
+msgid "Select a Device"
+msgstr "Khetha Idivayisi"
+
+#: include/arrays.php tags.php
+msgid "Graph"
+msgstr "Igrafu"
+
+#: include/arrays.php
+msgid "Select graph"
+msgstr "Khetha igrafu"
+
+#: include/arrays.php
+msgid "None"
+msgstr "Akukho"
+
+#: include/arrays.php tags.php
+msgid "Site"
+msgstr "Isayithi"
+
+#: include/arrays.php
+msgid "Select site"
+msgstr "Khetha isayithi"
+
+#: include/arrays.php
+msgid "Date and time of tag"
+msgstr "Usuku nesikhathi sethegi"
+
+#: include/arrays.php
+msgid "The date / time for this tag."
+msgstr "Usuku / isikhathi saleli thegi."
+
+#: include/arrays.php
+msgid "Choose color"
+msgstr "Khetha umbala"
+
+#: include/arrays.php
+msgid "Select color for this tag"
+msgstr "Khetha umbala waleli thegi"
+
+#: include/arrays.php tags.php
+msgid "Enable"
+msgstr "Nika amandla"
+
+#: include/arrays.php
+msgid "Disabled tag will not be shown in graph."
+msgstr "Ithegi elikhutshaziwe ngeke liboniswe kugrafu."
+
+#: include/arrays.php
+msgid "Settings"
+msgstr "Izilungiselelo"
+
+#: include/arrays.php
+msgid "Hide tags in graphs"
+msgstr "Fihla amathegi kumagrafu"
+
+#: include/arrays.php
+msgid "If checked, plugin will not display tags in graphs"
+msgstr "Uma kukhethiwe, isengezo ngeke sibonise amathegi kumagrafu"
+
+#: include/arrays.php
+msgid "Data Retention"
+msgstr "Ukugcinwa Kwedatha"
+
+#: include/arrays.php
+msgid "After this time, tags will be moved to the archive and will no longer be displayed"
+msgstr "Ngemva kwalesi sikhathi, amathegi azoyiswa kungobo yomlando futhi ngeke esaboniswa"
+
+#: include/arrays.php
+msgid "Graph legend limit"
+msgstr "Umkhawulo wencazelo yegrafu"
+
+#: include/arrays.php
+msgid "If number of tags is bigger than limit, legend will be aggregated. Due to potential display issues, the number of vertical lines is limited to 5 times this value."
+msgstr "Uma inani lamathegi likhulu kunomkhawulo, incazelo izohlanganiswa. Ngenxa yezinkinga zokubonisa ezingaba khona, inani lemigqa emile likhawulelwe izikhathi ezi-5 zaleli nani."
+
+#: include/arrays.php
+msgid "Select Primary Device"
+msgstr "Khetha Idivayisi Eyinhloko"
+
+#: include/arrays.php
+msgid "Typically a local Cacti device. Tags related to the Cacti system will be displayed here."
+msgstr "Ngokuvamile yidivayisi ye-Cacti yendawo. Amathegi ahlobene nohlelo lwe-Cacti azoboniswa lapha."
+
+#: include/arrays.php
+msgid "Automatic tags - host specific"
+msgstr "Amathegi azenzakalelayo - aqondene nomsingathi"
+
+#: include/arrays.php
+msgid "Host restart automatic tag"
+msgstr "Ithegi elizenzakalelayo lokuqalwa kabusha komsingathi"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device restarts"
+msgstr "Uma kukhethiwe, isengezo sizodala ithegi elizenzakalelayo uma idivayisi iqala kabusha"
+
+#: include/arrays.php
+msgid "Host restart tag color"
+msgstr "Umbala wethegi wokuqalwa kabusha komsingathi"
+
+#: include/arrays.php
+msgid "Recommendation: Use a different color for each automatic tag"
+msgstr "Isincomo: Sebenzisa umbala ohlukile kuthegi ngalinye elizenzakalelayo"
+
+#: include/arrays.php
+msgid "Host added automatic tag. Will be displayed on 'Default' device and specific device"
+msgstr "Ithegi elizenzakalelayo lokwengezwa komsingathi. Lizoboniswa kudivayisi ethi 'Okuzenzakalelayo' nakudivayisi ethile"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tags when device is added"
+msgstr "Uma kukhethiwe, isengezo sizodala amathegi azenzakalelayo uma kwengezwa idivayisi"
+
+#: include/arrays.php
+msgid "Host added tag color"
+msgstr "Umbala wethegi wokwengezwa komsingathi"
+
+#: include/arrays.php
+msgid "Device save/change automatic tag"
+msgstr "Ithegi elizenzakalelayo lokulondoloza/ukushintsha idivayisi"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when device is saved (changed)"
+msgstr "Uma kukhethiwe, isengezo sizodala ithegi elizenzakalelayo uma idivayisi ilondolozwa (ishintshwa)"
+
+#: include/arrays.php
+msgid "Device save/change tag color"
+msgstr "Umbala wethegi wokulondoloza/ukushintsha idivayisi"
+
+#: include/arrays.php
+msgid "Data source reindex automatic tag"
+msgstr "Ithegi elizenzakalelayo lokuhlela kabusha izinkomba zomthombo wedatha"
+
+#: include/arrays.php
+msgid "Create a tag when the set of indexes returned by a device data query changes."
+msgstr "Dala ithegi uma isethi yezinkomba ebuyiswa umbuzo wedatha yedivayisi ishintsha."
+
+#: include/arrays.php
+msgid "Data source reindex tag color"
+msgstr "Umbala wethegi wokuhlela kabusha izinkomba zomthombo wedatha"
+
+#: include/arrays.php
+msgid "Automatic tags - others"
+msgstr "Amathegi azenzakalelayo - amanye"
+
+#: include/arrays.php
+msgid "Choose how to display tags listed below"
+msgstr "Khetha indlela yokubonisa amathegi abhalwe ngezansi"
+
+#: include/arrays.php
+msgid "For which devices will the tags below displayed?"
+msgstr "Azoboniswa kumaphi amadivayisi amathegi angezansi?"
+
+#: include/arrays.php
+msgid "Cacti version automatic tag"
+msgstr "Ithegi elizenzakalelayo lenguqulo ye-Cacti"
+
+#: include/arrays.php
+msgid "If checked, plugin will create automatic tag when Cacti version is changed. Tags is for all graphs."
+msgstr "Uma kukhethiwe, isengezo sizodala ithegi elizenzakalelayo uma inguqulo ye-Cacti ishintshiwe. Ithegi elamagrafu wonke."
+
+#: include/arrays.php
+msgid "Cacti version tag color"
+msgstr "Umbala wethegi wenguqulo ye-Cacti"
+
+#: include/arrays.php
+msgid "Poller overrun automatic tag"
+msgstr "Ithegi elizenzakalelayo lokweqa kwesikhathi se-poller"
+
+#: include/arrays.php
+msgid "Create a tag when a data collector polling cycle exceeds the configured poller interval."
+msgstr "Dala ithegi uma umjikelezo wokuhlola womqoqi wedatha weqa isikhawu se-poller esihleliwe."
+
+#: include/arrays.php
+msgid "Poller overrun tag color"
+msgstr "Umbala wethegi wokweqa kwesikhathi se-poller"
+
+#: include/arrays.php
+msgid "Data collector status automatic tags"
+msgstr "Amathegi azenzakalelayo esimweni somqoqi wedatha"
+
+#: include/arrays.php
+msgid "Create tags when a remote data collector goes down or recovers."
+msgstr "Dala amathegi uma umqoqi wedatha okude efa noma elulama."
+
+#: include/arrays.php
+msgid "Data collector status tag color"
+msgstr "Umbala wethegi wesimo somqoqi wedatha"
+
+#: include/arrays.php
+msgid "Plugin status automatic tag"
+msgstr "Ithegi elizenzakalelayo lesimo sesengezo"
+
+#: include/arrays.php
+msgid "Create a tag when any plugin's status change (enable/disable/upgrade)"
+msgstr "Dala ithegi uma isimo sanoma yisiphi isengezo sishintsha (nika amandla/khubaza/thuthukisa)"
+
+#: include/arrays.php
+msgid "Plugin state tag color"
+msgstr "Umbala wethegi wesimo sesengezo"
+
+#: include/functions.php
+#, php-format
+msgid "Device save/changed, id %s"
+msgstr "Idivayisi ilondoloziwe/ishintshiwe, id %s"
+
+#: include/functions.php
+#, php-format
+msgid "Device added, id %s"
+msgstr "Idivayisi yengeziwe, id %s"
+
+#: include/functions.php
+msgid "Device added"
+msgstr "Idivayisi yengeziwe"
+
+#: include/functions.php
+#, php-format
+msgid "Restart, uptime was %s"
+msgstr "Ukuqalwa kabusha, isikhathi sokusebenza besingu-%s"
+
+#: include/functions.php
+msgid "Disable Tags"
+msgstr "Khubaza Amathegi"
+
+#: include/functions.php
+msgid "Enable Tags"
+msgstr "Nika Amathegi Amandla"
+
+#: setup.php
+msgid "Plugin Tags - view"
+msgstr "Isengezo Samathegi - ukubuka"
+
+#: setup.php
+msgid "Management"
+msgstr "Ukuphathwa"
+
+#: setup.php tags.php
+msgid "Tags"
+msgstr "Amathegi"
+
+#: setup.php
+msgid "Tags Edit"
+msgstr "Hlela Amathegi"
+
+#: setup.php
+msgid "Tags Save"
+msgstr "Londoloza Amathegi"
+
+#: tags.php
+msgid "Delete"
+msgstr "Susa"
+
+#: tags.php
+msgid "Disable"
+msgstr "Khubaza"
+
+#: tags.php
+msgid "Archive"
+msgstr "Faka Kungobo Yomlando"
+
+#: tags.php
+msgid "Click 'Continue' to delete the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze ususe into elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze ususe izinto ezilandelayo."
+
+#: tags.php
+msgid "Cancel"
+msgstr "Khansela"
+
+#: tags.php
+msgid "Continue"
+msgstr "Qhubeka"
+
+#: tags.php
+msgid "Delete item"
+msgid_plural "Delete items"
+msgstr[0] "Susa into"
+msgstr[1] "Susa izinto"
+
+#: tags.php
+msgid "Click 'Continue' to disable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze ukhubaze into elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze ukhubaze izinto ezilandelayo."
+
+#: tags.php
+msgid "Disable item"
+msgid_plural "Disable items"
+msgstr[0] "Khubaza into"
+msgstr[1] "Khubaza izinto"
+
+#: tags.php
+msgid "Click 'Continue' to enable the following item."
+msgid_plural "Click 'Continue' to delete following items."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze unike amandla into elandelayo."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze unike amandla izinto ezilandelayo."
+
+#: tags.php
+msgid "Enable item"
+msgid_plural "Enable items"
+msgstr[0] "Nika amandla into"
+msgstr[1] "Nika amandla izinto"
+
+#: tags.php
+msgid "Click 'Continue' to archive the following item."
+msgid_plural "Click 'Continue' to archive following items."
+msgstr[0] "Chofoza u-'Qhubeka' ukuze ufake into elandelayo kungobo yomlando."
+msgstr[1] "Chofoza u-'Qhubeka' ukuze ufake izinto ezilandelayo kungobo yomlando."
+
+#: tags.php
+msgid "Archive item"
+msgid_plural "Archive items"
+msgstr[0] "Faka into kungobo yomlando"
+msgstr[1] "Faka izinto kungobo yomlando"
+
+#: tags.php
+msgid "Not Found"
+msgstr "Akutholakalanga"
+
+#: tags.php
+#, php-format
+msgid "Tag [edit: %s]"
+msgstr "Ithegi [hlela: %s]"
+
+#: tags.php
+msgid "Tag [new]"
+msgstr "Ithegi [elisha]"
+
+#: tags.php
+msgid "Start Date/Time Selector"
+msgstr "Isikhethi Sosuku/Isikhathi Sokuqala"
+
+#: tags.php
+msgid "You have to set primary device in Console - Configuration - Settings - Tags"
+msgstr "Kufanele usethe idivayisi eyinhloko kuKhonsoli - Ukucushwa - Izilungiselelo - Amathegi"
+
+#: tags.php
+msgid "Tag time"
+msgstr "Isikhathi sethegi"
+
+#: tags.php
+msgid "Target"
+msgstr "Okuhlosiwe"
+
+#: tags.php
+msgid "No"
+msgstr "Cha"
+
+#: tags.php
+msgid "Yes"
+msgstr "Yebo"
+
+#: tags.php
+msgid "Empty"
+msgstr "Akunalutho"
+
+#: tags.php
+msgid "Tags Management"
+msgstr "Ukuphathwa Kwamathegi"
+
+#: tags.php
+msgid "Search"
+msgstr "Sesha"
+
+#: tags.php
+msgid "Any"
+msgstr "Noma yikuphi"
+
+#: tags.php
+msgid "Type"
+msgstr "Uhlobo"
+
+#: tags.php
+msgid "Default"
+msgstr "Okuzenzakalelayo"
+
+#: tags.php
+msgid "Go"
+msgstr "Hamba"
+
+#: tags.php
+msgid "Set/Refresh Filters"
+msgstr "Setha/Vuselela Izihlungi"
+
+#: tags.php
+msgid "Clear"
+msgstr "Sula"
+
+#: tags.php
+msgid "Clear Filters"
+msgstr "Sula Izihlungi"
+
+#: tags.php
+msgid "Presets"
+msgstr "Okusethwe Ngaphambilini"
+
+#: tags.php
+msgid "Custom"
+msgstr "Okwezifiso"
+
+#: tags.php
+msgid "From"
+msgstr "Kusuka"
+
+#: tags.php
+msgid "Start Date Selector"
+msgstr "Isikhethi Sosuku Lokuqala"
+
+#: tags.php
+msgid "To"
+msgstr "Kuya ku"
+
+#: tags.php
+msgid "End Date Selector"
+msgstr "Isikhethi Sosuku Lokugcina"
